@@ -1,4 +1,4 @@
-package base;
+package usuarios.datos;
 
 public class Fecha
 {
@@ -8,12 +8,9 @@ public class Fecha
     
     public Fecha(int dia, int mes, int ano)
     {
-        if(validarFecha(dia, mes, ano))
-        {
-            setDia(dia);
-            setMes(mes);
-            setAno(ano);
-        }
+        setDia(dia);
+        setMes(mes);
+        setAno(ano);
     }
     public int getDia()
     {
@@ -48,9 +45,5 @@ public class Fecha
         setDia(dia);
         setMes(mes);
         setAno(ano);
-    }
-    private boolean validarFecha(int dia, int mes, int ano)
-    {
-        return true;
     }
 }

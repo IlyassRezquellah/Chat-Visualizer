@@ -1,5 +1,6 @@
-package base;
+package interpretes;
 
+import usuarios.Persona;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Interprete
+public class InterpreteWhatsapp
 {
     private static final String REGEX_MENSAJE = "^([0-3][0-9]|[0-9])/([0-3][0-9]|[0-9])/(.{2}|.{4})(,\\s|\\s)([0-2]{0,1}[0-9]):([0-6]{0,1}[0-9])(\\s(['A'-'P']['M'])){0,2}\\s-\\s(.*?):\\s(.+)";
     private static final String REGEX_FECHA_HORA = "^([0-3][0-9]|[0-9])/([0-3][0-9]|[0-9])/(.{2}|.{4})(,\\s|\\s)([0-2]{0,1}[0-9]):([0-6]{0,1}[0-9])\\s(.+)";
@@ -24,6 +25,7 @@ public class Interprete
     private int minuto;
     private String nombre;
     private String mensaje;
+    private String pathFichero;
     /*0: todo
     1: día o mes
     2: mes o día
@@ -35,7 +37,7 @@ public class Interprete
     9: nombre
     10: mensaje*/
     
-    public Interprete()
+    public InterpreteWhatsapp(String pathFichero)
     {
         personas = new ArrayList<Persona>();
         //Compilamos la representación de la expresión regular
@@ -44,11 +46,12 @@ public class Interprete
         //Cargamos los encuentros que coinciden y los separa por grupos
         totalPersonas = 0;
         indice = -2;
+        this.pathFichero = pathFichero;
     }
     
     public boolean interpretarChat()
     {
-        try(BufferedReader reader = new BufferedReader(new FileReader("chat.txt")))
+        try(BufferedReader reader = new BufferedReader(new FileReader(pathFichero)))
         {
             String line; 
             while ((line = reader.readLine()) != null)
@@ -87,7 +90,7 @@ public class Interprete
         }
         catch (Exception e)
         {
-            System.out.println("Error: "+e);
+            System.out.println("Error: "+e.getMessage());
             return false;
         }
         mostrarMensajes();        
@@ -119,7 +122,6 @@ public class Interprete
         nombre = matcherMensaje.group(9);
         mensaje = matcherMensaje.group(10);
     }
-    
     public void mostrarMatches(Matcher matcher)
     {
         System.out.println("Grupos: "+matcher.groupCount());

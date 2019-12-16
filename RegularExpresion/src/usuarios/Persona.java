@@ -1,5 +1,6 @@
-package base;
+package usuarios;
 
+import usuarios.datos.Mensaje;
 import java.util.ArrayList;
 import java.util.List;
 
