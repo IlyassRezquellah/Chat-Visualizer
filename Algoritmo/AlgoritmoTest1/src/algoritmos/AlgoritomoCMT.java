@@ -30,5 +30,11 @@ public class AlgoritomoCMT
         }       
         return true;
     }
+    public static void getNumberDaysGivenYear(){
+        YearMonth yearMonthObject = YearMonth.of(2019, 02);
+        int daysInMonth = yearMonthObject.lengthOfMonth();
+        System.out.println(daysInMonth);
+    }
+    
     
 }
