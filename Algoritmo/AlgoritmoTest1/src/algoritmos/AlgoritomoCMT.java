@@ -1,20 +1,18 @@
 package algoritmos;
 
-import java.util.ArrayList;
-import java.util.List;
-import usuarios.Persona;
+import java.time.YearMonth;
 import usuarios.datos.Mensaje;
-//Algoritmo de conteo, medias y totales. Pero CMT mola más!
+
 public class AlgoritomoCMT
 {//Hay que hacer todo... ArrayList? estos ints no servirán para nada así! Clases autogestionadas?
-    private Mensaje mensajes;
+    private Mensaje message;
     
     public AlgoritomoCMT(Mensaje mensajesOriginales)
     {
-        mensajes = null;
+        message = null;
     }
     
-    public boolean calcular()
+    public boolean calculate()
     {
         try
         {
