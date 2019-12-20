@@ -1,6 +1,6 @@
 package interpretes;
 
-import usuarios.Persona;
+import users.Persona;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ public class InterpreteWhatsapp
 {
     private static final String REGEX_MENSAJE = "^([0-3][0-9]|[0-9])/([0-3][0-9]|[0-9])/(.{2}|.{4})(,\\s|\\s)([0-2]{0,1}[0-9]):([0-6]{0,1}[0-9])(\\s(['A'-'P']['M'])){0,2}\\s-\\s(.*?):\\s(.+)";
     private static final String REGEX_FECHA_HORA = "^([0-3][0-9]|[0-9])/([0-3][0-9]|[0-9])/(.{2}|.{4})(,\\s|\\s)([0-2]{0,1}[0-9]):([0-6]{0,1}[0-9])\\s(.+)";
-    private List<Persona> personas;
+    List<Persona> personas;
     private int totalPersonas;
     private Pattern patronMensaje;
     private Pattern patronFechaHora;
@@ -39,17 +39,17 @@ public class InterpreteWhatsapp
     
     public InterpreteWhatsapp(String pathFichero)
     {
-        personas = new ArrayList<Persona>();
         //Compilamos la representación de la expresión regular
         patronMensaje = Pattern.compile(REGEX_MENSAJE);
         patronFechaHora = Pattern.compile(REGEX_FECHA_HORA);
         //Cargamos los encuentros que coinciden y los separa por grupos
+        personas = new ArrayList<Persona>();
         totalPersonas = 0;
         indice = -2;
         this.pathFichero = pathFichero;
     }
     
-    public boolean interpretarChat()
+    public List<Persona> interpretarChat()
     {
         try(BufferedReader reader = new BufferedReader(new FileReader(pathFichero)))
         {
@@ -58,24 +58,27 @@ public class InterpreteWhatsapp
             {
                 if(!patronFechaHora.matcher(line).matches() && indice != -2)
                 {
-                    System.out.println("Linea suelta.");
+                    //System.out.println("Linea suelta.");
                     personas.get(indice).agrregarTextoAlAnteriorMensaje(line);
                 }
                 else
                 {
-                    if(!patronMensaje.matcher(line).matches())
-                        System.out.println("Información de Whatsapp.");
-                    else
+                    /*if(!patronMensaje.matcher(line).matches())
                     {
-                        System.out.println("Nuevo mensaje.");
+                        System.out.println("Información de Whatsapp.");
+                    }
+                    else*/
+                    if(patronMensaje.matcher(line).matches())
+                    {
+                        //System.out.println("Nuevo mensaje.");
                         matcherMensaje = patronMensaje.matcher(line);
                         while(matcherMensaje.find())
                         {
-                            mostrarMatches(matcherMensaje);
+                            //mostrarMatches(matcherMensaje);
                             montarFecha(matcherMensaje);
                             montarHora(matcherMensaje);
                         }
-                        if(totalPersonas > 1 && (indice = laPersonaExiste(nombre)) >= 0)
+                        if((indice = laPersonaExiste(nombre)) >= 0)
                             personas.get(indice).nuevoMesaje(dia, mes, ano, minuto, hora, mensaje);
                         else
                         {
@@ -85,20 +88,20 @@ public class InterpreteWhatsapp
                         }
                     }
                 }
-                System.out.println("");
+                //System.out.println("");
             }
         }
         catch (Exception e)
         {
             System.out.println("Error: "+e.getMessage());
-            return false;
+            return null;
         }
-        mostrarMensajes();        
-        return true;
+        //mostrarMensajes();        
+        return personas;
     }
     public void montarFecha(Matcher matcherMensaje)
     {//Identificación del formato de la fecha
-        if(matcherMensaje.group(4).equals(","))
+        if(matcherMensaje.group(4).equals(", "))
         {
             dia = Integer.valueOf(matcherMensaje.group(2));
             mes = Integer.valueOf(matcherMensaje.group(1));

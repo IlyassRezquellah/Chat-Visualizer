@@ -1,6 +1,8 @@
 package base;
 
 import interpretes.InterpreteWhatsapp;
+import java.util.List;
+import users.Persona;
 
 public class Main
 {
@@ -11,7 +13,12 @@ public class Main
     }
     public void run()
     {
-        InterpreteWhatsapp parse = new InterpreteWhatsapp(".\\Chats\\ChatBase.txt");
-        System.out.println(parse.interpretarChat());
+        InterpreteWhatsapp parse = new InterpreteWhatsapp("..\\..\\Chats\\ChatBase.txt");
+        List<Persona> personas = parse.interpretarChat();
+        
+        for (int i = 0, t = personas.size(); i < t; i++)
+        {
+            personas.get(i).startAlgorythm();
+        }
     }
 }

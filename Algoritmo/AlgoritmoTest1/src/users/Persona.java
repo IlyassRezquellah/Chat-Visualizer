@@ -1,27 +1,32 @@
-package usuarios;
+package users;
 
-import usuarios.datos.Mensaje;
+import algoritmos.AlgoritomoCMT;
+import users.data.Message;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Persona
 {
     private String nombre;
-    private List<Mensaje> mensajes;
+    private List<Message> mensajes;
     private int totalMensajes;
+    private AlgoritomoCMT algoritmo;
     
     public Persona(String nombre)
     {
         setNombre(nombre);
         mensajes = new ArrayList<>();
+        algoritmo = new AlgoritomoCMT();
         totalMensajes = 0;
     }
     public Persona(String nombre, int dia, int mes, int ano, int minuto, int hora, String texto)
     {
         setNombre(nombre);
         mensajes = new ArrayList<>();
+        algoritmo = new AlgoritomoCMT();
         totalMensajes = 0;
         nuevoMesaje(dia, mes, ano, minuto, hora, texto);
+        //System.out.println("Algo creado para: " + nombre);
     }
     public String getNombre()
     {
@@ -33,10 +38,10 @@ public class Persona
     }
     public void nuevoMesaje(int dia, int mes, int ano, int minuto, int hora, String texto)
     {
-        mensajes.add(new Mensaje(dia, mes, ano, minuto, hora, texto));
+        mensajes.add(new Message(dia, mes, ano, minuto, hora, texto));
         totalMensajes++;
     }
-    public Mensaje getMensajeObj(int i)
+    public Message getMensajeObj(int i)
     {
         return mensajes.get(i);
     }
@@ -56,5 +61,13 @@ public class Persona
     public boolean soyYo(String alguien)
     {
         return getNombre().equals(alguien);
+    }
+    public void startAlgorythm()
+    {
+        for(Message m : mensajes)
+        {
+            algoritmo.calculate(m);
+        }
+        
     }
 }

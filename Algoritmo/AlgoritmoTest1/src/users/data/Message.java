@@ -1,6 +1,6 @@
-package usuarios.datos;
+package users.data;
 
-public class Mensaje
+public class Message
 {
     private static final String MEDIA_ENGLISH = "<Media omitted>";
     private static final String MEDIA_SPANISH = "<Multimedia omitido>";
@@ -9,7 +9,7 @@ public class Mensaje
     private String texto;
     private boolean esMedia;
     
-    public Mensaje(int dia, int mes, int ano, int minuto, int hora, String texto)
+    public Message(int dia, int mes, int ano, int minuto, int hora, String texto)
     {
         setFecha(dia, mes, ano);
         setHora(minuto, hora);
