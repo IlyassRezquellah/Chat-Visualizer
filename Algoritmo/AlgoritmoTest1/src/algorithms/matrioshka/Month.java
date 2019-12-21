@@ -49,5 +49,35 @@ public class Month
     {
         this.charCount += charCount;
     }
+    //Days
+    public Day[] getDays()
+    {
+        return days;
+    }
+    public int getDayMessageCount(int day)
+    {
+        return days[day].getMessageCount();
+    }
+    public int getDayWordCount(int day)
+    {
+        return days[day].getWordCount();
+    }
+    public int getDayCharCount(int day)
+    {
+        return days[day].getCharCount();
+    }
+    //Hour
+    public int getHourMessageCount(int day, int hour)
+    {
+        return days[day].getHourMessageCount(hour);
+    }
+    public int getHourWordCount(int day, int hour)
+    {
+        return days[day].getHourWordCount(hour);
+    }
+    public int getHourCharCount(int day, int hour)
+    {
+        return days[day].getHourCharCount(hour);
+    }
    
 }

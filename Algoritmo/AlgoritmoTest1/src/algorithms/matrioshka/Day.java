@@ -5,16 +5,16 @@ import users.data.Message;
 public class Day
 {
     private static final int LIMIR_HOURS = 24;
-    private Hour[] hour;
+    private Hour[] hours;
     private int messageCount;
     private int wordCount;
     private int charCount;
     
     public Day()
     {
-        hour = new Hour[LIMIR_HOURS];
+        hours = new Hour[LIMIR_HOURS];
         for(int i = 0; i < LIMIR_HOURS;i++)
-            hour[i] = new Hour();
+            hours[i] = new Hour();
         messageCount  = 0;
         wordCount = 0;
         charCount = 0;
@@ -25,7 +25,7 @@ public class Day
         messageCount++;
         addWordCount(wordValue);
         addCharCount(charValue);
-        hour[mess.getHour()].addCount(mess, charValue, wordValue);
+        hours[mess.getHour()].addCount(mess, charValue, wordValue);
     }
     public int getMessageCount()
     {
@@ -46,6 +46,23 @@ public class Day
     private void addCharCount(int charCount)
     {
         this.charCount += charCount;
+    }
+    //Hour
+    public Hour[] getHours()
+    {
+        return hours;
+    }
+    public int getHourMessageCount(int hour)
+    {
+        return hours[hour].getMessageCount();
+    }
+    public int getHourWordCount(int hour)
+    {
+        return hours[hour].getWordCount();
+    }
+    public int getHourCharCount(int hour)
+    {
+        return hours[hour].getCharCount();
     }
     
 }

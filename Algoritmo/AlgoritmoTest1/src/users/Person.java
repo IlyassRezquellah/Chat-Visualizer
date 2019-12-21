@@ -68,6 +68,8 @@ public class Person
         {
             algorithm.calculate(m);
         }
+        //algorithm.extractCountData();
+        algorithm.extractData();
         
     }
 }
