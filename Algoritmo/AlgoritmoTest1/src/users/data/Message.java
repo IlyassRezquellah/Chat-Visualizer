@@ -4,88 +4,88 @@ public class Message
 {
     private static final String MEDIA_ENGLISH = "<Media omitted>";
     private static final String MEDIA_SPANISH = "<Multimedia omitido>";
-    private Fecha fecha;
-    private Hora hora;
-    private String texto;
-    private boolean esMedia;
+    private Date date;
+    private Time time;
+    private String text;
+    private boolean isMedia;
     
-    public Message(int dia, int mes, int ano, int minuto, int hora, String texto)
+    public Message(int day, int month, int year, int minute, int hour, String text)
     {
-        setFecha(dia, mes, ano);
-        setHora(minuto, hora);
-        setTexto(texto);
-        if(texto.equals(MEDIA_ENGLISH) || texto.equals(MEDIA_SPANISH))
+        setDate(day, month, year);
+        setHout(minute, hour);
+        setText(text);
+        if(text.equals(MEDIA_ENGLISH) || text.equals(MEDIA_SPANISH))
         {
-            esMedia = true;
-            setMasTexto("");
+            isMedia = true;
+            setMoreText("");
         }
         else
         {
-            esMedia = false;
-            setMasTexto(texto);
+            isMedia = false;
+            setMoreText(text);
         }
     }
-    public Fecha getFechaObj()
+    public Date getDateObj()
     {
-        return fecha;
+        return date;
     }
-    public Hora getHoraObj()
+    public Time getHourObj()
     {
-        return hora;
+        return time;
     }
-    public String getFechaStr()
+    public String getDateStr()
     {
-        return fecha.getTodo();
+        return date.getTodo();
     }
-    public String getHoraStr()
+    public String getHourStr()
     {
-        return hora.getTodo();
+        return time.getAll();
     }
-    public String getTexto()
+    public String getText()
     {
-        if(!esMedia())
-            return texto;
+        if(!isMedia())
+            return text;
         else
             return "Multimedia";
     }
-    public int getHora()
+    public int getHour()
     {
-        return hora.getHora();
+        return time.getHour();
     }
-    public int getMinuto()
+    public int getMinute()
     {
-        return hora.getMinuto();
+        return time.getMinute();
     }
-    public int getDia()
+    public int getDay()
     {
-        return fecha.getDia();
+        return date.getDia();
     }
-    public int getMes()
+    public int getMonth()
     {
-        return fecha.getMes();
+        return date.getMes();
     }
-    public int getAno()
+    public int getYear()
     {
-        return fecha.getAno();
+        return date.getAno();
     }
-    public boolean esMedia()
+    public boolean isMedia()
     {
-        return esMedia;
+        return isMedia;
     }
-    public void setFecha(int dia, int mes, int ano)
+    public void setDate(int dia, int mes, int ano)
     {
-        this.fecha = new Fecha(dia, mes, ano);
+        this.date = new Date(dia, mes, ano);
     }
-    public void setHora(int minuto, int hora)
+    public void setHout(int minuto, int hora)
     {
-        this.hora = new Hora(minuto, hora);
+        this.time = new Time(minuto, hora);
     }
-    public void setTexto(String texto)
+    public void setText(String text)
     {
-        this.texto = texto;
+        this.text = text;
     }
-    public void setMasTexto(String texto)
+    public void setMoreText(String text)
     {
-        this.texto += ("\n\r" + texto);
+        this.text += ("\n\r" + text);
     }  
 }

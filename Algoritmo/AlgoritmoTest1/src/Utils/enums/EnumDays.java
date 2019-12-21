@@ -1,7 +1,8 @@
-package algoritmos.matrioshka;
+package Utils.enums;
 
 public enum EnumDays
 {
+    PLACEHOLDER(0),
     MONDAY(1),
     TUESDAY(2),
     WEDNESDAY(3),

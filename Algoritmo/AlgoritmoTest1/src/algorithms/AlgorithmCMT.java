@@ -1,17 +1,18 @@
-package algoritmos;
+package algorithms;
 
-import algoritmos.matrioshka.*;
+import algorithms.matrioshka.Year;
 import java.util.HashMap;
 import users.data.Message;
 
-public class AlgoritomoCMT
+public class AlgorithmCMT
 {    
-    HashMap<Integer, Year> yearTree;
-    private int actualYear;
-    public AlgoritomoCMT()
+    private HashMap<Integer, Year> yearTree;
+    private int currentYear;
+    
+    public AlgorithmCMT()
     {
         this.yearTree = new HashMap<Integer, Year>();
-        actualYear = 0;
+        currentYear = 0;
     }
     public void createNewYear(int year)
     {//9013
@@ -24,15 +25,15 @@ public class AlgoritomoCMT
         int wordCount = 0;
         try
         {
-            if(mess.getAno() != actualYear)
+            if(mess.getYear() != currentYear)
             {
-                actualYear = mess.getAno();
-                createNewYear(actualYear);
+                currentYear = mess.getYear();
+                createNewYear(currentYear);
             }
             
             //Algoritmo = 3 (mensajes, caracteres, palablras)
             //Calculo medias
-            yearTree.get(actualYear).addCount(mess, 3, 4);
+            yearTree.get(currentYear).addCount(mess, 3, 4);
         } 
         catch (Exception e)
         {

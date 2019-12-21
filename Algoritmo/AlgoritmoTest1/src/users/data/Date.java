@@ -1,12 +1,12 @@
 package users.data;
 
-public class Fecha
+public class Date
 {
     private int dia;
     private int mes;
     private int ano;
     
-    public Fecha(int dia, int mes, int ano)
+    public Date(int dia, int mes, int ano)
     {
         setDia(dia);
         setMes(mes);
