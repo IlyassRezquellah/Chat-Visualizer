@@ -1,5 +1,6 @@
 package interpreters;
 
+import Utils.RegularExpressions;
 import users.Person;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,12 +11,6 @@ import java.util.regex.Pattern;
 
 public class InterpreterWhatsapp
 {
-    ///Expresiones regulares usadas para comprobar si son mensajes de una persona, información de whatsapp o si es una linea suelta de otro mensaje
-    //Regex usada para comprobar el partón de (Fecha - Hora - Nombre - Mensaje), que podemos encontrar en un mensaje
-    private static final String REGEX_MENSAJE = "^([0-3][0-9]|[0-9])/([0-3][0-9]|[0-9])/(.{2}|.{4})(,\\s|\\s)([0-2]{0,1}[0-9]):([0-6]{0,1}[0-9])(\\s(['A'-'P']['M'])){0,2}\\s-\\s(.*?):\\s(.+)";
-    //Regex usada para comprobar el partón de (Fecha - Hora): Con esta determino si es una lina suelta (dará false) o un mensaje informativo de whatsapp (dará true).
-    //Los mensajes de whatsapp nunca tienen un nombre solo (Fecha - Hora - Mensaje).
-    private static final String REGEX_DATE_TIME = "^([0-3][0-9]|[0-9])/([0-3][0-9]|[0-9])/(.{2}|.{4})(,\\s|\\s)([0-2]{0,1}[0-9]):([0-6]{0,1}[0-9])\\s(.+)";
     //Lista de personas donde se almacenarán todas las personas que se encuentren en el chat (cada persona contentrá toda su información de mensajes)
     List<Person> persons;
     //Conteo de personas usado para tener un control del numero actual de personas creadas (Evitamos llamar al metodo size de la lista)
@@ -53,8 +48,8 @@ public class InterpreterWhatsapp
     public InterpreterWhatsapp(String pathFichero){
         /*Compilamos la representación de ambas expresión regular, para posteriormente 
         cargar los encuentros que coinciden y los separa por grupos usando el matcher*/
-        patternMessage = Pattern.compile(REGEX_MENSAJE);
-        patternDateTime = Pattern.compile(REGEX_DATE_TIME);
+        patternMessage = Pattern.compile(RegularExpressions.VALIDATE_MENSSAGE);
+        patternDateTime = Pattern.compile(RegularExpressions.VALIDATE_DATE_TIME);
         //Inicialización basica de objetos
         persons = new ArrayList<Person>();
         totalPersons = 0;

@@ -18,7 +18,7 @@ public class Hour{
         messageCount++;
         addWordCount(wordValue);
         addCharCount(charValue);
-        //minute[mess.getMinuto()].addCount(mess, charValue, wordValue);
+        //minute[mess.getMinuto()].addCount(mess, wordValue, charValue);
     }
     //Metodos para la propia clase Hora (Hour[] hours)
     public int getMessageCount(){

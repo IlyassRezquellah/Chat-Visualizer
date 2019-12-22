@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 
 public class Main {
-          public static void main(String[] args) {
+        
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         //El metodo trim() quita el primer espacio --> " Hola" pasaria a ser "Hola"
         String s = scan.nextLine().trim();

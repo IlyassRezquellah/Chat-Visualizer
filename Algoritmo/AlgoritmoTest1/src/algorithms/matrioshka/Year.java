@@ -31,13 +31,13 @@ public class Year{
     }
     
     //Metodos para la propia clase Year (LinkedHashMap<Integer, Year> yearTree)
-    public boolean addCount(Message mess, int charValue, int wordValue){
+    public boolean addCount(Message mess, int wordValue, int charValue){
         try{
             //System.out.println(mess.getMes() + " / " + EnumMonths.values()[mess.getMes()].name());
             messageCount++;
-            addCharCount(charValue);
             addWordCount(wordValue);
-            getMonthByNumber(mess.getMonth()).addCount(mess, charValue, wordValue);
+            addCharCount(charValue);
+            getMonthByNumber(mess.getMonth()).addCount(mess, wordValue, charValue);
             /*treeMonths.get(EnumMonths.values()[mess.getMonth()].name()).addCount
                 (mess, charValue, wordValue);*/
         }

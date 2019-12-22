@@ -1,5 +1,6 @@
 package algorithms;
 
+import Utils.RegularExpressions;
 import algorithms.matrioshka.*;
 import java.io.FileOutputStream;
 import java.util.*;
@@ -26,8 +27,9 @@ public class AlgorithmCMT{
     //Metodo para hacer el algoritmo basico de conteos y medias de un mensaje
     public boolean calculateCMT(Message mess){
         //Almacenaran el conteo de caracteres y palabras en un mensaje
-        int charCount = 1;
-        int wordCount = 1;
+        int wordCount = 0;
+        int charCount = 0;
+        
         try{
             //Primero comprobamos si el año del mensaje existe, si no es así se crea un año nuevo
             if(mess.getYear() != currentYear){
@@ -36,12 +38,17 @@ public class AlgorithmCMT{
                 //Una vex tenemos el año, creamos el nuevo año dento del HashMap
                 createNewYear(currentYear);
             }
-            //Aquí va el metodo de conteo(mensajes, caracteres, palablras) a partir de una String
-            //Aquí va el metodo de medias a partir de una String
+            //Conteo de letras a partir de una String
+            wordCount = getWordCountOfString(mess.getText());
+            //Conteo de palabras a partir de una String
+            charCount = getCharCountOfString(mess.getText());
+            
+            //Metodo de medias
             
             /*Introduce el conteo de este mensaje en el año actual por medio se .addCount.
             Este Objeto año se lo pasa ha su mes, día y hora en expecifico indicados por el mensaje*/
-            boolean check = yearTree.get(currentYear).addCount(mess, charCount, wordCount);
+            //Chuleta: yearTree.get(Año).addCount("Mensaje", "ConteoPalabras", "ConteoLetras")
+            boolean check = yearTree.get(currentYear).addCount(mess, wordCount, charCount);
             
             //El "check" almacena si todo ha ido bien el la inserción de datos
             /*if(check)
@@ -67,6 +74,8 @@ public class AlgorithmCMT{
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
             System.out.println("Year: " + y.getKey());
             System.out.println("\tMessages: " + yearTree.get(y.getKey()).getMessageCount());
+            System.out.println("\tWords: " + yearTree.get(y.getKey()).getWordCount());
+            System.out.println("\tChars: " + yearTree.get(y.getKey()).getCharCount());
             
             //Iteración de meses (m), para acceder a un mes usar "???" (En proceso)
             for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMounths().entrySet()){
@@ -96,6 +105,7 @@ public class AlgorithmCMT{
     {
         StringBuilder log = new StringBuilder();
         log.append("Total years: " + yearTree.size());
+        
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
             log.append("\nYear: " + y.getKey());
             
@@ -103,7 +113,9 @@ public class AlgorithmCMT{
                 log.append("\n\tMounth: " + m.getKey());
                 int daysCount = 0;
                 int hoursCount = 0;
+                
                 for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    
                     for (Hour h : d.getHours())
                         hoursCount++;
                     daysCount++;
@@ -119,6 +131,27 @@ public class AlgorithmCMT{
         } 
         catch (Exception e){
             System.out.println("Error: " + e);
+        }
+    }
+    //Obtener el numero total de caracteres en una String
+    public int getCharCountOfString(String text)
+    {
+        String[] arrOfStr = text.split(RegularExpressions.COUNT); 
+        int count = 0;
+        //Contador de chars
+        for(int counter = 0, length = arrOfStr.length; counter < length; counter++){
+            count +=arrOfStr[counter].length();
+        }
+        return count;
+    }
+    //Obtener el numero total de palabras en una String
+    public int getWordCountOfString(String text)
+    {
+        String[] arrOfStr = text.split(RegularExpressions.COUNT); 
+        if((text.trim().length() == 0)){
+            return 0;
+        }else{
+            return arrOfStr.length;
         }
     }
     //Obtener un mes de un año en contreto
