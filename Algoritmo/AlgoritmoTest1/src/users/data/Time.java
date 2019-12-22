@@ -16,28 +16,22 @@ public class Time
         else
             setHour(0);
     }
-    public int getMinute()
-    {
+    public int getMinute(){
         return minute;
     }
-    public int getHour()
-    {
+    public int getHour(){
         return hour;
     }
-    public String getAll()
-    {
+    public String getFullTime(){
         return String.format("%02d:%02d", getHour(), getMinute());
     }
-    public void setMinute(int minute)
-    {
+    public void setMinute(int minute){
         this.minute = minute;
     }
-    public void setHour(int hour)
-    {
+    public void setHour(int hour){
         this.hour = hour;
     }
-    public void setAll(int minute, int hour)
-    {
+    public void setAll(int minute, int hour){
         setMinute(minute);
         setHour(hour);
     }

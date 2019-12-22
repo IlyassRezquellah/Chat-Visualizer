@@ -1,0 +1,12 @@
+Caracteres enviados por año
+Name: Christian
+Year: 2018
+	965
+Year: 2019
+	1119
+
+Name: Ilyass
+Year: 2018
+	885
+Year: 2019
+	950

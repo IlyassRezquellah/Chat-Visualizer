@@ -10,23 +10,26 @@ import java.util.regex.Pattern;
 
 public class InterpreterWhatsapp
 {
+    ///Expresiones regulares usadas para comprobar si son mensajes de una persona, información de whatsapp o si es una linea suelta de otro mensaje
+    //Regex usada para comprobar el partón de (Fecha - Hora - Nombre - Mensaje), que podemos encontrar en un mensaje
     private static final String REGEX_MENSAJE = "^([0-3][0-9]|[0-9])/([0-3][0-9]|[0-9])/(.{2}|.{4})(,\\s|\\s)([0-2]{0,1}[0-9]):([0-6]{0,1}[0-9])(\\s(['A'-'P']['M'])){0,2}\\s-\\s(.*?):\\s(.+)";
+    //Regex usada para comprobar el partón de (Fecha - Hora): Con esta determino si es una lina suelta (dará false) o un mensaje informativo de whatsapp (dará true).
+    //Los mensajes de whatsapp nunca tienen un nombre solo (Fecha - Hora - Mensaje).
     private static final String REGEX_DATE_TIME = "^([0-3][0-9]|[0-9])/([0-3][0-9]|[0-9])/(.{2}|.{4})(,\\s|\\s)([0-2]{0,1}[0-9]):([0-6]{0,1}[0-9])\\s(.+)";
+    //Lista de personas donde se almacenarán todas las personas que se encuentren en el chat (cada persona contentrá toda su información de mensajes)
     List<Person> persons;
+    //Conteo de personas usado para tener un control del numero actual de personas creadas (Evitamos llamar al metodo size de la lista)
     private int totalPersons;
-    private Pattern patternMessage;
-    private Pattern patternDateTime;
-    private Matcher matcherMessage;
     private int index;
-    private int day;
-    private int month;
-    private int year;
-    private int hour;
-    private int minute;
-    private String name;
-    private String messge;
-    private String filePath;
-    /*0: todo
+    ///Paterns usado para poder hacer la busqueda de patrones con las Regex anteriores
+    //Este pattern se usa para deteminar si la linea actual es un mensaje de una persona o no (usa REGEX_MENSAJE)
+    private Pattern patternMessage;
+    //Este otro patter se usa para diferenciar una linea suelta de un mensaje (Usa REGEX_DATE_TIME)
+    private Pattern patternDateTime;
+    //Matcher encargado de almacenar las coincidencias separadas por grupos en base a los patterns anteriores 
+    private Matcher matcherMessage;
+    /* Chuleta de grupos de un mensaje en un matcher
+    0: todo
     1: día o mes
     2: mes o día
     3: año (sumarle 2000 si son 2 digitos)
@@ -36,53 +39,66 @@ public class InterpreterWhatsapp
     8: puede estar vacio o ser AM o PM (si es PM, hay que sumarle 12 a la hora)
     9: nombre
     10: mensaje*/
+    //Ruta del chat
+    private String filePath;
+    //Objetos básicos para almacenar los datos de un mensaje
+    private int day;
+    private int month;
+    private int year;
+    private int hour;
+    private int minute;
+    private String name;
+    private String messge;
     
-    public InterpreterWhatsapp(String pathFichero)
-    {
-        //Compilamos la representación de la expresión regular
+    public InterpreterWhatsapp(String pathFichero){
+        /*Compilamos la representación de ambas expresión regular, para posteriormente 
+        cargar los encuentros que coinciden y los separa por grupos usando el matcher*/
         patternMessage = Pattern.compile(REGEX_MENSAJE);
         patternDateTime = Pattern.compile(REGEX_DATE_TIME);
-        //Cargamos los encuentros que coinciden y los separa por grupos
+        //Inicialización basica de objetos
         persons = new ArrayList<Person>();
         totalPersons = 0;
         index = -2;
+        //Carga la ruta del chat
         this.filePath = pathFichero;
     }
     
-    public List<Person> chatInterpret()
-    {
-        try(BufferedReader reader = new BufferedReader(new FileReader(filePath)))
-        {
-            String line; 
-            while ((line = reader.readLine()) != null)
-            {
-                if(!patternDateTime.matcher(line).matches() && index != -2)
-                {
+    public List<Person> chatInterpret(){
+        try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            String line;
+            //Leemos el chat txt linea a linea
+            while ((line = reader.readLine()) != null){
+                //Usando patternDateTime determinamos si esta linea suelta tiene o no la estructura del REGEX_DATE_TIME
+                //Si sale false, es una linea suelta del mensaje anterior
+                if(!patternDateTime.matcher(line).matches() && index != -2){
                     //System.out.println("Linea suelta.");
                     persons.get(index).addTextoToLastMessage(line);
                 }
-                else
-                {
-                    /*if(!patronMensaje.matcher(line).matches())
-                    {
+                else{//De lo contrario, si es true significa que es un mensaje
+                    //Este if se usaba antes con patternMessage para identificar un mensaje informativo de whatsapp, ahora solo lo omito
+                    /*if(!patronMensaje.matcher(line).matches()){
                         System.out.println("Información de Whatsapp.");
                     }
                     else*/
-                    if(patternMessage.matcher(line).matches())
-                    {
-                        //System.out.println("Nuevo mensaje.");
+                    //Usando patternMessage determinamos si es un mensaje de una persona cuando devuelve true. Es posible con la extructura de REGEX_MENSAJE 
+                    if(patternMessage.matcher(line).matches()){
+                        //Una vez sabemos que es un mensaje valido, usamos el matcherMessage para dividir el mensaje en los grupos deseados
                         matcherMessage = patternMessage.matcher(line);
-                        while(matcherMessage.find())
-                        {
+                        //Luego necesitamos usar find() con un bucle para acceder a los grupos internos del matcher 
+                        while(matcherMessage.find()){
                             //mostrarMatches(matcherMensaje);
+                            //Estos metodos guardan y montan la estrucura del mensaje teniendo en cuenta los formatos de fecha y hora, entre otras cosas
                             mountDate(matcherMessage);
                             mountHour(matcherMessage);
+                            mountNameAndMessage(matcherMessage);
                         }
+                        //Cuando tenemos ya tada la información guardada, comprobamos si la persona existe o no, para guardar este mensaje en ella
+                        //Si exiteste la persona, únicamnete le agraga un mensaje
                         if((index = thePersonExist(name)) >= 0)
-                            persons.get(index).newMessage(day, month, year, minute, hour, messge);
-                        else
-                        {
+                            persons.get(index).addNewMessage(day, month, year, minute, hour, messge);
+                        else{//De lo contrario, si la persona no existe, la crea y añade su primer mensaje en el contructor
                             persons.add(new Person(name, day, month, year, minute, hour, messge));
+                            //Actualizamos el numero de personas y su indice actual
                             index = totalPersons;
                             totalPersons++;
                         }
@@ -91,63 +107,75 @@ public class InterpreterWhatsapp
                 //System.out.println("");
             }
         }
-        catch (Exception e)
-        {
+        catch (Exception e){
             System.out.println("Error: "+e.getMessage());
             return null;
         }
         //mostrarMensajes();        
         return persons;
     }
-    public void mountDate(Matcher matcherMensaje)
-    {//Identificación del formato de la fecha
-        if(matcherMensaje.group(4).equals(", "))
-        {
+    //A partir de un matcher, guarda el día, hora, mes y año del mensaje de los grupos expecificados en la chuleta de arriba
+    public void mountDate(Matcher matcherMensaje){
+        //If identificador del formato de la fecha (dd/mm/yyy o mm/dd/yy) y lo adapta al siempre primer tipo
+        //Guarda el día, mes y año teniendo en cuenta su formato (Siempre se guarda en dd/mm/yyy)
+        //siempre se necesita conversión a int, ya que el matcher guarda strings y necesitamos numeros para el día, mes y año
+        if(matcherMensaje.group(4).equals(", ")){
             day = Integer.valueOf(matcherMensaje.group(2));
             month = Integer.valueOf(matcherMensaje.group(1));
         }
-        else
-        {
+        else{
             day = Integer.valueOf(matcherMensaje.group(1));
             month = Integer.valueOf(matcherMensaje.group(2));
         }
+        
         year = Integer.valueOf(matcherMensaje.group(3));
+        //Whatsapp siempre exporta el mes con los 2 numeros finales, así que siempre hay que rellenar los 2 anteriores
         if(matcherMensaje.group(3).length() == 2)
             year += 2000;
     }
-    public void mountHour(Matcher matcherMensaje)
-    {//Identificación del formato de la hora
+    //A partir de un matcher, guarda la hora y minuto del mensaje de los grupos expecificados en la chuleta de arriba
+    public void mountHour(Matcher matcherMensaje){
+        //Usando los grupos del matcher almacena la hora en formato 24h (si se da el caso de un formato 12h, la convierte a 24h)
+        //Guarda las horas (se necesita conversión a int, ya que el matcher guarda strings)
         hour = Integer.valueOf(matcherMensaje.group(5));
+        
+        //Este "dato" determina el tipo de formato que tiene la hora (12h o 24h)
         String dato = matcherMensaje.group(8);
+        //If identificador del formato de la hora y si es PM le suma 12 para equilibrarlo a 24h
         if(dato != null && dato.equals("PM"))
             hour += 12;
+        //Guarda los minutos (se necesita conversión a int, ya que el matcher guarda strings)
         minute = Integer.valueOf(matcherMensaje.group(6));
+    }
+    //Metodo para determinar si una persona ya existe
+    public int thePersonExist(String tName){
+        for (int i = 0; i < totalPersons; i++){
+            if(persons.get(i).itsMe(tName))
+                return i;
+        }
+        //Si devuelve -1, es que esta persona no existe
+        return -1;
+    }
+    public void mountNameAndMessage(Matcher matcherMensaje){
+        //Guarda el nombre de la persona y el mensaje
         name = matcherMensaje.group(9);
         messge = matcherMensaje.group(10);
     }
-    public void showMatches(Matcher matcher)
-    {
+    ///-------------------------------------------------------------------------
+    /*Metodos irrelebantes para el programa, existen con el motivo de testear 
+        rápidamente que todo funcona correctamente de manera interna por consola*/
+    //Metodo para mostrar los grupos de un matcher
+    public void showMatches(Matcher matcher){
         System.out.println("Grupos: "+matcher.groupCount());
         for (int i = 0, t = matcher.groupCount(); i <= t; i++)
             System.out.println(i + ":\t" + matcher.group(i));
     }
-    public void showMessages()
-    {
-        for (int i = 0; i < totalPersons; i++)
-        {
-            for (int j = 0, t = persons.get(i).getTotalMessages(); j < t; j++)
-            {
+    //Metodo para mostrar los mensajes con toda su información
+    public void showMessages(){
+        for (int i = 0; i < totalPersons; i++){
+            for (int j = 0, t = persons.get(i).getTotalMessages(); j < t; j++){
                 System.out.println(persons.get(i).returnMessage(j)+"\n");
             }
         }
-    }
-    public int thePersonExist(String tName)
-    {
-        for (int i = 0; i < totalPersons; i++)
-        {
-            if(persons.get(i).itsMe(tName))
-                return i;
-        }
-        return -1;
     }
 }

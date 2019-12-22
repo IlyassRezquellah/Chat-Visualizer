@@ -6,42 +6,34 @@ public class Date
     private int mes;
     private int ano;
     
-    public Date(int dia, int mes, int ano)
-    {
+    public Date(int dia, int mes, int ano){
         setDia(dia);
         setMes(mes);
         setAno(ano);
     }
-    public int getDia()
-    {
+    
+    public int getDia(){
         return dia;
     }
-    public int getMes()
-    {
+    public int getMes(){
         return mes;
     }
-    public int getAno()
-    {
+    public int getAno(){
         return ano;
     }
-    public String getTodo()
-    {
+    public String getFullDate(){
         return String.format("%02d/%02d/%4d", getDia(), getMes(), getAno());
     }
-    public void setDia(int dia)
-    {
+    public void setDia(int dia){
         this.dia = dia;
     }
-    public void setMes(int mes)
-    {
+    public void setMes(int mes){
         this.mes = mes;
     }
-    public void setAno(int ano)
-    {
+    public void setAno(int ano){
         this.ano = ano;
     }
-    public void setTodo(int dia, int mes, int ano)
-    {
+    public void setTodo(int dia, int mes, int ano){
         setDia(dia);
         setMes(mes);
         setAno(ano);

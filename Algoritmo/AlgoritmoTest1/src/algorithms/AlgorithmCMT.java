@@ -5,108 +5,125 @@ import java.io.FileOutputStream;
 import java.util.*;
 import users.data.Message;
 
-public class AlgorithmCMT
-{    
+public class AlgorithmCMT{
+    //Usamos un LikedHashMap, para que respete el orden de inserción de años
+    //(LinkedHashMap<"Numero de año", "Obj Year">)
     private LinkedHashMap<Integer, Year> yearTree;
+    //Siempre controlamos el año en el que estamos actualmente (solo cambia si ela año aumenta en la conversación)
     private int currentYear;
     
-    public AlgorithmCMT()
-    {
+    public AlgorithmCMT(){
+        //Inicializamos el HashMap de años
         this.yearTree = new LinkedHashMap<Integer, Year>();
+        //El currentYear empieza a 0, para dejar claro que no hay ningun año aún
         currentYear = 0;
     }
-    public void createNewYear(int year)
-    {//9013
+    
+    //A partir de un numero (año); crea ese año e inicializa todos sus meses, días y horas
+    public void createNewYear(int year){//9013 contructores aprox
         this.yearTree.put(year, new Year(year));
     }
-    
-    public boolean calculate(Message mess)
-    {
-        int charCount = 0;
-        int wordCount = 0;
-        try
-        {
-            if(mess.getYear() != currentYear)
-            {
+    //Metodo para hacer el algoritmo basico de conteos y medias de un mensaje
+    public boolean calculateCMT(Message mess){
+        //Almacenaran el conteo de caracteres y palabras en un mensaje
+        int charCount = 1;
+        int wordCount = 1;
+        try{
+            //Primero comprobamos si el año del mensaje existe, si no es así se crea un año nuevo
+            if(mess.getYear() != currentYear){
+                //Adquirimos el numero del año a partir de mensaje y lo asociamos a currentYear, para tenerlo siempre en cuenta
                 currentYear = mess.getYear();
+                //Una vex tenemos el año, creamos el nuevo año dento del HashMap
                 createNewYear(currentYear);
             }
+            //Aquí va el metodo de conteo(mensajes, caracteres, palablras) a partir de una String
+            //Aquí va el metodo de medias a partir de una String
             
-            //Algoritmo = 3 (mensajes, caracteres, palablras)
-            //Calculo medias
-            yearTree.get(currentYear).addCount(mess, 3, 4);
+            /*Introduce el conteo de este mensaje en el año actual por medio se .addCount.
+            Este Objeto año se lo pasa ha su mes, día y hora en expecifico indicados por el mensaje*/
+            boolean check = yearTree.get(currentYear).addCount(mess, charCount, wordCount);
+            
+            //El "check" almacena si todo ha ido bien el la inserción de datos
+            /*if(check)
+                //System.out.println("Inserción exitosa!");
+            else
+                System.out.println("Inserción fallida...");*/
         } 
-        catch (Exception e)
-        {
-            System.out.println(e);
+        catch(Exception e){
+            System.out.println("Error" + e);
             return false;
         }
         return true;
         
     }
-    public void extractData()
-    {
-        System.out.println(yearTree.size());
+    
+    //Este metodo es demasiado complejo, hay que cambiarlo.
+    //Te da la posiblidad de recorrer todas las listas de hashMap y arrays (Year, Month, day, hour) dentro de los mismos
+    public void extractData(String name){
         StringBuilder data = new StringBuilder();
-
-        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet())
-        {           
-            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getMounths().entrySet())
-            {
-                for(Day d : yearTree.get(y.getKey()).getMounth(m.getKey()).getDays())
-                {
-                    for (Hour h : d.getHours())
-                    {
-                        
+        System.out.println("Name: " + name);
+        
+        //Iteración de años (y), para acceder a un año usar "yearTree.get(y.getKey())"
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            System.out.println("Year: " + y.getKey());
+            System.out.println("\tMessages: " + yearTree.get(y.getKey()).getMessageCount());
+            
+            //Iteración de meses (m), para acceder a un mes usar "???" (En proceso)
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMounths().entrySet()){
+                
+                //Iteración de dias (d), para acceder a un día usar "d"
+                for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    //System.out.println(d.getCharCount());
+                    
+                    //Iteración de horas (h), para acceder a un día usar "h"
+                    for (Hour h : d.getHours()){
+                        //System.out.println(d.getCharCount());
                     }
                 }
             }
         }
-        
-        try(FileOutputStream oFile = new FileOutputStream("output.txt", false); )
-        {
+        System.out.println("");
+        /*try(FileOutputStream oFile = new FileOutputStream("output.txt", false)){
             oFile.write(currentYear);
         } 
-        catch (Exception e)
-        {
+        catch (Exception e){
+            System.out.println("Error: " + e);
+        }*/
+    }
+    //Este metodo crea un ficher log llamado "NombrePersona"+Matrioshka
+    //Es muy útil para comprobar el conteo de los años que se han mandado mensajes. Así como el total de meses, días y horas de cada año que se han creados
+    public void createLogCountOfTheYearsMonthsDyasAndHours(String name)
+    {
+        StringBuilder log = new StringBuilder();
+        log.append("Total years: " + yearTree.size());
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            log.append("\nYear: " + y.getKey());
+            
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMounths().entrySet()){
+                log.append("\n\tMounth: " + m.getKey());
+                int daysCount = 0;
+                int hoursCount = 0;
+                for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    for (Hour h : d.getHours())
+                        hoursCount++;
+                    daysCount++;
+                }
+                log.append("\n\t\tDays: " + daysCount);
+                log.append("\n\t\t\tHours: " + hoursCount);
+            }
+            log.append("\n");
+        }
+        //Crea un fichero log con el total de años que se han creado, así como los meses días y horas de cada uno
+        try(FileOutputStream oFile = new FileOutputStream(name+"Matrioshka.txt", false)){
+            oFile.write(log.toString().getBytes());
+        } 
+        catch (Exception e){
             System.out.println("Error: " + e);
         }
     }
-    public void extractCountData()
+    //Obtener un mes de un año en contreto
+    public Month getMonthOnYearTree(int year, String month)
     {
-        System.out.println(yearTree.size());
-        StringBuilder data = new StringBuilder();
-
-        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet())
-        {
-            System.out.println("Year: " + y.getKey());
-            
-            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getMounths().entrySet())
-            {
-                System.out.println("Mounth:" + m.getKey());
-                int ddd = 0;
-                int hhh = 0;
-                for(Day d : yearTree.get(y.getKey()).getMounth(m.getKey()).getDays())
-                {
-                    for (Hour h : d.getHours())
-                    {
-                        hhh++;
-                    }
-                    ddd++;
-                }
-                System.out.println("Day: " + ddd);
-                System.out.println("Hour: " + hhh + "\n");
-            }
-            System.out.println("");
-        }
-        
-        try(FileOutputStream oFile = new FileOutputStream("output.txt", false); )
-        {
-            oFile.write(currentYear);
-        } 
-        catch (Exception e)
-        {
-            System.out.println("Error: " + e);
-        }
+        return yearTree.get(year).getOneMonth(month);
     }
 }

@@ -2,16 +2,17 @@ package algorithms.matrioshka;
 
 import users.data.Message;
 
-public class Day
-{
+public class Day{
+    //Array de horas y su limite de tamaño
     private static final int LIMIR_HOURS = 24;
     private Hour[] hours;
+    //Variables para almacenar los conteos
     private int messageCount;
     private int wordCount;
     private int charCount;
     
-    public Day()
-    {
+    public Day(){
+        //Inicializa las horas dentro de este día
         hours = new Hour[LIMIR_HOURS];
         for(int i = 0; i < LIMIR_HOURS;i++)
             hours[i] = new Hour();
@@ -20,49 +21,39 @@ public class Day
         charCount = 0;
     }
     
-    public void addCount(Message mess, int charValue, int wordValue)
-    {
+    public void addCount(Message mess, int wordValue, int charValue){
         messageCount++;
         addWordCount(wordValue);
         addCharCount(charValue);
-        hours[mess.getHour()].addCount(mess, charValue, wordValue);
+        hours[mess.getHour()].addCount(mess, wordValue, charValue);
     }
-    public int getMessageCount()
-    {
+    //Metodos para la propia clase Day (Day[] days)
+    public int getMessageCount(){
         return messageCount;
     }
-    public int getWordCount()
-    {
+    public int getWordCount(){
         return wordCount;
     }
-    private void addWordCount(int wordCount)
-    {
+    private void addWordCount(int wordCount){
         this.wordCount += wordCount;
     }
-    public int getCharCount()
-    {
+    public int getCharCount(){
         return charCount;
     }
-    private void addCharCount(int charCount)
-    {
+    private void addCharCount(int charCount){
         this.charCount += charCount;
     }
-    //Hour
-    public Hour[] getHours()
-    {
+    //Metodos para la clase Hora (Hour[] hours)
+    public Hour[] getHours(){
         return hours;
     }
-    public int getHourMessageCount(int hour)
-    {
+    public int getHourMessageCount(int hour){
         return hours[hour].getMessageCount();
     }
-    public int getHourWordCount(int hour)
-    {
+    public int getHourWordCount(int hour){
         return hours[hour].getWordCount();
     }
-    public int getHourCharCount(int hour)
-    {
+    public int getHourCharCount(int hour){
         return hours[hour].getCharCount();
     }
-    
 }

@@ -2,47 +2,38 @@ package algorithms.matrioshka;
 
 import users.data.Message;
 
-public class Hour
-{
+public class Hour{
+    //Variables para almacenar los conteos
     private int messageCount;
     private int wordCount;
     private int charCount;
     
-    public Hour()
-    {
+    public Hour(){
         messageCount = 0;
         wordCount = 0;
         charCount = 0;
-        
     }
     
-    public void addCount(Message mess, int charValue, int wordValue)
-    {
+    public void addCount(Message mess, int wordValue, int charValue){
         messageCount++;
         addWordCount(wordValue);
         addCharCount(charValue);
-        //System.out.println("End");
         //minute[mess.getMinuto()].addCount(mess, charValue, wordValue);
     }
-    public int getMessageCount()
-    {
+    //Metodos para la propia clase Hora (Hour[] hours)
+    public int getMessageCount(){
         return messageCount;
     }
-    public int getWordCount()
-    {
+    public int getWordCount(){
         return wordCount;
     }
-    private void addWordCount(int wordCount)
-    {
+    private void addWordCount(int wordCount){
         this.wordCount += wordCount;
     }
-    public int getCharCount()
-    {
+    public int getCharCount(){
         return charCount;
     }
-    private void addCharCount(int charCount)
-    {
+    private void addCharCount(int charCount){
         this.charCount += charCount;
     }
-    
 }
