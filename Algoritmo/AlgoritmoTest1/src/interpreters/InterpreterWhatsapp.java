@@ -1,6 +1,6 @@
 package interpreters;
 
-import Utils.RegularExpressions;
+import Utils.Regex;
 import users.Person;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -48,8 +48,8 @@ public class InterpreterWhatsapp
     public InterpreterWhatsapp(String pathFichero){
         /*Compilamos la representación de ambas expresión regular, para posteriormente 
         cargar los encuentros que coinciden y los separa por grupos usando el matcher*/
-        patternMessage = Pattern.compile(RegularExpressions.VALIDATE_MENSSAGE);
-        patternDateTime = Pattern.compile(RegularExpressions.VALIDATE_DATE_TIME);
+        patternMessage = Pattern.compile(Regex.VALIDATE_MENSSAGE);
+        patternDateTime = Pattern.compile(Regex.VALIDATE_DATE_TIME);
         //Inicialización basica de objetos
         persons = new ArrayList<Person>();
         totalPersons = 0;

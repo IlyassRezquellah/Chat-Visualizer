@@ -1,6 +1,6 @@
 package algorithms;
 
-import Utils.RegularExpressions;
+import Utils.Regex;
 import algorithms.matrioshka.*;
 import java.io.FileOutputStream;
 import java.util.*;
@@ -136,7 +136,7 @@ public class AlgorithmCMT{
     //Obtener el numero total de caracteres en una String
     public int getCharCountOfString(String text)
     {
-        String[] arrOfStr = text.split(RegularExpressions.COUNT); 
+        String[] arrOfStr = text.split(Regex.COUNT_WORDS_CHARS); 
         int count = 0;
         //Contador de chars
         for(int counter = 0, length = arrOfStr.length; counter < length; counter++){
@@ -147,7 +147,7 @@ public class AlgorithmCMT{
     //Obtener el numero total de palabras en una String
     public int getWordCountOfString(String text)
     {
-        String[] arrOfStr = text.split(RegularExpressions.COUNT); 
+        String[] arrOfStr = text.split(Regex.COUNT_WORDS_CHARS); 
         if((text.trim().length() == 0)){
             return 0;
         }else{
