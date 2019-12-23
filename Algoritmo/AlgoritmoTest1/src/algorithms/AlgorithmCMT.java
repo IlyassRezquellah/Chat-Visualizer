@@ -120,7 +120,16 @@ public class AlgorithmCMT{
                     //hOURS
                     //Iteración de horas (h), para acceder a un día usar "h"
                     for (Hour h : d.getHours()){
-                        //System.out.println(h);
+                        System.out.println("\t\t\tHour: "+h);
+                        System.out.println("\t\t\t\tMesssages: "+ Colores.ANSI_YELLOW +
+                        h.getMessageCount()
+                        + Colores.ANSI_RESET);
+                        System.out.println("\t\t\t\tWords: "+ Colores.ANSI_YELLOW +
+                        h.getWordCount()
+                        + Colores.ANSI_RESET);
+                        System.out.println("\t\t\t\tChars: "+ Colores.ANSI_YELLOW +
+                        h.getCharCount()
+                        + Colores.ANSI_RESET);
                     }
                 }
             }
