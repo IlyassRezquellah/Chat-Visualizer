@@ -63,7 +63,7 @@ public class Year{
         this.charCount += charCount;
     }
     //Metodos para la clase Months (LinkedHashMap<String, Month> treeMonths)
-    public HashMap<String, Month> getAllMounths(){
+    public HashMap<String, Month> getAllMonths(){
         return treeMonths;
     }
     public Month getOneMonth(String key){

@@ -2,6 +2,7 @@ package algorithms;
 
 import Utils.Regex;
 import algorithms.matrioshka.*;
+import colors.Colores;
 import java.io.FileOutputStream;
 import java.util.*;
 import users.data.Message;
@@ -10,6 +11,8 @@ public class AlgorithmCMT{
     //Usamos un LikedHashMap, para que respete el orden de inserción de años
     //(LinkedHashMap<"Numero de año", "Obj Year">)
     private LinkedHashMap<Integer, Year> yearTree;
+    //(LinkedHashMap<"Nombre del mes", "Obj Month">)
+    private LinkedHashMap<String, Month> treeMonths;
     //Siempre controlamos el año en el que estamos actualmente (solo cambia si ela año aumenta en la conversación)
     private int currentYear;
     
@@ -66,27 +69,58 @@ public class AlgorithmCMT{
     
     //Este metodo es demasiado complejo, hay que cambiarlo.
     //Te da la posiblidad de recorrer todas las listas de hashMap y arrays (Year, Month, day, hour) dentro de los mismos
+    //String name hace referencia a la persona
     public void extractData(String name){
         StringBuilder data = new StringBuilder();
-        System.out.println("Name: " + name);
         
+        System.out.println("Name--> " + Colores.ANSI_PURPLE+ name +Colores.ANSI_RESET);
+        //YEARS
         //Iteración de años (y), para acceder a un año usar "yearTree.get(y.getKey())"
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
-            System.out.println("Year: " + y.getKey());
-            System.out.println("\tMessages: " + yearTree.get(y.getKey()).getMessageCount());
-            System.out.println("\tWords: " + yearTree.get(y.getKey()).getWordCount());
-            System.out.println("\tChars: " + yearTree.get(y.getKey()).getCharCount());
-            
+            System.out.println("Year--> "+ Colores.ANSI_CYAN + y.getKey()+ Colores.ANSI_RESET);
+            System.out.println("\tMessages: "+ Colores.ANSI_YELLOW +
+                    yearTree.get(y.getKey()).getMessageCount()
+                    + Colores.ANSI_RESET);
+            System.out.println("\tWords: " + Colores.ANSI_YELLOW +
+                    yearTree.get(y.getKey()).getWordCount()
+                    + Colores.ANSI_RESET);
+            System.out.println("\tChars: " + Colores.ANSI_YELLOW +
+                    yearTree.get(y.getKey()).getCharCount()
+                    + Colores.ANSI_RESET);
+            System.out.println("");
+            //MONTHS
             //Iteración de meses (m), para acceder a un mes usar "???" (En proceso)
-            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMounths().entrySet()){
-                
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
+                System.out.println("\tMonth-->"+ Colores.ANSI_CYAN + m.getKey()+ Colores.ANSI_RESET);
+                System.out.println("\t\tMensajes: "+ Colores.ANSI_YELLOW +
+                        yearTree.get(y.getKey()).getOneMonth(m.getKey()).getMessageCount()
+                        + Colores.ANSI_RESET);
+                System.out.println("\t\tWords: "+ Colores.ANSI_YELLOW +
+                        yearTree.get(y.getKey()).getOneMonth(m.getKey()).getWordCount()
+                        + Colores.ANSI_RESET);
+                System.out.println("\t\tChars: "+ Colores.ANSI_YELLOW + 
+                        yearTree.get(y.getKey()).getOneMonth(m.getKey()).getCharCount()
+                        + Colores.ANSI_RESET);
+                System.out.println("");
+                //DAYS
                 //Iteración de dias (d), para acceder a un día usar "d"
                 for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
-                    //System.out.println(d.getCharCount());
                     
+                    System.out.println("\t\tDay: "+d);
+                    System.out.println("\t\t\tMesssages: "+ Colores.ANSI_YELLOW +
+                    d.getMessageCount()
+                    + Colores.ANSI_RESET);
+                    System.out.println("\t\t\tWords: "+ Colores.ANSI_YELLOW +
+                    d.getWordCount()
+                    + Colores.ANSI_RESET);
+                    System.out.println("\t\t\tChars: "+ Colores.ANSI_YELLOW +
+                    d.getCharCount()
+                    + Colores.ANSI_RESET);
+                    
+                    //hOURS
                     //Iteración de horas (h), para acceder a un día usar "h"
                     for (Hour h : d.getHours()){
-                        //System.out.println(d.getCharCount());
+                        //System.out.println(h);
                     }
                 }
             }
@@ -109,7 +143,7 @@ public class AlgorithmCMT{
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
             log.append("\nYear: " + y.getKey());
             
-            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMounths().entrySet()){
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
                 log.append("\n\tMounth: " + m.getKey());
                 int daysCount = 0;
                 int hoursCount = 0;

@@ -1,6 +1,7 @@
 package users;
 
 import algorithms.AlgorithmCMT;
+import colors.Colores;
 import users.data.Message;
 import java.util.ArrayList;
 import java.util.List;
@@ -71,7 +72,7 @@ public class Person{
         }
         //Comprueba los datos extrayendolos (Consola, fichero log)
         algorithm.extractData(this.getName());
-        System.out.println("Total menssages: " + getTotalMessages() + "\n\n");
+        System.out.println("Total menssages: "+ Colores.ANSI_YELLOW + getTotalMessages() + Colores.ANSI_RESET+ "\n\n");
     }
     //Crea un log con toda la estructura matrioshka creada, así como el numero de años, meses, días y horas creados
     public void createLogOfTheMatrioshkaStructure(){
