@@ -2,7 +2,7 @@ package algorithms;
 
 import Utils.Regex;
 import algorithms.matrioshka.*;
-import colors.Colores;
+import Utils.Colors;
 import java.io.FileOutputStream;
 import java.util.*;
 import users.data.Message;
@@ -73,74 +73,78 @@ public class AlgorithmCMT{
     public void extractData(String name){
         StringBuilder data = new StringBuilder();
         
-        System.out.println("Name--> " + Colores.ANSI_PURPLE+ name +Colores.ANSI_RESET);
+        data.append("Name--> " + name +"\n");
+        
         //YEARS
         //Iteración de años (y), para acceder a un año usar "yearTree.get(y.getKey())"
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
-            System.out.println("Year--> "+ Colores.ANSI_CYAN + y.getKey()+ Colores.ANSI_RESET);
-            System.out.println("\tMessages: "+ Colores.ANSI_YELLOW +
+            data.append("Year--> "+ y.getKey()+"\n");
+            data.append("\tMessages: " +
                     yearTree.get(y.getKey()).getMessageCount()
-                    + Colores.ANSI_RESET);
-            System.out.println("\tWords: " + Colores.ANSI_YELLOW +
+                    +"\n");
+            data.append("\tWords: "  +
                     yearTree.get(y.getKey()).getWordCount()
-                    + Colores.ANSI_RESET);
-            System.out.println("\tChars: " + Colores.ANSI_YELLOW +
+                   +"\n");
+            data.append("\tChars: "  +
                     yearTree.get(y.getKey()).getCharCount()
-                    + Colores.ANSI_RESET);
-            System.out.println("");
+                    +"\n\n");
+           
             //MONTHS
             //Iteración de meses (m), para acceder a un mes usar "???" (En proceso)
             for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
-                System.out.println("\tMonth-->"+ Colores.ANSI_CYAN + m.getKey()+ Colores.ANSI_RESET);
-                System.out.println("\t\tMensajes: "+ Colores.ANSI_YELLOW +
+                data.append("\tMonth-->" + m.getKey()+"\n");
+                data.append("\t\tMensajes: " +
                         yearTree.get(y.getKey()).getOneMonth(m.getKey()).getMessageCount()
-                        + Colores.ANSI_RESET);
-                System.out.println("\t\tWords: "+ Colores.ANSI_YELLOW +
+                        +"\n");
+                data.append("\t\tWords: " +
                         yearTree.get(y.getKey()).getOneMonth(m.getKey()).getWordCount()
-                        + Colores.ANSI_RESET);
-                System.out.println("\t\tChars: "+ Colores.ANSI_YELLOW + 
+                        +"\n");
+                data.append("\t\tChars: " + 
                         yearTree.get(y.getKey()).getOneMonth(m.getKey()).getCharCount()
-                        + Colores.ANSI_RESET);
-                System.out.println("");
+                        +"\n\n");
+                int countDays =1;
                 //DAYS
                 //Iteración de dias (d), para acceder a un día usar "d"
                 for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
                     
-                    System.out.println("\t\tDay: "+d);
-                    System.out.println("\t\t\tMesssages: "+ Colores.ANSI_YELLOW +
+                    data.append("\t\tDay: "+countDays+"\n");
+                    data.append("\t\t\tMesssages: " +
                     d.getMessageCount()
-                    + Colores.ANSI_RESET);
-                    System.out.println("\t\t\tWords: "+ Colores.ANSI_YELLOW +
+                    +"\n");
+                    data.append("\t\t\tWords: " +
                     d.getWordCount()
-                    + Colores.ANSI_RESET);
-                    System.out.println("\t\t\tChars: "+ Colores.ANSI_YELLOW +
+                    +"\n");
+                    data.append("\t\t\tChars: " +
                     d.getCharCount()
-                    + Colores.ANSI_RESET);
-                    
+                    +"\n\n");
+                    countDays++;
+                    int countHours = 0;
                     //hOURS
                     //Iteración de horas (h), para acceder a un día usar "h"
                     for (Hour h : d.getHours()){
-                        System.out.println("\t\t\tHour: "+h);
-                        System.out.println("\t\t\t\tMesssages: "+ Colores.ANSI_YELLOW +
+                        
+                        data.append("\t\t\tHour: "+countHours +"\n");
+                        data.append("\t\t\t\tMesssages: " +
                         h.getMessageCount()
-                        + Colores.ANSI_RESET);
-                        System.out.println("\t\t\t\tWords: "+ Colores.ANSI_YELLOW +
+                       +"\n");
+                        data.append("\t\t\t\tWords: " +
                         h.getWordCount()
-                        + Colores.ANSI_RESET);
-                        System.out.println("\t\t\t\tChars: "+ Colores.ANSI_YELLOW +
+                       +"\n");
+                        data.append("\t\t\t\tChars: " +
                         h.getCharCount()
-                        + Colores.ANSI_RESET);
+                       +"\n");
+                        countHours++;
                     }
                 }
             }
         }
-        System.out.println("");
-        /*try(FileOutputStream oFile = new FileOutputStream("output.txt", false)){
-            oFile.write(currentYear);
+        data.append("\n");
+        try(FileOutputStream oFile = new FileOutputStream(name+"ShowMe.txt", false)){
+            oFile.write(data.toString().getBytes());
         } 
         catch (Exception e){
             System.out.println("Error: " + e);
-        }*/
+        }
     }
     //Este metodo crea un ficher log llamado "NombrePersona"+Matrioshka
     //Es muy útil para comprobar el conteo de los años que se han mandado mensajes. Así como el total de meses, días y horas de cada año que se han creados

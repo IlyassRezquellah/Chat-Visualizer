@@ -12,7 +12,7 @@ public class Main{
     public void run(){
         //Crear más adelante una clases que gestione todo esto
         //Inicializa la clase interprete que analizará y devolverá el chat de whatsapp
-        InterpreterWhatsapp parse = new InterpreterWhatsapp("..\\..\\Chats\\ChatBase(corta).txt");
+        InterpreterWhatsapp parse = new InterpreterWhatsapp("..\\..\\Chats\\ChatBase(total).txt");
         //Crea una lista de personas con todos sus mensajes así como la información pertinente del chat
         List<Person> persons = parse.chatInterpret();
         

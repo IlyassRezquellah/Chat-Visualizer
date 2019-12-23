@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package colors;
+package Utils;
 
 /**
  *
  * @author Virtuo
  */
-public class Colores {
+public class Colors {
     //Paleta de colores 
     //Los colores mas amenos a la vista son el PURPLE,YELLOW Y CYAN
     public static final String ANSI_RESET = "\u001B[0m";
