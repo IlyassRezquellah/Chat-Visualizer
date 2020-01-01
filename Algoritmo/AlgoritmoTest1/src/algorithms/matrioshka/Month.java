@@ -18,7 +18,7 @@ public class Month{
         limitDays = Utils.Auxiliary.getNumberDaysGivenYear(year, month);
         days = new Day[limitDays];
         for(int i = 0; i < limitDays;i++)
-            days[i] = new Day();        
+            days[i] = new Day(i);        
         messageCount = 0;
         wordCount = 0;
         charCount = 0;
