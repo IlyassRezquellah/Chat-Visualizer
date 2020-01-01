@@ -1,3 +1,3 @@
 Esta grafica la utilizaremos para el mostrar el numero total de mensajes.
 
-![](Graficas/Images/Grafica1.0.PNG)
+<img src="https://github.com/EliassReque/FinalProject/blob/master/Graficas/Images/Grafica1.0.PNG">
