@@ -67,6 +67,7 @@ public class PersonManager{
         String beginingDate = "{\n\"date\": \"";
         StringBuilder jSonFile = new StringBuilder();
         int counterMonths;
+        jSonFile.append("[");
         for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
             counterMonths = 1;
             for(HashMap.Entry<String, Month> m : personsMatrishka[0].get(y.getKey()).getAllMonths().entrySet()){
@@ -101,9 +102,10 @@ public class PersonManager{
         }
         //Elimina la última coma innecesaria
         jSonFile.setLength(jSonFile.length() - 2);
+        jSonFile.append("]");
         //jSonFile.append(conf);
         //System.out.println(jSonFile.toString());
-        try(FileOutputStream oFile = new FileOutputStream("charMessageCount.txt", false)){
+        try(FileOutputStream oFile = new FileOutputStream("charMessageCount.json", false)){
             oFile.write(jSonFile.toString().getBytes());
         } 
         catch (Exception e){
