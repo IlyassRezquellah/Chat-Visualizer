@@ -148,8 +148,7 @@ public class AlgorithmCMT{
     }
     //Este metodo crea un ficher log llamado "NombrePersona"+Matrioshka
     //Es muy útil para comprobar el conteo de los años que se han mandado mensajes. Así como el total de meses, días y horas de cada año que se han creados
-    public void createLogCountOfTheYearsMonthsDyasAndHours(String name)
-    {
+    public void createLogCountOfTheYearsMonthsDyasAndHours(String name){
         StringBuilder log = new StringBuilder();
         log.append("Total years: " + yearTree.size());
         
@@ -181,8 +180,7 @@ public class AlgorithmCMT{
         }
     }
     //Obtener el numero total de caracteres en una String
-    public int getCharCountOfString(String text)
-    {
+    public int getCharCountOfString(String text){
         String[] arrOfStr = text.split(Regex.COUNT_WORDS_CHARS); 
         int count = 0;
         //Contador de chars
@@ -192,8 +190,7 @@ public class AlgorithmCMT{
         return count;
     }
     //Obtener el numero total de palabras en una String
-    public int getWordCountOfString(String text)
-    {
+    public int getWordCountOfString(String text){
         String[] arrOfStr = text.split(Regex.COUNT_WORDS_CHARS); 
         if((text.trim().length() == 0)){
             return 0;
@@ -202,8 +199,11 @@ public class AlgorithmCMT{
         }
     }
     //Obtener un mes de un año en contreto
-    public Month getMonthOnYearTree(int year, String month)
-    {
+    public Month getMonthOnYearTree(int year, String month){
         return yearTree.get(year).getOneMonth(month);
+    }
+    //Devuelve la extructura matrioshka con toda la información
+    public LinkedHashMap<Integer, Year> getMatrioshka(){
+        return yearTree;
     }
 }

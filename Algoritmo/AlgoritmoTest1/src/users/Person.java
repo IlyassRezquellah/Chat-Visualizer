@@ -2,8 +2,10 @@ package users;
 
 import algorithms.AlgorithmCMT;
 import Utils.Colors;
+import algorithms.matrioshka.Year;
 import users.data.Message;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class Person{
@@ -62,6 +64,10 @@ public class Person{
     }
     public boolean itsMe(String alguien){
         return getName().equals(alguien);
+    }
+    //Devuelve la matrioshka de esta persona
+    public LinkedHashMap<Integer, Year> getMatrioshka(){
+        return algorithm.getMatrioshka();
     }
     //--------------------------------------------------------------------------
     //Metodos del algoritmo

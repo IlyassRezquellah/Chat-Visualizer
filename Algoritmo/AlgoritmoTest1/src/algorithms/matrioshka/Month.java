@@ -50,6 +50,9 @@ public class Month{
     public Day[] getDays(){
         return days;
     }
+    public Day getOneDay(int key){
+        return days[key];
+    }
     public int getDayMessageCount(int day){
         return days[day].getMessageCount();
     }

@@ -32,6 +32,9 @@ public class Day{
     public int getName(){
         return dayName +1;
     }
+    public int getArrayName(){
+        return dayName;
+    }
     //Metodos para la propia clase Day (Day[] days)
     public int getMessageCount(){
         return messageCount;
@@ -51,6 +54,9 @@ public class Day{
     //Metodos para la clase Hora (Hour[] hours)
     public Hour[] getHours(){
         return hours;
+    }
+    public Hour getOneHour(int key){
+        return hours[key];
     }
     public int getHourMessageCount(int hour){
         return hours[hour].getMessageCount();
