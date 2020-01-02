@@ -32,6 +32,9 @@ public class Day{
     public int getName(){
         return dayName +1;
     }
+    public String getNameString(){
+        return String.format("%02d", dayName +1);
+    }
     public int getArrayName(){
         return dayName;
     }

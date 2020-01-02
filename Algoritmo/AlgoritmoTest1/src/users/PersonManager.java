@@ -73,7 +73,7 @@ public class PersonManager{
                                 
                 for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
                     
-                    jSonFile.append(beginingDate + y.getKey() + "-" + counterMonths + "-" + d.getName() + "\",\n");
+                    jSonFile.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
                     //Limite de personas
                     for (int i = 0; i < totalPersons; i++){
                         if(i == totalPersons-1)
