@@ -33,7 +33,7 @@ var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
 
-// Create series=
+// Create series
 var series = chart.series.push(new am4charts.LineSeries());
 series.dataFields.valueY = "Christian";
 series.dataFields.dateX = "date";
@@ -48,7 +48,7 @@ series2.dataFields.valueY = "Ilyass";
 series2.dataFields.dateX = "date";
 //series.tooltipText = "{Ilyass}"
 series2.strokeWidth = 2;
-
+series2.minBulletDistance = 15;
 series2.strokeDasharray = "3,4";
 series2.stroke = series.stroke;
 
@@ -60,6 +60,24 @@ series2.tooltipText = `{dateX}[/]
 Ilyass: {Ilyass}`;
 series2.tooltip.pointerOrientation = "vertical";
 
+//Sacar las bullets en hover --> Bullet series 2
+var bullet2 = series2.bullets.push(new am4charts.Bullet());
+bullet2.width = 12;
+bullet2.height = 12;
+bullet2.horizontalCenter = "middle";
+bullet2.verticalCenter = "middle";
+
+//Darle forma a los bullets
+var triangle = bullet2.createChild(am4core.Triangle);
+triangle.strokeWidth = 2;
+triangle.direction = "top";
+triangle.width = 12;
+triangle.height = 12;
+triangle.fill = am4core.color("#fff");
+
+var bullethover = bullet2.states.create("hover");
+bullethover.properties.scale = 1.3;
+
 
 // Drop-shaped tooltips
 series.tooltip.background.cornerRadius = 20;
@@ -70,7 +88,7 @@ series.tooltip.label.minHeight = 40;
 series.tooltip.label.textAlign = "middle";
 series.tooltip.label.textValign = "middle";
 
-// Make bullets grow on hover
+//Sacar las bullets en hover  --> Bullet series 1
 var bullet = series.bullets.push(new am4charts.CircleBullet());
 bullet.circle.strokeWidth = 2;
 bullet.circle.radius = 4;
