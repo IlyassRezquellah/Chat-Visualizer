@@ -2,6 +2,7 @@ package interpreters;
 
 import Utils.Regex;
 import users.Person;
+import users.data.Message;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -37,13 +38,14 @@ public class InterpreterWhatsapp
     //Ruta del chat
     private String filePath;
     //Objetos básicos para almacenar los datos de un mensaje
-    private int day;
+    private String name;
+    private Message message;
+    /*private int day;
     private int month;
     private int year;
     private int hour;
     private int minute;
-    private String name;
-    private String messge;
+    private String messge;*/
     
     public InterpreterWhatsapp(String pathFichero){
         /*Compilamos la representación de ambas expresión regular, para posteriormente 
@@ -51,6 +53,7 @@ public class InterpreterWhatsapp
         patternMessage = Pattern.compile(Regex.VALIDATE_MENSSAGE);
         patternDateTime = Pattern.compile(Regex.VALIDATE_DATE_TIME);
         //Inicialización basica de objetos
+        message = new Message();
         persons = new ArrayList<Person>();
         totalPersons = 0;
         index = -2;
@@ -89,10 +92,13 @@ public class InterpreterWhatsapp
                         }
                         //Cuando tenemos ya tada la información guardada, comprobamos si la persona existe o no, para guardar este mensaje en ella
                         //Si exiteste la persona, únicamnete le agraga un mensaje
-                        if((index = thePersonExist(name)) >= 0)
-                            persons.get(index).addNewMessage(day, month, year, minute, hour, messge);
+                        if((index = thePersonExist(name)) >= 0){
+                            //persons.get(index).addNewMessage(day, month, year, minute, hour, messge);
+                            persons.get(index).addNewMessage(message);
+                        }
                         else{//De lo contrario, si la persona no existe, la crea y añade su primer mensaje en el contructor
-                            persons.add(new Person(name, day, month, year, minute, hour, messge));
+                            //persons.add(new Person(name, day, month, year, minute, hour, messge));
+                            persons.add(new Person(name, message));
                             //Actualizamos el numero de personas y su indice actual
                             index = totalPersons;
                             totalPersons++;
@@ -111,6 +117,9 @@ public class InterpreterWhatsapp
     }
     //A partir de un matcher, guarda el día, hora, mes y año del mensaje de los grupos expecificados en la chuleta de arriba
     public void mountDate(Matcher matcherMensaje){
+        int day = -1;
+        int month = -1;
+        int year = -1;
         //If identificador del formato de la fecha (dd/mm/yyy o mm/dd/yy) y lo adapta al siempre primer tipo
         //Guarda el día, mes y año teniendo en cuenta su formato (Siempre se guarda en dd/mm/yyy)
         //siempre se necesita conversión a int, ya que el matcher guarda strings y necesitamos numeros para el día, mes y año
@@ -127,9 +136,12 @@ public class InterpreterWhatsapp
         //Whatsapp siempre exporta el mes con los 2 numeros finales, así que siempre hay que rellenar los 2 anteriores
         if(matcherMensaje.group(3).length() == 2)
             year += 2000;
+        message.setDate(day, month, year);
     }
     //A partir de un matcher, guarda la hora y minuto del mensaje de los grupos expecificados en la chuleta de arriba
     public void mountHour(Matcher matcherMensaje){
+        int hour = -1;
+        int minute = -1;
         //Usando los grupos del matcher almacena la hora en formato 24h (si se da el caso de un formato 12h, la convierte a 24h)
         //Guarda las horas (se necesita conversión a int, ya que el matcher guarda strings)
         hour = Integer.valueOf(matcherMensaje.group(5));
@@ -141,6 +153,7 @@ public class InterpreterWhatsapp
             hour += 12;
         //Guarda los minutos (se necesita conversión a int, ya que el matcher guarda strings)
         minute = Integer.valueOf(matcherMensaje.group(6));
+        message.setHout(minute, hour);
     }
     //Metodo para determinar si una persona ya existe
     public int thePersonExist(String tName){
@@ -154,7 +167,7 @@ public class InterpreterWhatsapp
     public void mountNameAndMessage(Matcher matcherMensaje){
         //Guarda el nombre de la persona y el mensaje
         name = matcherMensaje.group(9);
-        messge = matcherMensaje.group(10);
+        message.setText(matcherMensaje.group(10));
     }
     ///-------------------------------------------------------------------------
     /*Metodos irrelebantes para el programa, existen con el motivo de testear 

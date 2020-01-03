@@ -34,7 +34,7 @@ public class PersonManager{
             //Crea un log sencillo con todos los años, así como los meses, días y horas que tiene cada uno
             persons.get(i).createLogOfTheMatrioshkaStructure();
         }
-        //Calculos post almacenaje de mensajes
+        //Calculos post almacenaje de mensajes en la matrioshka
         
         
         //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
@@ -54,28 +54,31 @@ public class PersonManager{
         
         //JSon de conteos básicos
         jSonCountMessages();
+        //Conteo palabras
+        //Conteo letras
+        //Más calculos y análisis para charts...
         
     }
-    
-    /*
-    {
-    "date": "2012-07-27",
-    "value": 13
-    }, 
-    */
+    //Fichero JSon (chat): Conteo de mensajes 
     public void jSonCountMessages(){
+        //Dejo guardada la coletilla de cada indicador de fecha
         String beginingDate = "{\n\"date\": \"";
         StringBuilder jSonFile = new StringBuilder();
+        //Usamos un contador para los meses, ya que es necesaria su representación numérica en el json
         int counterMonths;
+        //Abrimos brackets para empezar la extructura del json
         jSonFile.append("[");
+        //Estos fors son pareceidos a los de la matrioshka, con la diferentea de que estos se usan para recorrers todos los días de los años del calensario que han hablado estas personas en el chat.
+        //Gracias a estos fors, podemos recorrer todas las fechas y anotarlas en el json
         for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
             counterMonths = 1;
             for(HashMap.Entry<String, Month> m : personsMatrishka[0].get(y.getKey()).getAllMonths().entrySet()){
-                                
+                
                 for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
-                    
+                    //Escribimos la fecha en el json
                     jSonFile.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
-                    //Limite de personas
+                    //Limite de personas preparado de antemano
+                    //Dentro de esta fecha, anotamos las personas correspondientes, y el número de mensajes que tiene (preparado para recibir un número indefinído de personas)
                     for (int i = 0; i < totalPersons; i++){
                         if(i == totalPersons-1)
                             jSonFile.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "\n");
@@ -83,7 +86,7 @@ public class PersonManager{
                             jSonFile.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",\n");
                             
                     }
-                    
+                    //Se cierra esta fecha
                     jSonFile.append("}, ");
                     /*for (Hour h : d.getHours()){
                         jSonFile.append(y.getKey() + "/" + m.getKey() + "/" + d.getName() + " - " + h.getName() + ":00\n");
@@ -94,17 +97,17 @@ public class PersonManager{
                         }
                     }*/
                 }
+                //Tenemos en cuenta que el counter de meses no se pase de 12
                 counterMonths++;
                 if(m.getKey().equals(EnumMonths.DECEMBER))
                     counterMonths = 1;
             }
-
         }
         //Elimina la última coma innecesaria
         jSonFile.setLength(jSonFile.length() - 2);
+        //Cerramos la extructura del json
         jSonFile.append("]");
-        //jSonFile.append(conf);
-        //System.out.println(jSonFile.toString());
+        //Por último, creamos el fichero json
         try(FileOutputStream oFile = new FileOutputStream("charMessageCount.json", false)){
             oFile.write(jSonFile.toString().getBytes());
         } 
@@ -112,7 +115,7 @@ public class PersonManager{
             System.out.println("Error: " + e);
         }
     }
-    //Configuraciones de gráficos
+    //Configuraciones de gráficos (no sé si se usará). Van al final de los fichros json
     private static final String conf = "\nhelloConf;";
 
 }

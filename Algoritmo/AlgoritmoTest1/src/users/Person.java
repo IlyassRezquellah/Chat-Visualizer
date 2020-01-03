@@ -26,6 +26,13 @@ public class Person{
         algorithm = new AlgorithmCMT();
         totalMessages = 0;
     }
+    public Person(String name, Message message){
+        setName(name);
+        mensajes = new ArrayList<>();
+        algorithm = new AlgorithmCMT();
+        totalMessages = 0;
+        addNewMessage(message);
+    }
     //Este contructor crea una persona y le añade un mensaje nuevo directamente
     public Person(String name, int day, int month, int year, int minute, int hour, String text){
         setName(name);
@@ -38,6 +45,11 @@ public class Person{
     //Añade un mensaje a esta persona
     public void addNewMessage(int day, int month, int year, int minute, int hour, String text){
         mensajes.add(new Message(day, month, year, minute, hour, text));
+        totalMessages++;
+    }
+    public void addNewMessage(Message message){
+        mensajes.add(new Message(message.getDay(), message.getMonth(), message.getYear(), 
+                message.getMinute(), message.getHour(), message.getText()));
         totalMessages++;
     }
     //Añade una linea suelta al mensaja anterior

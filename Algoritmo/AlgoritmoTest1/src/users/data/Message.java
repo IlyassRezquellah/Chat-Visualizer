@@ -11,6 +11,13 @@ public class Message
     private Time time;
     private String text;
     
+    public Message(){
+        date = null;
+        time = null;
+        setText("");
+        
+    }
+    
     public Message(int day, int month, int year, int minute, int hour, String text){
         setDate(day, month, year);
         setHout(minute, hour);
@@ -70,7 +77,15 @@ public class Message
         this.time = new Time(minuto, hora);
     }
     public void setText(String text){
-        this.text = text;
+        //Guarda el texto comprobando si es un documento multimedia
+        if(text.equals(MEDIA_ENGLISH) || text.equals(MEDIA_SPANISH)){
+            isMedia = true;
+            this.text = "";
+        }
+        else{
+            isMedia = false;
+            this.text = text;
+        }
     }
     public void setMoreText(String text){
         this.text += ("\n\r" + text);
