@@ -21,7 +21,7 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 // Add data
 //chart.data = [];
 
-chart.dataSource.url = "hola/A.json";
+chart.dataSource.url = "hola/WordsCount.json";
 //chart.dataSource.load();
 
 

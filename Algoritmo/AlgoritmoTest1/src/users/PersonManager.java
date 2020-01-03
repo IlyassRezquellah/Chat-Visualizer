@@ -53,21 +53,25 @@ public class PersonManager{
             personsMatrishka[i] = persons.get(i).getMatrioshka();
         
         //JSon de conteos básicos
-        jSonCountMessages();
+        jSonCount();
         //Conteo palabras
         //Conteo letras
         //Más calculos y análisis para charts...
         
     }
     //Fichero JSon (chat): Conteo de mensajes 
-    public void jSonCountMessages(){
+    public void jSonCount(){
         //Dejo guardada la coletilla de cada indicador de fecha
         String beginingDate = "{\n\"date\": \"";
-        StringBuilder jSonFile = new StringBuilder();
+        StringBuilder jSonFileMessages = new StringBuilder();
+        StringBuilder jSonFileWords = new StringBuilder();
+        StringBuilder jSonFileChars = new StringBuilder();
         //Usamos un contador para los meses, ya que es necesaria su representación numérica en el json
         int counterMonths;
         //Abrimos brackets para empezar la extructura del json
-        jSonFile.append("[");
+        jSonFileMessages.append("[");
+        jSonFileWords.append("[");
+        jSonFileChars.append("[");
         //Estos fors son pareceidos a los de la matrioshka, con la diferentea de que estos se usan para recorrers todos los días de los años del calensario que han hablado estas personas en el chat.
         //Gracias a estos fors, podemos recorrer todas las fechas y anotarlas en el json
         for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
@@ -76,18 +80,26 @@ public class PersonManager{
                 
                 for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
                     //Escribimos la fecha en el json
-                    jSonFile.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
+                    jSonFileMessages.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
+                    jSonFileWords.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
+                    jSonFileChars.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
                     //Limite de personas preparado de antemano
                     //Dentro de esta fecha, anotamos las personas correspondientes, y el número de mensajes que tiene (preparado para recibir un número indefinído de personas)
                     for (int i = 0; i < totalPersons; i++){
-                        if(i == totalPersons-1)
-                            jSonFile.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "\n");
-                        else
-                            jSonFile.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",\n");
-                            
+                        if(i == totalPersons-1){
+                            jSonFileMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "\n");
+                            jSonFileWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + "\n");
+                            jSonFileChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + "\n");
+                        }else{
+                            jSonFileMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",\n");
+                            jSonFileWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",\n");
+                            jSonFileChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",\n");
+                        }    
                     }
                     //Se cierra esta fecha
-                    jSonFile.append("}, ");
+                    jSonFileMessages.append("}, ");
+                    jSonFileWords.append("}, ");
+                    jSonFileChars.append("}, ");
                     /*for (Hour h : d.getHours()){
                         jSonFile.append(y.getKey() + "/" + m.getKey() + "/" + d.getName() + " - " + h.getName() + ":00\n");
                         //System.out.println(y.getKey() + "/" + m.getKey() + "/" + d.getName() + "\n");
@@ -104,12 +116,30 @@ public class PersonManager{
             }
         }
         //Elimina la última coma innecesaria
-        jSonFile.setLength(jSonFile.length() - 2);
+        jSonFileMessages.setLength(jSonFileMessages.length() - 2);
+        jSonFileWords.setLength(jSonFileWords.length() - 2);
+        jSonFileChars.setLength(jSonFileChars.length() - 2);
         //Cerramos la extructura del json
-        jSonFile.append("]");
+        jSonFileMessages.append("]");
+        jSonFileWords.append("]");
+        jSonFileChars.append("]");
         //Por último, creamos el fichero json
-        try(FileOutputStream oFile = new FileOutputStream("charMessageCount.json", false)){
-            oFile.write(jSonFile.toString().getBytes());
+        try(FileOutputStream oFileMessages = new FileOutputStream("MessageCount.json", false)){
+            oFileMessages.write(jSonFileMessages.toString().getBytes());
+        } 
+        catch (Exception e){
+            System.out.println("Error: " + e);
+        }
+        
+        try(FileOutputStream oFileWords = new FileOutputStream("WordsCount.json", false)){
+            oFileWords.write(jSonFileWords.toString().getBytes());
+        } 
+        catch (Exception e){
+            System.out.println("Error: " + e);
+        }
+        
+        try(FileOutputStream oFileChars = new FileOutputStream("CharsCount.json", false)){
+            oFileChars.write(jSonFileChars.toString().getBytes());
         } 
         catch (Exception e){
             System.out.println("Error: " + e);
