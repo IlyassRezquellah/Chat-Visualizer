@@ -90,7 +90,7 @@ public class Person{
         }
         //Comprueba los datos extrayendolos (Consola, fichero log)
         algorithm.extractData(this.getName());
-        System.out.println("Total menssages: "+ Colors.ANSI_YELLOW + getTotalMessages() + Colors.ANSI_RESET+ "\n\n");
+       // System.out.println("Total messages de " + getName() +" "+ Colors.ANSI_YELLOW + getTotalMessages() + Colors.ANSI_RESET+ "\n\n");
     }
     //Crea un log con toda la estructura matrioshka creada, así como el numero de años, meses, días y horas creados
     public void createLogOfTheMatrioshkaStructure(){

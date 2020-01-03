@@ -1,8 +1,8 @@
 Name--> Christian
 Year--> 2018
-	Messages: 965
-	Words: 5082
-	Chars: 20612
+	Messages: 14
+	Words: 74
+	Chars: 327
 
 	Month-->JUNARY
 		Mensajes: 0
@@ -27623,9 +27623,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 	Month-->OCTOBER
-		Mensajes: 234
-		Words: 1262
-		Chars: 5131
+		Mensajes: 14
+		Words: 74
+		Chars: 327
 
 		Day: 1
 			Messsages: 0
@@ -28234,9 +28234,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 7
-			Messsages: 15
-			Words: 69
-			Chars: 296
+			Messsages: 9
+			Words: 37
+			Chars: 163
 
 			Hour: 0
 				Messsages: 0
@@ -28311,9 +28311,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 15
-				Words: 69
-				Chars: 296
+				Messsages: 9
+				Words: 37
+				Chars: 163
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -28436,9 +28436,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 9
-			Messsages: 6
-			Words: 31
-			Chars: 115
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -28497,9 +28497,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 6
-				Words: 31
-				Chars: 115
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -28537,9 +28537,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 10
-			Messsages: 1
-			Words: 5
-			Chars: 29
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -28594,9 +28594,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 1
-				Words: 5
-				Chars: 29
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
@@ -28638,9 +28638,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 11
-			Messsages: 33
-			Words: 125
-			Chars: 494
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -28695,13 +28695,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 3
-				Words: 7
-				Chars: 30
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
-				Messsages: 24
-				Words: 96
-				Chars: 362
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -28719,9 +28719,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 6
-				Words: 22
-				Chars: 102
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -28941,9 +28941,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 14
-			Messsages: 11
-			Words: 67
-			Chars: 280
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -29026,9 +29026,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 11
-				Words: 67
-				Chars: 280
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -29042,9 +29042,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 15
-			Messsages: 1
-			Words: 11
-			Chars: 42
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -29079,9 +29079,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 1
-				Words: 11
-				Chars: 42
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -29143,9 +29143,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 16
-			Messsages: 6
-			Words: 54
-			Chars: 220
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -29224,9 +29224,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 1
-				Words: 2
-				Chars: 15
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -29236,9 +29236,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 5
-				Words: 52
-				Chars: 205
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
@@ -29446,9 +29446,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 1
-			Words: 10
-			Chars: 35
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -29523,9 +29523,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 1
-				Words: 10
-				Chars: 35
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -29547,9 +29547,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 20
-			Messsages: 12
-			Words: 44
-			Chars: 176
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -29616,17 +29616,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 3
-				Words: 12
-				Chars: 55
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 9
-				Words: 32
-				Chars: 121
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -29749,9 +29749,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 22
-			Messsages: 5
-			Words: 18
-			Chars: 82
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -29822,9 +29822,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 5
-				Words: 18
-				Chars: 82
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -29951,9 +29951,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 24
-			Messsages: 3
-			Words: 42
-			Chars: 178
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30032,13 +30032,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 1
-				Words: 36
-				Chars: 151
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 2
-				Words: 6
-				Chars: 27
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -30052,9 +30052,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 25
-			Messsages: 7
-			Words: 58
-			Chars: 295
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30121,9 +30121,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 7
-				Words: 58
-				Chars: 295
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -30153,9 +30153,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 26
-			Messsages: 3
-			Words: 32
-			Chars: 127
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30222,9 +30222,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 3
-				Words: 32
-				Chars: 127
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -30254,9 +30254,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 27
-			Messsages: 42
-			Words: 243
-			Chars: 996
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30267,9 +30267,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 2
-				Messsages: 18
-				Words: 104
-				Chars: 412
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 3
 				Messsages: 0
 				Words: 0
@@ -30303,13 +30303,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 11
-				Messsages: 4
-				Words: 18
-				Chars: 72
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 12
-				Messsages: 2
-				Words: 8
-				Chars: 35
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 13
 				Messsages: 0
 				Words: 0
@@ -30331,17 +30331,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 4
-				Words: 10
-				Chars: 41
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 1
-				Words: 1
-				Chars: 3
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 13
-				Words: 102
-				Chars: 433
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -30355,9 +30355,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 28
-			Messsages: 12
-			Words: 65
-			Chars: 280
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30432,13 +30432,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 5
-				Words: 34
-				Chars: 154
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 7
-				Words: 31
-				Chars: 126
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -30456,9 +30456,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 29
-			Messsages: 1
-			Words: 4
-			Chars: 14
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30517,9 +30517,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 1
-				Words: 4
-				Chars: 14
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -30557,9 +30557,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 30
-			Messsages: 46
-			Words: 242
-			Chars: 887
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30618,29 +30618,29 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 21
-				Words: 95
-				Chars: 317
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
-				Messsages: 19
-				Words: 84
-				Chars: 318
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 2
-				Words: 26
-				Chars: 105
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 1
-				Words: 29
-				Chars: 119
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 3
-				Words: 8
-				Chars: 28
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -30658,9 +30658,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 31
-			Messsages: 24
-			Words: 105
-			Chars: 421
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30747,21 +30747,21 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 21
-				Words: 90
-				Chars: 375
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
-				Messsages: 1
-				Words: 11
-				Chars: 33
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
-				Messsages: 2
-				Words: 4
-				Chars: 13
+				Messsages: 0
+				Words: 0
+				Chars: 0
 	Month-->NOVEMBER
-		Mensajes: 342
-		Words: 1786
-		Chars: 7254
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
 			Messsages: 0
@@ -30865,9 +30865,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 2
-			Messsages: 18
-			Words: 86
-			Chars: 340
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -30910,17 +30910,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 10
-				Messsages: 1
-				Words: 3
-				Chars: 9
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 11
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 12
-				Messsages: 7
-				Words: 53
-				Chars: 221
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 13
 				Messsages: 0
 				Words: 0
@@ -30934,21 +30934,21 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 2
-				Words: 5
-				Chars: 20
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 4
-				Words: 6
-				Chars: 23
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 4
-				Words: 19
-				Chars: 67
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -31168,9 +31168,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 5
-			Messsages: 12
-			Words: 65
-			Chars: 265
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -31205,9 +31205,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 1
-				Words: 4
-				Chars: 18
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -31253,13 +31253,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 7
-				Words: 35
-				Chars: 151
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
-				Messsages: 4
-				Words: 26
-				Chars: 96
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
 				Messsages: 0
 				Words: 0
@@ -31471,9 +31471,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 8
-			Messsages: 13
-			Words: 107
-			Chars: 439
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -31540,9 +31540,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 13
-				Words: 107
-				Chars: 439
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -31572,9 +31572,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 9
-			Messsages: 14
-			Words: 70
-			Chars: 281
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -31633,21 +31633,21 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 7
-				Words: 38
-				Chars: 160
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 6
-				Words: 30
-				Chars: 110
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 2
-				Chars: 11
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -31875,9 +31875,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 12
-			Messsages: 14
-			Words: 96
-			Chars: 386
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -31944,9 +31944,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 4
-				Words: 15
-				Chars: 65
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -31956,9 +31956,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 10
-				Words: 81
-				Chars: 321
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -31976,9 +31976,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 13
-			Messsages: 6
-			Words: 30
-			Chars: 106
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32013,9 +32013,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 1
-				Words: 10
-				Chars: 35
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -32073,13 +32073,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 23
-				Messsages: 5
-				Words: 20
-				Chars: 71
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 14
-			Messsages: 7
-			Words: 56
-			Chars: 204
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32130,9 +32130,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 12
-				Messsages: 7
-				Words: 56
-				Chars: 204
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 13
 				Messsages: 0
 				Words: 0
@@ -32178,9 +32178,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 15
-			Messsages: 3
-			Words: 26
-			Chars: 99
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32215,9 +32215,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 3
-				Words: 26
-				Chars: 99
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -32279,9 +32279,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 16
-			Messsages: 46
-			Words: 195
-			Chars: 881
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32332,9 +32332,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 12
-				Messsages: 42
-				Words: 168
-				Chars: 769
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 13
 				Messsages: 0
 				Words: 0
@@ -32352,13 +32352,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 3
-				Words: 18
-				Chars: 69
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 1
-				Words: 9
-				Chars: 43
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -32380,9 +32380,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 17
-			Messsages: 11
-			Words: 55
-			Chars: 219
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32441,9 +32441,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 8
-				Words: 44
-				Chars: 167
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -32457,9 +32457,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 3
-				Words: 11
-				Chars: 52
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -32481,9 +32481,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 18
-			Messsages: 25
-			Words: 113
-			Chars: 471
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32570,9 +32570,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 25
-				Words: 113
-				Chars: 471
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
 				Messsages: 0
 				Words: 0
@@ -32582,9 +32582,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 56
-			Words: 259
-			Chars: 1017
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32659,21 +32659,21 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 34
-				Words: 132
-				Chars: 515
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 8
-				Words: 68
-				Chars: 278
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 10
-				Words: 32
-				Chars: 131
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
-				Messsages: 4
-				Words: 27
-				Chars: 93
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
 				Messsages: 0
 				Words: 0
@@ -32683,9 +32683,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 20
-			Messsages: 1
-			Words: 12
-			Chars: 45
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32764,9 +32764,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 1
-				Words: 12
-				Chars: 45
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -32784,9 +32784,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 21
-			Messsages: 5
-			Words: 22
-			Chars: 81
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32817,9 +32817,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 7
-				Messsages: 1
-				Words: 1
-				Chars: 7
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 8
 				Messsages: 0
 				Words: 0
@@ -32877,17 +32877,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 4
-				Words: 21
-				Chars: 74
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 22
-			Messsages: 3
-			Words: 14
-			Chars: 68
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -32958,13 +32958,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 1
-				Chars: 10
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 2
-				Words: 13
-				Chars: 58
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -32986,9 +32986,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 23
-			Messsages: 3
-			Words: 32
-			Chars: 130
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -33023,9 +33023,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 3
-				Words: 32
-				Chars: 130
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -33087,9 +33087,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 24
-			Messsages: 11
-			Words: 55
-			Chars: 230
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -33176,9 +33176,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 11
-				Words: 55
-				Chars: 230
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
 				Messsages: 0
 				Words: 0
@@ -33188,9 +33188,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 25
-			Messsages: 12
-			Words: 31
-			Chars: 131
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -33265,17 +33265,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 5
-				Words: 9
-				Chars: 27
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 4
-				Words: 12
-				Chars: 62
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 3
-				Words: 10
-				Chars: 42
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -33289,9 +33289,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 26
-			Messsages: 34
-			Words: 160
-			Chars: 658
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -33326,9 +33326,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 1
-				Words: 11
-				Chars: 44
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -33358,25 +33358,25 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 14
-				Words: 67
-				Chars: 289
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 8
-				Words: 31
-				Chars: 138
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 6
-				Words: 31
-				Chars: 123
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 5
-				Words: 20
-				Chars: 64
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -33390,9 +33390,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 27
-			Messsages: 11
-			Words: 53
-			Chars: 217
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -33483,17 +33483,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 11
-				Words: 53
-				Chars: 217
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 28
-			Messsages: 26
-			Words: 125
-			Chars: 500
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -33568,9 +33568,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 2
-				Words: 8
-				Chars: 36
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -33580,13 +33580,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 10
-				Words: 55
-				Chars: 215
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
-				Messsages: 14
-				Words: 62
-				Chars: 249
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
@@ -33693,9 +33693,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 30
-			Messsages: 11
-			Words: 124
-			Chars: 486
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -33762,9 +33762,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 11
-				Words: 124
-				Chars: 486
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -33794,14 +33794,14 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 	Month-->DECEMBER
-		Mensajes: 389
-		Words: 2034
-		Chars: 8227
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
-			Messsages: 25
-			Words: 65
-			Chars: 245
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -33856,21 +33856,21 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 5
-				Words: 9
-				Chars: 34
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 19
-				Words: 55
-				Chars: 208
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 1
-				Words: 1
-				Chars: 3
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -33900,18 +33900,18 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 2
-			Messsages: 50
-			Words: 196
-			Chars: 830
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 1
-				Messsages: 15
-				Words: 48
-				Chars: 216
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 2
 				Messsages: 0
 				Words: 0
@@ -33941,9 +33941,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 9
-				Messsages: 7
-				Words: 19
-				Chars: 81
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -33981,17 +33981,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 16
-				Words: 84
-				Chars: 350
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 12
-				Words: 45
-				Chars: 183
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
 				Messsages: 0
 				Words: 0
@@ -34001,9 +34001,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 3
-			Messsages: 40
-			Words: 224
-			Chars: 936
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -34070,13 +34070,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 17
-				Words: 98
-				Chars: 391
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 4
-				Words: 9
-				Chars: 40
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -34098,13 +34098,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 23
-				Messsages: 19
-				Words: 117
-				Chars: 505
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 4
-			Messsages: 1
-			Words: 2
-			Chars: 15
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -34175,9 +34175,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 2
-				Chars: 15
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -34203,9 +34203,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 5
-			Messsages: 15
-			Words: 89
-			Chars: 396
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -34276,9 +34276,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 5
-				Words: 27
-				Chars: 124
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -34292,21 +34292,21 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 2
-				Words: 31
-				Chars: 142
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
-				Messsages: 8
-				Words: 31
-				Chars: 130
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 6
-			Messsages: 31
-			Words: 203
-			Chars: 762
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -34373,17 +34373,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 29
-				Words: 201
-				Chars: 754
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 1
-				Chars: 3
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 1
-				Words: 1
-				Chars: 5
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -34506,9 +34506,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 8
-			Messsages: 8
-			Words: 21
-			Chars: 81
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -34563,9 +34563,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 8
-				Words: 21
-				Chars: 81
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
@@ -34607,9 +34607,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 9
-			Messsages: 16
-			Words: 112
-			Chars: 431
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -34704,13 +34704,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 23
-				Messsages: 16
-				Words: 112
-				Chars: 431
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 10
-			Messsages: 5
-			Words: 25
-			Chars: 113
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -34781,9 +34781,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 5
-				Words: 25
-				Chars: 113
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -34910,9 +34910,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 12
-			Messsages: 13
-			Words: 34
-			Chars: 153
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -34987,13 +34987,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 3
-				Words: 9
-				Chars: 42
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 10
-				Words: 25
-				Chars: 111
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -35011,9 +35011,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 13
-			Messsages: 16
-			Words: 58
-			Chars: 248
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -35088,13 +35088,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 2
-				Words: 1
-				Chars: 2
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 14
-				Words: 57
-				Chars: 246
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -35213,9 +35213,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 15
-			Messsages: 29
-			Words: 154
-			Chars: 601
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -35262,17 +35262,17 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 11
-				Messsages: 17
-				Words: 87
-				Chars: 339
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 12
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 12
-				Words: 67
-				Chars: 262
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
@@ -35314,9 +35314,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 16
-			Messsages: 5
-			Words: 27
-			Chars: 110
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -35379,9 +35379,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 5
-				Words: 27
-				Chars: 110
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -35516,9 +35516,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 18
-			Messsages: 9
-			Words: 51
-			Chars: 211
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -35585,13 +35585,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 2
-				Words: 13
-				Chars: 50
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 2
-				Words: 11
-				Chars: 41
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -35605,9 +35605,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 5
-				Words: 27
-				Chars: 120
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
 				Messsages: 0
 				Words: 0
@@ -35617,9 +35617,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 11
-			Words: 65
-			Chars: 254
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -35690,9 +35690,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 7
-				Words: 24
-				Chars: 90
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -35702,9 +35702,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 4
-				Words: 41
-				Chars: 164
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -35718,9 +35718,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 20
-			Messsages: 60
-			Words: 383
-			Chars: 1615
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -35791,37 +35791,37 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 1
-				Chars: 2
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 10
-				Words: 56
-				Chars: 224
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 5
-				Words: 39
-				Chars: 178
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 26
-				Words: 164
-				Chars: 689
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
-				Messsages: 18
-				Words: 123
-				Chars: 522
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 21
-			Messsages: 9
-			Words: 45
-			Chars: 162
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -35876,9 +35876,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 9
-				Words: 45
-				Chars: 162
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
@@ -36021,9 +36021,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 23
-			Messsages: 9
-			Words: 41
-			Chars: 180
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -36082,9 +36082,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 4
-				Words: 19
-				Chars: 80
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -36094,9 +36094,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 5
-				Words: 22
-				Chars: 100
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -36526,14 +36526,14 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 28
-			Messsages: 5
-			Words: 29
-			Chars: 97
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
-				Messsages: 5
-				Words: 29
-				Chars: 97
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 1
 				Messsages: 0
 				Words: 0
@@ -36728,9 +36728,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 30
-			Messsages: 27
-			Words: 175
-			Chars: 640
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -36785,13 +36785,13 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 2
-				Words: 10
-				Chars: 34
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
-				Messsages: 25
-				Words: 165
-				Chars: 606
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -36829,9 +36829,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 		Day: 31
-			Messsages: 5
-			Words: 35
-			Chars: 147
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -36902,9 +36902,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 5
-				Words: 35
-				Chars: 147
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -36930,19 +36930,19 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 Year--> 2019
-	Messages: 1119
-	Words: 6325
-	Chars: 25511
+	Messages: 3
+	Words: 6
+	Chars: 26
 
 	Month-->JUNARY
-		Mensajes: 161
-		Words: 786
-		Chars: 3070
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
-			Messsages: 5
-			Words: 19
-			Chars: 67
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -37005,9 +37005,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 5
-				Words: 19
-				Chars: 67
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -37344,9 +37344,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 5
-			Messsages: 4
-			Words: 25
-			Chars: 84
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -37409,9 +37409,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 4
-				Words: 25
-				Chars: 84
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -37647,9 +37647,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 8
-			Messsages: 4
-			Words: 12
-			Chars: 50
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -37688,9 +37688,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 9
-				Messsages: 1
-				Words: 4
-				Chars: 18
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -37740,17 +37740,17 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 3
-				Words: 8
-				Chars: 32
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 9
-			Messsages: 30
-			Words: 136
-			Chars: 537
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -37809,9 +37809,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 27
-				Words: 125
-				Chars: 495
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -37829,9 +37829,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 3
-				Words: 11
-				Chars: 42
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -37849,9 +37849,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 10
-			Messsages: 49
-			Words: 212
-			Chars: 857
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -37914,21 +37914,21 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 9
-				Words: 34
-				Chars: 149
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 13
-				Words: 45
-				Chars: 211
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 18
-				Words: 73
-				Chars: 267
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 7
-				Words: 57
-				Chars: 220
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -37942,9 +37942,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 2
-				Words: 3
-				Chars: 10
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
@@ -38152,9 +38152,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 13
-			Messsages: 3
-			Words: 25
-			Chars: 92
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -38213,9 +38213,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 1
-				Words: 6
-				Chars: 20
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -38237,9 +38237,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 2
-				Words: 19
-				Chars: 72
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -38253,9 +38253,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 14
-			Messsages: 3
-			Words: 20
-			Chars: 86
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -38326,13 +38326,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 9
-				Chars: 43
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 2
-				Words: 11
-				Chars: 43
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -38354,9 +38354,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 15
-			Messsages: 28
-			Words: 168
-			Chars: 655
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -38391,9 +38391,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 5
-				Words: 27
-				Chars: 106
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -38423,41 +38423,41 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 4
-				Words: 42
-				Chars: 150
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 4
-				Words: 29
-				Chars: 115
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 8
-				Words: 22
-				Chars: 101
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 1
-				Words: 3
-				Chars: 12
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 6
-				Words: 45
-				Chars: 171
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 16
-			Messsages: 5
-			Words: 27
-			Chars: 114
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -38496,9 +38496,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 9
-				Messsages: 4
-				Words: 21
-				Chars: 78
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -38528,9 +38528,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 6
-				Chars: 36
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -38657,9 +38657,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 18
-			Messsages: 7
-			Words: 46
-			Chars: 167
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -38754,13 +38754,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 23
-				Messsages: 7
-				Words: 46
-				Chars: 167
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 19
-			Messsages: 2
-			Words: 6
-			Chars: 27
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -38847,13 +38847,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 1
-				Words: 5
-				Chars: 25
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
-				Messsages: 1
-				Words: 1
-				Chars: 2
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
@@ -39061,9 +39061,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 22
-			Messsages: 4
-			Words: 19
-			Chars: 66
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -39102,9 +39102,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 9
-				Messsages: 4
-				Words: 19
-				Chars: 66
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -39667,9 +39667,110 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 28
-			Messsages: 5
-			Words: 15
-			Chars: 48
+			Messsages: 0
+			Words: 0
+			Chars: 0
+
+			Hour: 0
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 1
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 2
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 3
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 4
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 5
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 6
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 7
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 8
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 9
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 10
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 11
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 12
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 13
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 14
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 15
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 16
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 17
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 18
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 19
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 20
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 21
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 22
+				Messsages: 0
+				Words: 0
+				Chars: 0
+			Hour: 23
+				Messsages: 0
+				Words: 0
+				Chars: 0
+		Day: 29
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -39740,107 +39841,6 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 5
-				Words: 15
-				Chars: 48
-			Hour: 18
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 19
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 20
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 21
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 22
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 23
-				Messsages: 0
-				Words: 0
-				Chars: 0
-		Day: 29
-			Messsages: 8
-			Words: 35
-			Chars: 138
-
-			Hour: 0
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 1
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 2
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 3
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 4
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 5
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 6
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 7
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 8
-				Messsages: 3
-				Words: 10
-				Chars: 40
-			Hour: 9
-				Messsages: 3
-				Words: 18
-				Chars: 72
-			Hour: 10
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 11
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 12
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 13
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 14
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 15
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 16
-				Messsages: 0
-				Words: 0
-				Chars: 0
-			Hour: 17
 				Messsages: 0
 				Words: 0
 				Chars: 0
@@ -39861,22 +39861,22 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 2
-				Words: 7
-				Chars: 26
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 30
-			Messsages: 3
-			Words: 16
-			Chars: 64
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
-				Messsages: 1
-				Words: 12
-				Chars: 49
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 1
 				Messsages: 0
 				Words: 0
@@ -39954,9 +39954,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 2
-				Words: 4
-				Chars: 15
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -39970,9 +39970,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 31
-			Messsages: 1
-			Words: 5
-			Chars: 18
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -40007,9 +40007,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 1
-				Words: 5
-				Chars: 18
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -40071,14 +40071,14 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->FEBRARY
-		Mensajes: 284
-		Words: 1524
-		Chars: 5977
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
-			Messsages: 2
-			Words: 7
-			Chars: 31
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -40141,9 +40141,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 2
-				Words: 7
-				Chars: 31
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -40177,14 +40177,14 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 2
-			Messsages: 19
-			Words: 119
-			Chars: 477
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
-				Messsages: 19
-				Words: 119
-				Chars: 477
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 1
 				Messsages: 0
 				Words: 0
@@ -40278,9 +40278,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 3
-			Messsages: 7
-			Words: 22
-			Chars: 83
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -40347,13 +40347,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 2
-				Words: 7
-				Chars: 30
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 3
-				Words: 10
-				Chars: 35
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -40363,9 +40363,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 2
-				Words: 5
-				Chars: 18
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -40379,9 +40379,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 4
-			Messsages: 116
-			Words: 638
-			Chars: 2352
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -40460,13 +40460,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 37
-				Words: 214
-				Chars: 796
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 79
-				Words: 424
-				Chars: 1556
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -40682,9 +40682,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 7
-			Messsages: 2
-			Words: 14
-			Chars: 52
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -40767,9 +40767,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 2
-				Words: 14
-				Chars: 52
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -40783,9 +40783,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 8
-			Messsages: 4
-			Words: 14
-			Chars: 52
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -40844,13 +40844,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 1
-				Words: 4
-				Chars: 17
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
-				Messsages: 3
-				Words: 10
-				Chars: 35
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -41187,9 +41187,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 12
-			Messsages: 22
-			Words: 109
-			Chars: 452
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -41260,13 +41260,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 5
-				Words: 30
-				Chars: 137
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 17
-				Words: 79
-				Chars: 315
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -41288,9 +41288,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 13
-			Messsages: 5
-			Words: 21
-			Chars: 81
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -41369,9 +41369,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 5
-				Words: 21
-				Chars: 81
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -41389,9 +41389,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 14
-			Messsages: 15
-			Words: 70
-			Chars: 269
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -41486,9 +41486,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 23
-				Messsages: 15
-				Words: 70
-				Chars: 269
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 15
 			Messsages: 0
 			Words: 0
@@ -41894,9 +41894,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 26
-			Words: 168
-			Chars: 676
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -41931,9 +41931,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 2
-				Words: 17
-				Chars: 58
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -41967,9 +41967,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 24
-				Words: 151
-				Chars: 618
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -42096,9 +42096,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 21
-			Messsages: 7
-			Words: 28
-			Chars: 155
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -42141,9 +42141,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 10
-				Messsages: 1
-				Words: 3
-				Chars: 12
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 11
 				Messsages: 0
 				Words: 0
@@ -42157,17 +42157,17 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 5
-				Words: 22
-				Chars: 131
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 1
-				Words: 3
-				Chars: 12
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -42500,9 +42500,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 25
-			Messsages: 6
-			Words: 24
-			Chars: 84
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -42561,9 +42561,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 6
-				Words: 24
-				Chars: 84
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -42601,9 +42601,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 26
-			Messsages: 19
-			Words: 119
-			Chars: 503
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -42646,9 +42646,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 10
-				Messsages: 4
-				Words: 48
-				Chars: 180
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 11
 				Messsages: 0
 				Words: 0
@@ -42662,9 +42662,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 3
-				Words: 20
-				Chars: 91
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -42694,17 +42694,17 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 12
-				Words: 51
-				Chars: 232
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 27
-			Messsages: 34
-			Words: 171
-			Chars: 710
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -42767,29 +42767,29 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 2
-				Words: 9
-				Chars: 31
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 4
-				Words: 16
-				Chars: 77
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 15
-				Chars: 69
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 22
-				Words: 98
-				Chars: 408
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 5
-				Words: 33
-				Chars: 125
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -42904,9 +42904,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->MARCH
-		Mensajes: 186
-		Words: 1180
-		Chars: 5018
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
 			Messsages: 0
@@ -43111,9 +43111,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 3
-			Messsages: 57
-			Words: 392
-			Chars: 1643
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -43192,13 +43192,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 50
-				Words: 365
-				Chars: 1537
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 7
-				Words: 27
-				Chars: 106
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -43313,9 +43313,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 5
-			Messsages: 9
-			Words: 39
-			Chars: 151
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -43386,9 +43386,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 9
-				Words: 39
-				Chars: 151
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -43616,9 +43616,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 8
-			Messsages: 1
-			Words: 7
-			Chars: 52
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -43697,9 +43697,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 1
-				Words: 7
-				Chars: 52
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -43919,9 +43919,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 11
-			Messsages: 10
-			Words: 51
-			Chars: 201
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -43984,13 +43984,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 3
-				Words: 27
-				Chars: 97
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 7
-				Words: 24
-				Chars: 104
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -44020,9 +44020,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 12
-			Messsages: 11
-			Words: 47
-			Chars: 187
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -44057,9 +44057,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 6
-				Words: 23
-				Chars: 88
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -44113,9 +44113,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 5
-				Words: 24
-				Chars: 99
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
@@ -44222,9 +44222,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 14
-			Messsages: 1
-			Words: 1
-			Chars: 2
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -44315,9 +44315,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 1
-				Words: 1
-				Chars: 2
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
@@ -44626,9 +44626,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 18
-			Messsages: 1
-			Words: 3
-			Chars: 20
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -44699,9 +44699,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 3
-				Chars: 20
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -44727,9 +44727,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 3
-			Words: 2
-			Chars: 13
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -44760,9 +44760,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 7
-				Messsages: 2
-				Words: 1
-				Chars: 3
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 8
 				Messsages: 0
 				Words: 0
@@ -44800,9 +44800,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 1
-				Chars: 10
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -44828,9 +44828,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 20
-			Messsages: 4
-			Words: 3
-			Chars: 22
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -44925,13 +44925,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 23
-				Messsages: 4
-				Words: 3
-				Chars: 22
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 21
-			Messsages: 3
-			Words: 11
-			Chars: 51
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -44986,9 +44986,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 1
-				Words: 2
-				Chars: 10
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
@@ -44998,9 +44998,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 2
-				Words: 9
-				Chars: 41
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -45131,9 +45131,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 23
-			Messsages: 11
-			Words: 112
-			Chars: 483
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -45180,9 +45180,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 11
-				Messsages: 11
-				Words: 112
-				Chars: 483
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 12
 				Messsages: 0
 				Words: 0
@@ -45232,9 +45232,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 24
-			Messsages: 39
-			Words: 248
-			Chars: 1063
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -45293,9 +45293,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 3
-				Words: 37
-				Chars: 145
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -45309,9 +45309,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 36
-				Words: 211
-				Chars: 918
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -45333,9 +45333,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 25
-			Messsages: 21
-			Words: 121
-			Chars: 487
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -45418,25 +45418,25 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 20
-				Words: 117
-				Chars: 470
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 1
-				Words: 4
-				Chars: 17
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 26
-			Messsages: 12
-			Words: 59
-			Chars: 255
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -45499,13 +45499,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 3
-				Words: 7
-				Chars: 29
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 9
-				Words: 52
-				Chars: 226
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -45535,9 +45535,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 27
-			Messsages: 1
-			Words: 4
-			Chars: 13
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -45620,9 +45620,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 1
-				Words: 4
-				Chars: 13
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -45737,9 +45737,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 29
-			Messsages: 2
-			Words: 80
-			Chars: 375
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -45798,9 +45798,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 2
-				Words: 80
-				Chars: 375
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -46040,9 +46040,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->APRIL
-		Mensajes: 43
-		Words: 231
-		Chars: 986
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
 			Messsages: 0
@@ -46146,9 +46146,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 2
-			Messsages: 1
-			Words: 4
-			Chars: 18
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -46191,9 +46191,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 10
-				Messsages: 1
-				Words: 4
-				Chars: 18
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 11
 				Messsages: 0
 				Words: 0
@@ -46651,9 +46651,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 7
-			Messsages: 1
-			Words: 3
-			Chars: 13
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -46716,9 +46716,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 1
-				Words: 3
-				Chars: 13
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -46853,9 +46853,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 9
-			Messsages: 3
-			Words: 10
-			Chars: 35
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -46934,13 +46934,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 2
-				Words: 7
-				Chars: 22
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 1
-				Words: 3
-				Chars: 13
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -46954,14 +46954,14 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 10
-			Messsages: 7
-			Words: 38
-			Chars: 141
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
-				Messsages: 2
-				Words: 10
-				Chars: 36
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 1
 				Messsages: 0
 				Words: 0
@@ -47051,9 +47051,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 23
-				Messsages: 5
-				Words: 28
-				Chars: 105
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 11
 			Messsages: 0
 			Words: 0
@@ -47459,9 +47459,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 15
-			Messsages: 4
-			Words: 28
-			Chars: 153
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -47520,9 +47520,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 1
-				Words: 14
-				Chars: 88
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -47532,9 +47532,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 3
-				Words: 14
-				Chars: 65
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -47661,9 +47661,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 17
-			Messsages: 4
-			Words: 15
-			Chars: 62
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -47730,17 +47730,17 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 2
-				Words: 6
-				Chars: 29
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 2
-				Words: 9
-				Chars: 33
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -47863,9 +47863,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 10
-			Words: 42
-			Chars: 193
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -47948,17 +47948,17 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 4
-				Words: 12
-				Chars: 71
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 6
-				Words: 30
-				Chars: 122
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
@@ -48267,9 +48267,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 23
-			Messsages: 5
-			Words: 24
-			Chars: 96
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -48328,9 +48328,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 1
-				Words: 15
-				Chars: 61
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -48340,13 +48340,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 2
-				Words: 7
-				Chars: 31
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 2
-				Words: 2
-				Chars: 4
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -48469,9 +48469,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 25
-			Messsages: 2
-			Words: 14
-			Chars: 59
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -48510,9 +48510,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 9
-				Messsages: 2
-				Words: 14
-				Chars: 59
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -48873,9 +48873,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 29
-			Messsages: 4
-			Words: 29
-			Chars: 125
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -48930,9 +48930,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 4
-				Words: 29
-				Chars: 125
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
@@ -48974,9 +48974,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 30
-			Messsages: 2
-			Words: 24
-			Chars: 91
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -49015,9 +49015,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 9
-				Messsages: 2
-				Words: 24
-				Chars: 91
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -49075,9 +49075,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->MAY
-		Mensajes: 198
-		Words: 1248
-		Chars: 4954
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
 			Messsages: 0
@@ -49686,9 +49686,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 7
-			Messsages: 2
-			Words: 6
-			Chars: 26
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -49743,9 +49743,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 2
-				Words: 6
-				Chars: 26
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
@@ -49989,9 +49989,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 10
-			Messsages: 5
-			Words: 10
-			Chars: 42
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -50026,9 +50026,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 5
-				Words: 10
-				Chars: 42
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -50090,9 +50090,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 11
-			Messsages: 8
-			Words: 64
-			Chars: 230
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -50171,13 +50171,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 5
-				Words: 34
-				Chars: 115
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 3
-				Words: 30
-				Chars: 115
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -50292,9 +50292,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 13
-			Messsages: 6
-			Words: 17
-			Chars: 64
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -50357,9 +50357,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 3
-				Words: 10
-				Chars: 29
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -50369,9 +50369,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 3
-				Words: 7
-				Chars: 35
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -50494,9 +50494,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 15
-			Messsages: 4
-			Words: 22
-			Chars: 77
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -50559,9 +50559,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 4
-				Words: 22
-				Chars: 77
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -50797,9 +50797,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 18
-			Messsages: 17
-			Words: 94
-			Chars: 378
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -50862,29 +50862,29 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 3
-				Words: 22
-				Chars: 91
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 5
-				Words: 26
-				Chars: 96
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 5
-				Chars: 21
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 5
-				Words: 25
-				Chars: 103
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 3
-				Words: 16
-				Chars: 67
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -50898,9 +50898,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 15
-			Words: 111
-			Chars: 471
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -50955,13 +50955,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 4
-				Words: 14
-				Chars: 53
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
-				Messsages: 7
-				Words: 52
-				Chars: 234
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -50975,9 +50975,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 4
-				Words: 45
-				Chars: 184
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
@@ -50999,9 +50999,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 20
-			Messsages: 11
-			Words: 59
-			Chars: 235
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -51080,9 +51080,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 11
-				Words: 59
-				Chars: 235
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -51201,9 +51201,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 22
-			Messsages: 22
-			Words: 154
-			Chars: 632
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -51258,13 +51258,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 3
-				Words: 44
-				Chars: 173
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
-				Messsages: 8
-				Words: 54
-				Chars: 214
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -51290,21 +51290,21 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 8
-				Words: 37
-				Chars: 180
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
-				Messsages: 1
-				Words: 3
-				Chars: 8
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
-				Messsages: 2
-				Words: 16
-				Chars: 57
+				Messsages: 0
+				Words: 0
+				Chars: 0
 		Day: 23
-			Messsages: 7
-			Words: 106
-			Chars: 425
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -51375,37 +51375,37 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 1
-				Words: 18
-				Chars: 76
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
-				Messsages: 2
-				Words: 29
-				Chars: 120
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 3
-				Words: 50
-				Chars: 189
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 22
-				Messsages: 1
-				Words: 9
-				Chars: 40
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 23
 				Messsages: 0
 				Words: 0
 				Chars: 0
 		Day: 24
-			Messsages: 1
-			Words: 7
-			Chars: 24
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -51444,9 +51444,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 9
-				Messsages: 1
-				Words: 7
-				Chars: 24
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -51706,14 +51706,14 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 27
-			Messsages: 89
-			Words: 548
-			Chars: 2135
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
-				Messsages: 57
-				Words: 336
-				Chars: 1348
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 1
 				Messsages: 0
 				Words: 0
@@ -51755,9 +51755,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 11
-				Messsages: 27
-				Words: 170
-				Chars: 639
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 12
 				Messsages: 0
 				Words: 0
@@ -51791,13 +51791,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 1
-				Words: 15
-				Chars: 45
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
-				Messsages: 4
-				Words: 27
-				Chars: 103
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
 				Messsages: 0
 				Words: 0
@@ -51807,9 +51807,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 28
-			Messsages: 9
-			Words: 46
-			Chars: 195
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -51864,21 +51864,21 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 5
-				Words: 12
-				Chars: 61
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
-				Messsages: 2
-				Words: 11
-				Chars: 52
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 2
-				Words: 23
-				Chars: 82
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -52009,9 +52009,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 30
-			Messsages: 2
-			Words: 4
-			Chars: 20
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -52062,9 +52062,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 12
-				Messsages: 2
-				Words: 4
-				Chars: 20
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 13
 				Messsages: 0
 				Words: 0
@@ -52211,9 +52211,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->JUNE
-		Mensajes: 68
-		Words: 397
-		Chars: 1622
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
 			Messsages: 0
@@ -52418,9 +52418,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 3
-			Messsages: 2
-			Words: 13
-			Chars: 58
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -52503,9 +52503,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 2
-				Words: 13
-				Chars: 58
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -52721,9 +52721,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 6
-			Messsages: 4
-			Words: 56
-			Chars: 246
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -52782,9 +52782,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 4
-				Words: 56
-				Chars: 246
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -53125,9 +53125,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 10
-			Messsages: 32
-			Words: 182
-			Chars: 747
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -53194,13 +53194,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 28
-				Words: 166
-				Chars: 689
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
-				Messsages: 4
-				Words: 16
-				Chars: 58
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -53226,9 +53226,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 11
-			Messsages: 5
-			Words: 13
-			Chars: 55
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -53275,9 +53275,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 11
-				Messsages: 5
-				Words: 13
-				Chars: 55
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 12
 				Messsages: 0
 				Words: 0
@@ -53327,9 +53327,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 12
-			Messsages: 6
-			Words: 37
-			Chars: 153
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -53388,9 +53388,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 6
-				Words: 37
-				Chars: 153
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -53731,9 +53731,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 16
-			Messsages: 12
-			Words: 52
-			Chars: 216
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -53808,13 +53808,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 18
-				Messsages: 6
-				Words: 22
-				Chars: 86
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 19
-				Messsages: 6
-				Words: 30
-				Chars: 130
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -53933,9 +53933,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 18
-			Messsages: 2
-			Words: 9
-			Chars: 29
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -53998,9 +53998,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 2
-				Words: 9
-				Chars: 29
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -54034,9 +54034,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 5
-			Words: 35
-			Chars: 118
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -54123,9 +54123,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 21
-				Messsages: 5
-				Words: 35
-				Chars: 118
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 22
 				Messsages: 0
 				Words: 0
@@ -55246,9 +55246,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->JULY
-		Mensajes: 1
-		Words: 11
-		Chars: 49
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
 			Messsages: 0
@@ -56665,9 +56665,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 15
-			Messsages: 1
-			Words: 11
-			Chars: 49
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -56750,9 +56750,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 1
-				Words: 11
-				Chars: 49
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -61518,9 +61518,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->SEPTEMBER
-		Mensajes: 170
-		Words: 939
-		Chars: 3766
+		Mensajes: 3
+		Words: 6
+		Chars: 26
 
 		Day: 1
 			Messsages: 0
@@ -61725,9 +61725,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 3
-			Messsages: 38
-			Words: 193
-			Chars: 776
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -61798,9 +61798,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 38
-				Words: 193
-				Chars: 776
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -62129,9 +62129,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 7
-			Messsages: 21
-			Words: 106
-			Chars: 415
+			Messsages: 3
+			Words: 6
+			Chars: 26
 
 			Hour: 0
 				Messsages: 0
@@ -62194,9 +62194,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 21
-				Words: 106
-				Chars: 415
+				Messsages: 3
+				Words: 6
+				Chars: 26
 			Hour: 16
 				Messsages: 0
 				Words: 0
@@ -63240,9 +63240,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 18
-			Messsages: 1
-			Words: 1
-			Chars: 2
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -63297,9 +63297,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 1
-				Words: 1
-				Chars: 2
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0
@@ -63341,9 +63341,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 19
-			Messsages: 16
-			Words: 78
-			Chars: 307
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -63378,13 +63378,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 7
-				Words: 44
-				Chars: 167
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
-				Messsages: 9
-				Words: 34
-				Chars: 140
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -63442,9 +63442,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 20
-			Messsages: 26
-			Words: 153
-			Chars: 569
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -63479,13 +63479,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 3
-				Words: 9
-				Chars: 41
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
-				Messsages: 9
-				Words: 48
-				Chars: 175
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 10
 				Messsages: 0
 				Words: 0
@@ -63511,9 +63511,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 16
-				Messsages: 3
-				Words: 27
-				Chars: 97
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -63523,13 +63523,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 4
-				Words: 27
-				Chars: 93
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
-				Messsages: 7
-				Words: 42
-				Chars: 163
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -63745,9 +63745,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 23
-			Messsages: 9
-			Words: 48
-			Chars: 181
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -63818,9 +63818,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 9
-				Words: 48
-				Chars: 181
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -63846,9 +63846,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 24
-			Messsages: 12
-			Words: 59
-			Chars: 254
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -63911,13 +63911,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 8
-				Words: 47
-				Chars: 206
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 1
-				Words: 5
-				Chars: 22
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -63927,9 +63927,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 19
-				Messsages: 3
-				Words: 7
-				Chars: 26
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 20
 				Messsages: 0
 				Words: 0
@@ -63947,9 +63947,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 25
-			Messsages: 8
-			Words: 35
-			Chars: 151
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -64008,9 +64008,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 14
-				Messsages: 8
-				Words: 35
-				Chars: 151
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 15
 				Messsages: 0
 				Words: 0
@@ -64048,9 +64048,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 26
-			Messsages: 6
-			Words: 28
-			Chars: 107
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -64085,9 +64085,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 8
-				Messsages: 6
-				Words: 28
-				Chars: 107
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 9
 				Messsages: 0
 				Words: 0
@@ -64149,9 +64149,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 27
-			Messsages: 19
-			Words: 144
-			Chars: 601
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -64222,9 +64222,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 17
-				Messsages: 19
-				Words: 144
-				Chars: 601
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 18
 				Messsages: 0
 				Words: 0
@@ -64452,9 +64452,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 30
-			Messsages: 14
-			Words: 94
-			Chars: 403
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -64517,13 +64517,13 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 6
-				Words: 47
-				Chars: 206
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
-				Messsages: 8
-				Words: 47
-				Chars: 197
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 17
 				Messsages: 0
 				Words: 0
@@ -64553,19 +64553,19 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->OCTOBER
-		Mensajes: 8
-		Words: 9
-		Chars: 69
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
-			Messsages: 2
-			Words: 3
-			Chars: 17
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
-				Messsages: 2
-				Words: 3
-				Chars: 17
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 1
 				Messsages: 0
 				Words: 0
@@ -64760,14 +64760,14 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 3
-			Messsages: 6
-			Words: 6
-			Chars: 52
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
-				Messsages: 3
-				Words: 3
-				Chars: 30
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 1
 				Messsages: 0
 				Words: 0
@@ -64817,9 +64817,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 13
-				Messsages: 3
-				Words: 3
-				Chars: 22
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 14
 				Messsages: 0
 				Words: 0

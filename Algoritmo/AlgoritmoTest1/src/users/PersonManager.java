@@ -1,6 +1,8 @@
 package users;
 
+import Utils.Colors;
 import Utils.enums.EnumMonths;
+import algorithms.AlgorithmCMT;
 import algorithms.matrioshka.Day;
 import algorithms.matrioshka.Hour;
 import algorithms.matrioshka.Month;
@@ -14,7 +16,7 @@ import users.Person;
 
 public class PersonManager{
     //Variable estatica con la ruta del chat a analizar
-    private static String filePath = "..\\..\\Chats\\ChatBase(total).txt";
+    private static String filePath = "..\\..\\Chats\\ChatBase(corta).txt";
     InterpreterWhatsapp InterWhatsapp;
     List<Person> persons;
     
@@ -34,11 +36,12 @@ public class PersonManager{
             //Crea un log sencillo con todos los años, así como los meses, días y horas que tiene cada uno
             persons.get(i).createLogOfTheMatrioshkaStructure();
         }
-        //Calculos post almacenaje de mensajes en la matrioshka
-        
         
         //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
         exportJSons();
+        
+        //Calculos post almacenaje de mensajes en la matrioshka
+        getTotalNumber();
     }
     //Creación y expotación de ficheros JSon
     //Guardaremos el número total de personas acutales para reutilizarlo sin llamar al metodo
@@ -58,6 +61,14 @@ public class PersonManager{
         //Conteo letras
         //Más calculos y análisis para charts...
         
+    }
+    //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
+    //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"
+    public void getTotalNumber(){
+        System.out.println("Numero total de mensajes --> "+ Colors.ANSI_YELLOW +AlgorithmCMT.messagesGlobal + Colors.ANSI_RESET);
+        System.out.println("Numero total de palabras --> "+ Colors.ANSI_YELLOW +AlgorithmCMT.wordsGlobal + Colors.ANSI_RESET);
+        System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW +AlgorithmCMT.charsGlobal + Colors.ANSI_RESET);
+    
     }
     //Fichero JSon (chat): Conteo de mensajes 
     public void jSonCount(){

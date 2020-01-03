@@ -15,6 +15,10 @@ public class AlgorithmCMT{
     private LinkedHashMap<String, Month> treeMonths;
     //Siempre controlamos el año en el que estamos actualmente (solo cambia si ela año aumenta en la conversación)
     private int currentYear;
+    //Variables globales que tendran el valor total de la suma de mensajes,words y chars de x personas
+    public static int messagesGlobal = 0;
+    public static int wordsGlobal = 0;
+    public static int charsGlobal = 0;
     
     public AlgorithmCMT(){
         //Inicializamos el HashMap de años
@@ -88,6 +92,11 @@ public class AlgorithmCMT{
             data.append("\tChars: "  +
                     yearTree.get(y.getKey()).getCharCount()
                     +"\n\n");
+            
+            //Asignamos los valores a las variables globales
+            messagesGlobal = messagesGlobal + yearTree.get(y.getKey()).getMessageCount();
+            wordsGlobal = wordsGlobal + yearTree.get(y.getKey()).getWordCount();
+            charsGlobal = charsGlobal + yearTree.get(y.getKey()).getCharCount();
            
             //MONTHS
             //Iteración de meses (m), para acceder a un mes usar "???" (En proceso)
