@@ -20,7 +20,7 @@ public class AlgorithmCMT{
     private int wordsGlobal;
     private int charsGlobal;
     private int daysGlobal;
-    private double averageMonth;
+    private double[][] averageMonthByYear;
     
     public AlgorithmCMT(){
         //Inicializamos el HashMap de años
@@ -32,7 +32,6 @@ public class AlgorithmCMT{
         wordsGlobal = 0;
         charsGlobal = 0;
         daysGlobal = 0;
-        averageMonth =0;
     }
     //Getters de datos globales
     public int getMessagesGlobal(){
@@ -47,8 +46,11 @@ public class AlgorithmCMT{
     public int getDaysGlobal(){
         return daysGlobal;
     }
-    public double getAverageMonth(){
-        return averageMonth;
+    public double[][] getAverageMonth(){
+        return averageMonthByYear;
+    }
+    public double getOneAverageMonth(int y, int m){
+        return averageMonthByYear[y][m];
     }
     //A partir de un numero (año); crea ese año e inicializa todos sus meses, días y horas
     public void createNewYear(int year){//9013 contructores aprox
@@ -252,36 +254,39 @@ public class AlgorithmCMT{
     public void personCountDays(){
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
             for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
-                
                 for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
                     if(d.getMessageCount()>0){
                         daysGlobal++;
-                        //System.out.println(d.getName() + ": "+d.getMessageCount());
                     }
-                    //totalDays++;
-                    
-                    //System.out.println(d.getMessageCount());
                 }
-                
             }
         }
-        System.out.println(daysGlobal); 
     }
     
     public void averageMonthMessagesPerson(){
+        averageMonthByYear = new double[yearTree.size()][12];
+        double averageMonth = 0.0f;
+        int counYears = 0;
+        int counMonths = 0;
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
             for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
                 for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
-                    averageMonth = averageMonth + d.getMessageCount();
-                    
+                    averageMonth += d.getMessageCount();
                 }
-                averageMonth = averageMonth / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;
-                //yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays();
-                System.out.println("Media del mes de "+m.getKey()+"--> " +averageMonth); 
-                averageMonth =0;
+                averageMonthByYear[counYears][counMonths] = averageMonth / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;;
+                //System.out.println("Media del mes de " + m.getKey() + "--> " + averageMonthByYear[counYears][counMonths]); 
+                averageMonth = 0;
+                counMonths++;
+            }
+            counYears++;
+            counMonths = 0;
+        }
+        for (int year = 0, tY = averageMonthByYear.length; year < tY; year++){
+            System.out.println("Año: " + year);
+            for (int month = 0, tM = 12; month < tM; month++){
+                System.out.println("Media del mes " + month + ": " + averageMonthByYear[year][month]);
             }
         }
-        //System.out.println("Media del mes es: " +averageMonth); 
-        //averageMonth = averageMonth / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays();
+        System.out.println("\n");
     }
 }

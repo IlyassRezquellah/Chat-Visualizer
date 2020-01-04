@@ -111,7 +111,10 @@ public class Person{
     public int getDaysGlobal(){
         return algorithm.getDaysGlobal();
     }
-    public double getAverageMonth(){
+    public double[][] getAverageMonth(){
         return algorithm.getAverageMonth();
+    }
+    public double getOneAverageMonth(int y, int m){
+        return algorithm.getOneAverageMonth(y, m);
     }
 }

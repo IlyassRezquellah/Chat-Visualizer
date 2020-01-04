@@ -36,7 +36,7 @@ public class PersonManager{
     private int wordGlobal;
     private int charsGlobal;
     private int daysGlobal;
-    private double averageMonth;
+    private double[][] grupalAverageMonths;
     //Arranque inicial del algoritmo
     public void startAlgorythm(){
         //Pruebas del algoritmo
@@ -52,7 +52,7 @@ public class PersonManager{
         //Calculos post almacenaje de mensajes en la matrioshka
         getTotalNumber();
         totalDaysConvo();
-        
+        getGrupAverageMonths();
         //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
         exportJSons();
 
@@ -68,7 +68,6 @@ public class PersonManager{
         wordGlobal = 0;
         charsGlobal = 0;
         daysGlobal = 0;
-        averageMonth = 0;
     }
      //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
     //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"
@@ -82,6 +81,30 @@ public class PersonManager{
         System.out.println("Numero total de mensajes --> "+ Colors.ANSI_YELLOW + messagesGlobal + Colors.ANSI_RESET);
         System.out.println("Numero total de palabras --> "+ Colors.ANSI_YELLOW + wordGlobal + Colors.ANSI_RESET);
         System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW + charsGlobal + Colors.ANSI_RESET);
+    }
+    public void getGrupAverageMonths(){
+        int totalYears = persons.get(0).getAverageMonth().length;
+        double totalAverage = 0.0f;
+        grupalAverageMonths = new double[totalYears][12];
+        
+        for (int year = 0, tY = persons.get(year).getAverageMonth().length; year < tY; year++){  
+            for (int month = 0, tM = persons.get(year).getAverageMonth()[year].length; month < tM; month++){
+                for (Person p : persons){
+                    totalAverage += p.getOneAverageMonth(year, month);
+                }
+                grupalAverageMonths[year][month] = totalAverage / totalPersons;
+                totalAverage = 0;
+            }
+        }
+        System.out.println("\nMedia grupal por mes:");
+        for (int year = 0, tY = totalYears; year < tY; year++){
+            System.out.println("Añitos: " + year);
+            for (int month = 0, tM = 12; month < tM; month++){
+                System.out.println("Media global del mes " + month + ": " + grupalAverageMonths[year][month]);
+            }
+            System.out.println("\n");
+        }
+        
     }
     //Creación y expotación de ficheros JSon
     public void exportJSons(){
