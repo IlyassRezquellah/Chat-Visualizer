@@ -63,11 +63,12 @@ public class PersonManager{
             personsMatrishka[i] = persons.get(i).getMatrioshka();
         messagesGlobal = 0;
         wordGlobal = 0;
-        charsGlobal = 0;  
+        charsGlobal = 0;
     }
      //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
     //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"
     public void getTotalNumber(){
+        //Suma de los tops globales de cada persona para agruparlo
         for(int i = 0; i < totalPersons; i++){
             messagesGlobal += persons.get(i).getMessagesGlobal();
             wordGlobal += persons.get(i).getWordsGlobal();
@@ -75,7 +76,7 @@ public class PersonManager{
         }
         System.out.println("Numero total de mensajes --> "+ Colors.ANSI_YELLOW + messagesGlobal + Colors.ANSI_RESET);
         System.out.println("Numero total de palabras --> "+ Colors.ANSI_YELLOW + wordGlobal + Colors.ANSI_RESET);
-        System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW + charsGlobal + Colors.ANSI_RESET); 
+        System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW + charsGlobal + Colors.ANSI_RESET);
     }
     //Creación y expotación de ficheros JSon
     public void exportJSons(){

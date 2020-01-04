@@ -88,6 +88,8 @@ public class Person{
         for(Message m : mensajes){
             algorithm.calculateCMT(m);
         }
+        //Post calculo matrioshka
+        algorithm.postMatrioshka();
         //Comprueba los datos extrayendolos (Consola, fichero log)
         algorithm.extractData(this.getName());
        // System.out.println("Total messages de " + getName() +" "+ Colors.ANSI_YELLOW + getTotalMessages() + Colors.ANSI_RESET+ "\n\n");

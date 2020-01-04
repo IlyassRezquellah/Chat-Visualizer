@@ -83,6 +83,11 @@ public class AlgorithmCMT{
         return true;
         
     }
+    //Este metodo hace una carga de datos posterior a la inicialización de la matrioshka
+    public void postMatrioshka(){
+        //Asignamos los valores a las variables globales
+        topsGlobalData();
+    }
     
     //Este metodo es demasiado complejo, hay que cambiarlo.
     //Te da la posiblidad de recorrer todas las listas de hashMap y arrays (Year, Month, day, hour) dentro de los mismos
@@ -106,11 +111,6 @@ public class AlgorithmCMT{
                     yearTree.get(y.getKey()).getCharCount()
                     +"\n\n");
             
-            //Asignamos los valores a las variables globales
-            messagesGlobal = messagesGlobal + yearTree.get(y.getKey()).getMessageCount();
-            wordsGlobal = wordsGlobal + yearTree.get(y.getKey()).getWordCount();
-            charsGlobal = charsGlobal + yearTree.get(y.getKey()).getCharCount();
-           
             //MONTHS
             //Iteración de meses (m), para acceder a un mes usar "???" (En proceso)
             for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
@@ -227,5 +227,13 @@ public class AlgorithmCMT{
     //Devuelve la extructura matrioshka con toda la información
     public LinkedHashMap<Integer, Year> getMatrioshka(){
         return yearTree;
+    }
+    //Calcular las medias globales
+    public void topsGlobalData(){
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            messagesGlobal = messagesGlobal + yearTree.get(y.getKey()).getMessageCount();
+            wordsGlobal = wordsGlobal + yearTree.get(y.getKey()).getWordCount();
+            charsGlobal = charsGlobal + yearTree.get(y.getKey()).getCharCount();
+        }
     }
 }
