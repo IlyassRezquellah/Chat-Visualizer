@@ -96,4 +96,14 @@ public class Person{
     public void createLogOfTheMatrioshkaStructure(){
         algorithm.createLogCountOfTheYearsMonthsDyasAndHours(this.getName());
     }
+    //Getters globales de datos pertenecientes a la clase AlgorithmCMT
+    public int getMessagesGlobal(){
+        return algorithm.getMessagesGlobal();
+    }
+    public int getWordsGlobal(){
+        return algorithm.getWordsGlobal();
+    }
+    public int getCharsGlobal(){
+        return algorithm.getCharsGlobal();
+    }
 }

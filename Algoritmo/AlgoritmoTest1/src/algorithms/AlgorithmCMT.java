@@ -16,17 +16,30 @@ public class AlgorithmCMT{
     //Siempre controlamos el año en el que estamos actualmente (solo cambia si ela año aumenta en la conversación)
     private int currentYear;
     //Variables globales que tendran el valor total de la suma de mensajes,words y chars de x personas
-    public static int messagesGlobal = 0;
-    public static int wordsGlobal = 0;
-    public static int charsGlobal = 0;
+    private int messagesGlobal;
+    private int wordsGlobal;
+    private int charsGlobal;
     
     public AlgorithmCMT(){
         //Inicializamos el HashMap de años
         this.yearTree = new LinkedHashMap<Integer, Year>();
         //El currentYear empieza a 0, para dejar claro que no hay ningun año aún
         currentYear = 0;
+        
+        messagesGlobal = 0;
+        wordsGlobal = 0;
+        charsGlobal = 0;
     }
-    
+    //Getters de datos globales
+    public int getMessagesGlobal(){
+        return messagesGlobal;
+    }
+    public int getWordsGlobal(){
+        return wordsGlobal;
+    }
+    public int getCharsGlobal(){
+        return charsGlobal;
+    }
     //A partir de un numero (año); crea ese año e inicializa todos sus meses, días y horas
     public void createNewYear(int year){//9013 contructores aprox
         this.yearTree.put(year, new Year(year));

@@ -27,7 +27,15 @@ public class PersonManager{
         //Inicializamos la lista de personas con todos sus mensajes así como la información pertinente del chat
         persons = InterWhatsapp.chatInterpret();
     }
-    
+    //Guardaremos el número total de personas acutales para reutilizarlo sin llamar al metodo
+    private int totalPersons;
+    //Creamos un array de cada "Persona" almacenando su extructura matrishka con todos los datos
+    private LinkedHashMap<Integer, Year>[] personsMatrishka;
+    //Totales globales
+    private int messagesGlobal;
+    private int wordGlobal;
+    private int charsGlobal;
+    //Arranque inicial del algoritmo
     public void startAlgorythm(){
         //Pruebas del algoritmo
         for (int i = 0, t = persons.size(); i < t; i++){
@@ -36,39 +44,47 @@ public class PersonManager{
             //Crea un log sencillo con todos los años, así como los meses, días y horas que tiene cada uno
             persons.get(i).createLogOfTheMatrioshkaStructure();
         }
-        
-        //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
-        exportJSons();
+        //Inizialización de variables auxiliares
+        auxiliaryInitialization();
         
         //Calculos post almacenaje de mensajes en la matrioshka
         getTotalNumber();
+        
+        //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
+        exportJSons();
+
     }
-    //Creación y expotación de ficheros JSon
-    //Guardaremos el número total de personas acutales para reutilizarlo sin llamar al metodo
-    private int totalPersons;
-    //Creamos un array de cada "Persona" almacenando su extructura matrishka con todos los datos
-    private LinkedHashMap<Integer, Year>[] personsMatrishka;
-    public void exportJSons(){
+    //Inicialización de variables auxiliares que necesitamos para obtener más numero y crear los fichertos json
+    public void auxiliaryInitialization(){
         totalPersons = persons.size();
         personsMatrishka = new LinkedHashMap[totalPersons];
         //Obtenermos la matrioshka de todas las personas
         for (int i = 0, t = totalPersons; i < t; i++)
             personsMatrishka[i] = persons.get(i).getMatrioshka();
-        
+        messagesGlobal = 0;
+        wordGlobal = 0;
+        charsGlobal = 0;  
+    }
+     //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
+    //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"
+    public void getTotalNumber(){
+        for(int i = 0; i < totalPersons; i++){
+            messagesGlobal += persons.get(i).getMessagesGlobal();
+            wordGlobal += persons.get(i).getWordsGlobal();
+            charsGlobal += persons.get(i).getCharsGlobal();
+        }
+        System.out.println("Numero total de mensajes --> "+ Colors.ANSI_YELLOW + messagesGlobal + Colors.ANSI_RESET);
+        System.out.println("Numero total de palabras --> "+ Colors.ANSI_YELLOW + wordGlobal + Colors.ANSI_RESET);
+        System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW + charsGlobal + Colors.ANSI_RESET); 
+    }
+    //Creación y expotación de ficheros JSon
+    public void exportJSons(){
         //JSon de conteos básicos
         jSonCount();
         //Conteo palabras
         //Conteo letras
         //Más calculos y análisis para charts...
         
-    }
-    //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
-    //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"
-    public void getTotalNumber(){
-        System.out.println("Numero total de mensajes --> "+ Colors.ANSI_YELLOW +AlgorithmCMT.messagesGlobal + Colors.ANSI_RESET);
-        System.out.println("Numero total de palabras --> "+ Colors.ANSI_YELLOW +AlgorithmCMT.wordsGlobal + Colors.ANSI_RESET);
-        System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW +AlgorithmCMT.charsGlobal + Colors.ANSI_RESET);
-    
     }
     //Fichero JSon (chat): Conteo de mensajes 
     public void jSonCount(){
