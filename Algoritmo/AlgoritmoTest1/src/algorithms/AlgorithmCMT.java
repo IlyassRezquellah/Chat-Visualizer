@@ -19,6 +19,7 @@ public class AlgorithmCMT{
     private int messagesGlobal;
     private int wordsGlobal;
     private int charsGlobal;
+    private int daysGlobal;
     
     public AlgorithmCMT(){
         //Inicializamos el HashMap de años
@@ -29,6 +30,7 @@ public class AlgorithmCMT{
         messagesGlobal = 0;
         wordsGlobal = 0;
         charsGlobal = 0;
+        daysGlobal = 0;
     }
     //Getters de datos globales
     public int getMessagesGlobal(){
@@ -39,6 +41,9 @@ public class AlgorithmCMT{
     }
     public int getCharsGlobal(){
         return charsGlobal;
+    }
+    public int getDaysGlobal(){
+        return daysGlobal;
     }
     //A partir de un numero (año); crea ese año e inicializa todos sus meses, días y horas
     public void createNewYear(int year){//9013 contructores aprox
@@ -87,6 +92,7 @@ public class AlgorithmCMT{
     public void postMatrioshka(){
         //Asignamos los valores a las variables globales
         topsGlobalData();
+        personCountDays();
     }
     
     //Este metodo es demasiado complejo, hay que cambiarlo.
@@ -228,12 +234,31 @@ public class AlgorithmCMT{
     public LinkedHashMap<Integer, Year> getMatrioshka(){
         return yearTree;
     }
-    //Calcular las medias globales
+    //Calcular las tops globales
     public void topsGlobalData(){
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
             messagesGlobal = messagesGlobal + yearTree.get(y.getKey()).getMessageCount();
             wordsGlobal = wordsGlobal + yearTree.get(y.getKey()).getWordCount();
             charsGlobal = charsGlobal + yearTree.get(y.getKey()).getCharCount();
         }
+    }
+    // dias totales de la conversacion de cada persona
+    public void personCountDays(){
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
+                
+                for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    if(d.getMessageCount()>0){
+                        daysGlobal++;
+                        //System.out.println(d.getName() + ": "+d.getMessageCount());
+                    }
+                    //totalDays++;
+                    
+                    //System.out.println(d.getMessageCount());
+                }
+                
+            }
+        }
+        System.out.println(daysGlobal); 
     }
 }

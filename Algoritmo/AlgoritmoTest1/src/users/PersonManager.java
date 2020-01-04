@@ -35,6 +35,7 @@ public class PersonManager{
     private int messagesGlobal;
     private int wordGlobal;
     private int charsGlobal;
+    private int daysGlobal;
     //Arranque inicial del algoritmo
     public void startAlgorythm(){
         //Pruebas del algoritmo
@@ -49,6 +50,7 @@ public class PersonManager{
         
         //Calculos post almacenaje de mensajes en la matrioshka
         getTotalNumber();
+        totalDaysConvo();
         
         //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
         exportJSons();
@@ -64,6 +66,7 @@ public class PersonManager{
         messagesGlobal = 0;
         wordGlobal = 0;
         charsGlobal = 0;
+        daysGlobal = 0;
     }
      //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
     //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"
@@ -175,5 +178,24 @@ public class PersonManager{
     }
     //Configuraciones de gráficos (no sé si se usará). Van al final de los fichros json
     private static final String conf = "\nhelloConf;";
+    
+    //Metodo que saca el numero total de dias de una conversación
+    public void totalDaysConvo(){
+        for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
+            for(HashMap.Entry<String, Month> m : personsMatrishka[0].get(y.getKey()).getAllMonths().entrySet()){
+                for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    boolean daysTalked = false;
+                    for (int i = 0; i < totalPersons && !daysTalked; i++){
+                        if(personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount()>0 ){
+                            daysGlobal++;
+                            daysTalked = true;
+                        }
+                    }
+                   
+                }
+            }
+        }
+        System.out.println("Dias totales hablados --> "+ Colors.ANSI_YELLOW +daysGlobal+ Colors.ANSI_RESET); 
+    }
 
 }

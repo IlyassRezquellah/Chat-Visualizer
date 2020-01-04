@@ -36930,9 +36930,9 @@ Year--> 2018
 				Words: 0
 				Chars: 0
 Year--> 2019
-	Messages: 5
-	Words: 18
-	Chars: 89
+	Messages: 4
+	Words: 3
+	Chars: 23
 
 	Month-->JUNARY
 		Mensajes: 0
@@ -42904,9 +42904,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->MARCH
-		Mensajes: 0
-		Words: 0
-		Chars: 0
+		Mensajes: 4
+		Words: 3
+		Chars: 23
 
 		Day: 1
 			Messsages: 0
@@ -45333,9 +45333,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 25
-			Messsages: 0
-			Words: 0
-			Chars: 0
+			Messsages: 3
+			Words: 3
+			Chars: 23
 
 			Hour: 0
 				Messsages: 0
@@ -45418,9 +45418,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 0
-				Words: 0
-				Chars: 0
+				Messsages: 3
+				Words: 3
+				Chars: 23
 			Hour: 21
 				Messsages: 0
 				Words: 0
@@ -45535,7 +45535,7 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 27
-			Messsages: 0
+			Messsages: 1
 			Words: 0
 			Chars: 0
 
@@ -45620,7 +45620,7 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 20
-				Messsages: 0
+				Messsages: 1
 				Words: 0
 				Chars: 0
 			Hour: 21
@@ -61518,9 +61518,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 	Month-->SEPTEMBER
-		Mensajes: 5
-		Words: 18
-		Chars: 89
+		Mensajes: 0
+		Words: 0
+		Chars: 0
 
 		Day: 1
 			Messsages: 0
@@ -62129,9 +62129,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 		Day: 7
-			Messsages: 5
-			Words: 18
-			Chars: 89
+			Messsages: 0
+			Words: 0
+			Chars: 0
 
 			Hour: 0
 				Messsages: 0
@@ -62194,9 +62194,9 @@ Year--> 2019
 				Words: 0
 				Chars: 0
 			Hour: 15
-				Messsages: 5
-				Words: 18
-				Chars: 89
+				Messsages: 0
+				Words: 0
+				Chars: 0
 			Hour: 16
 				Messsages: 0
 				Words: 0

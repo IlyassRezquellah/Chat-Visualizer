@@ -108,4 +108,7 @@ public class Person{
     public int getCharsGlobal(){
         return algorithm.getCharsGlobal();
     }
+     public int getDaysGlobal(){
+        return algorithm.getDaysGlobal();
+    }
 }
