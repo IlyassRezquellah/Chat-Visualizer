@@ -16,7 +16,7 @@ import users.Person;
 
 public class PersonManager{
     //Variable estatica con la ruta del chat a analizar
-    private static String filePath = "..\\..\\Chats\\ChatBase(corta).txt";
+    private static String filePath = "..\\..\\Chats\\ChatBase(total).txt";
     InterpreterWhatsapp InterWhatsapp;
     List<Person> persons;
     
@@ -36,6 +36,7 @@ public class PersonManager{
     private int wordGlobal;
     private int charsGlobal;
     private int daysGlobal;
+    private double averageMonth;
     //Arranque inicial del algoritmo
     public void startAlgorythm(){
         //Pruebas del algoritmo
@@ -67,6 +68,7 @@ public class PersonManager{
         wordGlobal = 0;
         charsGlobal = 0;
         daysGlobal = 0;
+        averageMonth = 0;
     }
      //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
     //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"

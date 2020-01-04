@@ -20,6 +20,7 @@ public class AlgorithmCMT{
     private int wordsGlobal;
     private int charsGlobal;
     private int daysGlobal;
+    private double averageMonth;
     
     public AlgorithmCMT(){
         //Inicializamos el HashMap de años
@@ -31,6 +32,7 @@ public class AlgorithmCMT{
         wordsGlobal = 0;
         charsGlobal = 0;
         daysGlobal = 0;
+        averageMonth =0;
     }
     //Getters de datos globales
     public int getMessagesGlobal(){
@@ -44,6 +46,9 @@ public class AlgorithmCMT{
     }
     public int getDaysGlobal(){
         return daysGlobal;
+    }
+    public double getAverageMonth(){
+        return averageMonth;
     }
     //A partir de un numero (año); crea ese año e inicializa todos sus meses, días y horas
     public void createNewYear(int year){//9013 contructores aprox
@@ -93,6 +98,7 @@ public class AlgorithmCMT{
         //Asignamos los valores a las variables globales
         topsGlobalData();
         personCountDays();
+        averageMonthMessagesPerson();
     }
     
     //Este metodo es demasiado complejo, hay que cambiarlo.
@@ -260,5 +266,22 @@ public class AlgorithmCMT{
             }
         }
         System.out.println(daysGlobal); 
+    }
+    
+    public void averageMonthMessagesPerson(){
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
+                for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    averageMonth = averageMonth + d.getMessageCount();
+                    
+                }
+                averageMonth = averageMonth / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;
+                //yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays();
+                System.out.println("Media del mes de "+m.getKey()+"--> " +averageMonth); 
+                averageMonth =0;
+            }
+        }
+        //System.out.println("Media del mes es: " +averageMonth); 
+        //averageMonth = averageMonth / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays();
     }
 }
