@@ -55,6 +55,7 @@ public class PersonManager{
         totalDaysChat();
         //Saca la media grupal de lo que se habla mensualmente en la conversación
         getGrupAverageMonths();
+        
         //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
         exportJSons();
 
@@ -121,6 +122,8 @@ public class PersonManager{
         //Conteo palabras
         //Conteo letras
         //Más calculos y análisis para charts...
+        //Implime todos los mensajes del conjunto de personas del chat, para después determinar las palabras más usadas
+        jSonWordsMostUsed();
         
     }
     //Fichero JSon (chat): Conteo de mensajes 
@@ -230,5 +233,24 @@ public class PersonManager{
         }
         System.out.println("Dias totales hablados --> "+ Colors.ANSI_YELLOW +daysGlobal+ Colors.ANSI_RESET); 
     }
-
+    //Con este metodo, extraigo todos los mensajes(textos) de cada persona, y los almaceno en un para asu posterior exportación en json
+    public void jSonWordsMostUsed(){
+        StringBuilder jSonAllMessages = new StringBuilder();
+        jSonAllMessages.append("[{");
+        for (Person p : persons){
+            for (int i = 0, t = p.getTotalMessages(); i < t; i++){
+                //Siempre se eliminan los saltos de línea(replaceAll) para que no sucedan errores cuando se lea el archivo más tarde.
+                jSonAllMessages.append(p.getMessageObj(i).getText()
+                    .replaceAll("\\r|\\n", " ") + ", ");
+            }
+        }
+        jSonAllMessages.append("}]");
+        //Más tarde se usará este TopWordsMostUsed.json para calcular las palabras más usadas en la conversación
+        try(FileOutputStream oFileChars = new FileOutputStream("TopWordsMostUsed.json", false)){
+            oFileChars.write(jSonAllMessages.toString().getBytes());
+        } 
+        catch (Exception e){
+            System.out.println("Error: " + e);
+        }
+    }
 }
