@@ -1,7 +1,6 @@
 package Utils.enums;
 
-public enum EnumMonths
-{
+public enum EnumMonths{
     PLACEHOLDER(0),
     JUNARY(1),
     FEBRARY(2),
@@ -18,13 +17,11 @@ public enum EnumMonths
     
     private int number;
     
-    EnumMonths(int number)
-    {
+    EnumMonths(int number){
         this.number = number;
     }
     
-    public int getNumber()
-    {
+    public int getNumber(){
         return number;
     }
 }

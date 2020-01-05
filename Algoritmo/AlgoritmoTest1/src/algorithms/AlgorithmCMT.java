@@ -70,9 +70,9 @@ public class AlgorithmCMT{
                 //Una vex tenemos el año, creamos el nuevo año dento del HashMap
                 createNewYear(currentYear);
             }
-            //Conteo de letras a partir de una String
-            wordCount = getWordCountOfString(mess.getText());
             //Conteo de palabras a partir de una String
+            wordCount = getWordCountOfString(mess.getText());
+            //Conteo de letras a partir de una String
             charCount = getCharCountOfString(mess.getText());
             
             //Metodo de medias
@@ -97,9 +97,11 @@ public class AlgorithmCMT{
     }
     //Este metodo hace una carga de datos posterior a la inicialización de la matrioshka
     public void postMatrioshka(){
-        //Asignamos los valores a las variables globales
+        //Asignamos los valores a las variables globales de tops
         topsGlobalData();
+        //Calcula los días que ha hablado esta persona en la consversación
         personCountDays();
+        //Obtiene la media de mensajes que se escriben de manera mensual
         averageMonthMessagesPerson();
     }
     
@@ -262,12 +264,16 @@ public class AlgorithmCMT{
             }
         }
     }
-    
+    //Calcula la media que habla mensualmente una persona (en base al conteo de mensajes que tiene esta)
     public void averageMonthMessagesPerson(){
+        //Inicializamos el array 2D donde guardaremos las medias de mensajes menssuales escritos de cada año
         averageMonthByYear = new double[yearTree.size()][12];
+        //Variable auxiliar para guardar lo que habla una persona
         double averageMonth = 0.0f;
+        //Contadores pra moverse automaticamente entre los datos del array 2D
         int counYears = 0;
         int counMonths = 0;
+        //Bucle de la matrioshka para obtener la información pertienen sobre los días, meses y años
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
             for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
                 for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
@@ -281,6 +287,7 @@ public class AlgorithmCMT{
             counYears++;
             counMonths = 0;
         }
+        //Muestara por consola de todos los datos obteneidos. Se cambiará más tarde por un json
         for (int year = 0, tY = averageMonthByYear.length; year < tY; year++){
             System.out.println("Año: " + year);
             for (int month = 0, tM = 12; month < tM; month++){

@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//aClase usa para mostrar información agradable a la vista por consola.
 package Utils;
 
-/**
- *
- * @author Virtuo
- */
 public class Colors {
-    //Paleta de colores 
+    //Paletas de colores 
     //Los colores mas amenos a la vista son el PURPLE,YELLOW Y CYAN
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";

@@ -36,6 +36,7 @@ public class PersonManager{
     private int wordGlobal;
     private int charsGlobal;
     private int daysGlobal;
+    //Media de mensajes mensuales
     private double[][] grupalAverageMonths;
     //Arranque inicial del algoritmo
     public void startAlgorythm(){
@@ -51,7 +52,8 @@ public class PersonManager{
         
         //Calculos post almacenaje de mensajes en la matrioshka
         getTotalNumber();
-        totalDaysConvo();
+        totalDaysChat();
+        //Saca la media grupal de lo que se habla mensualmente en la conversación
         getGrupAverageMonths();
         //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
         exportJSons();
@@ -82,20 +84,26 @@ public class PersonManager{
         System.out.println("Numero total de palabras --> "+ Colors.ANSI_YELLOW + wordGlobal + Colors.ANSI_RESET);
         System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW + charsGlobal + Colors.ANSI_RESET);
     }
+    //Calcula y anora la media mensual que se habla de manera grupal en una convresación
     public void getGrupAverageMonths(){
+        //Guardo la cantidad de años que hay en este chat, dado que se usa mucho este valor
         int totalYears = persons.get(0).getAverageMonth().length;
+        //Al igual que en su versión individual, se usa una variable local para almacenar el conteo de mensajes mensuales de cada persona
         double totalAverage = 0.0f;
+        //Inicializamos el array 2D donde se almacenará la media grupal
         grupalAverageMonths = new double[totalYears][12];
-        
+        //Conjunto de bucles usados para extraer la media de cada media mensual individual, por cada año de las diferentes personas que han hablado en el chat.
         for (int year = 0, tY = persons.get(year).getAverageMonth().length; year < tY; year++){  
             for (int month = 0, tM = persons.get(year).getAverageMonth()[year].length; month < tM; month++){
                 for (Person p : persons){
                     totalAverage += p.getOneAverageMonth(year, month);
                 }
+                //Se calcula la media de este mes y se almacena
                 grupalAverageMonths[year][month] = totalAverage / totalPersons;
                 totalAverage = 0;
             }
         }
+        //Se muestra por consola la información de medias grupals. Cambiar más tarde por un fichero json
         System.out.println("\nMedia grupal por mes:");
         for (int year = 0, tY = totalYears; year < tY; year++){
             System.out.println("Añitos: " + year);
@@ -205,7 +213,7 @@ public class PersonManager{
     private static final String conf = "\nhelloConf;";
     
     //Metodo que saca el numero total de dias de una conversación
-    public void totalDaysConvo(){
+    public void totalDaysChat(){
         for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
             for(HashMap.Entry<String, Month> m : personsMatrishka[0].get(y.getKey()).getAllMonths().entrySet()){
                 for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
