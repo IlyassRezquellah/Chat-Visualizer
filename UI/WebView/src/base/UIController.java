@@ -10,15 +10,18 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 public class UIController implements Initializable{
-    
     @FXML
+    //Esta sería la ventana en si (la web)
     private WebView webView;
        
     @Override
     public void initialize(URL fxmlStyle, ResourceBundle rb){
+        //Este es el explorador web (chorme, firefox)
         WebEngine engine = webView.getEngine();
+        //Un enlace directo al documentdo index
         URL url = getClass().getResource("/web/index.html");
+        //Carga de la web en el navegador
         engine.load(url.toString());
-    }    
+    }
     
 }

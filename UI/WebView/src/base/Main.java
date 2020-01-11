@@ -6,9 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
     
-public class Main extends Application
-{
+public class Main extends Application{
     
+    public static void main(String[] args){
+        launch(args);
+    }
+    //Ventana de JavaFX
     @Override
     public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("FXMLStyle.fxml"));
@@ -17,10 +20,6 @@ public class Main extends Application
         
         stage.setScene(scene);
         stage.show();
-    }
-
-    public static void main(String[] args){
-        launch(args);
     }
     
 }
