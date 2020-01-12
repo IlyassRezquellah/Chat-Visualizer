@@ -1,5 +1,6 @@
 package base;
 
+import com.sun.javafx.webkit.WebConsoleListener;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -22,6 +23,7 @@ public class UIController implements Initializable{
         URL url = getClass().getResource("/web/index.html");
         //Carga de la web en el navegador
         engine.load(url.toString());
+        
     }
     
 }

@@ -10,6 +10,28 @@
  * ---------------------------------------
  */
 //https://www.w3schools.com/js/js_json_http.asp
+// Load json
+var xmlhttp = new XMLHttpRequest();
+var url = "hola/MessageCount.json";
+xmlhttp.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200) {
+        chart.data = JSON.parse(this.responseText);
+        //myLog(chart.data);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+//Log
+function myLog(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' +
+        arr[i].display + '</a><br>';
+    }
+    document.getElementById("log").innerHTML = out;
+}
 
 // Themes begin
 am4core.useTheme(am4themes_dataviz);
@@ -19,33 +41,8 @@ am4core.useTheme(am4themes_animated);
 // Create chart instance
 var chart = am4core.create("chartdiv", am4charts.XYChart);
 
-// Add data
-//chart.data = [];
-var xmlhttp = new XMLHttpRequest();
-var url = "hola/MessageCount.json";
-var json = [];
-xmlhttp.onreadystatechange = function(){
-    console.log(this.responseText);
-    if (this.readyState == 4 && this.status == 200) {
-        json = JSON.parse(this.responseText);
-        myFunction(json);
-    }
-};
-xmlhttp.open("GET",url,true);
-xmlhttp.send();
-
-function myFunction(arr) {
-    var out = "";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-        out += '<a href="' + arr[i].url + '">' +
-        arr[i].display + '</a><br>';
-    }
-    document.getElementById("id01").innerHTML = out;
-}
-
-chart.dataSource.url = json;
-//chart.dataSource.load();
+//chart.jsonData = jsonData;
+//chart.dataSource.url = "https://raw.githubusercontent.com/EliassReque/FinalProject/master/Graficas/Grafica%20Total%20Mensajes/hola/MessageCount.json";
 
 // Set input format for the dates
 chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
