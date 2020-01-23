@@ -89,7 +89,7 @@ public class PersonManager{
         System.out.println("Numero total de palabras --> "+ Colors.ANSI_YELLOW + wordGlobal + Colors.ANSI_RESET);
         System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW + charsGlobal + Colors.ANSI_RESET);
     }
-    //Calcula y anora la media mensual que se habla de manera grupal en una convresación
+    //Calcula y anota la media mensual que se habla de manera grupal en una convresación
     public void getGrupAverageMonths(){
         //Guardo la cantidad de años que hay en este chat, dado que se usa mucho este valor
         int totalYears = persons.get(0).getAverageMonth().length;
@@ -121,28 +121,27 @@ public class PersonManager{
     }
     //Creación y expotación de ficheros JSon
     public void exportJSons(){
-        //JSon de conteos básicos
+        //JSon de conteos básicos (Mensajes, palabras, caracteres)
         jSonCount();
-        //Conteo palabras
-        //Conteo letras
-        //Más calculos y análisis para charts...
-        //Implime todos los mensajes del conjunto de personas del chat, para después determinar las palabras más usadas
+        //JSon media individual y media general
+        jSonAverage();
+        //JSon con todos los mensajes, para sacar las palabras más usadas
         jSonWordsMostUsed();
         
     }
-    //Fichero JSon (chat): Conteo de mensajes 
+    //JSon (chat): Conteos 
     public void jSonCount(){
         //Dejo guardada la coletilla de cada indicador de fecha
-        String beginingDate = "{\n\"date\": \"";
-        StringBuilder jSonFileMessages = new StringBuilder();
-        StringBuilder jSonFileWords = new StringBuilder();
-        StringBuilder jSonFileChars = new StringBuilder();
+        String beginingDate = "{\"date\": \"";
+        StringBuilder jSonMessages = new StringBuilder();
+        StringBuilder jSonWords = new StringBuilder();
+        StringBuilder jSonChars = new StringBuilder();
         //Usamos un contador para los meses, ya que es necesaria su representación numérica en el json
         int counterMonths;
         //Abrimos brackets para empezar la extructura del json
-        jSonFileMessages.append("[");
-        jSonFileWords.append("[");
-        jSonFileChars.append("[");
+        jSonMessages.append("[");
+        jSonWords.append("[");
+        jSonChars.append("[");
         //Estos fors son pareceidos a los de la matrioshka, con la diferentea de que estos se usan para recorrers todos los días de los años del calensario que han hablado estas personas en el chat.
         //Gracias a estos fors, podemos recorrer todas las fechas y anotarlas en el json
         for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
@@ -151,34 +150,26 @@ public class PersonManager{
                 
                 for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
                     //Escribimos la fecha en el json
-                    jSonFileMessages.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
-                    jSonFileWords.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
-                    jSonFileChars.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
+                    jSonMessages.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
+                    jSonWords.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
+                    jSonChars.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
                     //Limite de personas preparado de antemano
                     //Dentro de esta fecha, anotamos las personas correspondientes, y el número de mensajes que tiene (preparado para recibir un número indefinído de personas)
                     for (int i = 0; i < totalPersons; i++){
                         if(i == totalPersons-1){
-                            jSonFileMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "");
-                            jSonFileWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + "\n");
-                            jSonFileChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + "\n");
+                            jSonMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "");
+                            jSonWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + "");
+                            jSonChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + "");
                         }else{
-                            jSonFileMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",");
-                            jSonFileWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",\n");
-                            jSonFileChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",\n");
+                            jSonMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",");
+                            jSonWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",");
+                            jSonChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",");
                         }    
                     }
                     //Se cierra esta fecha
-                    jSonFileMessages.append("}, ");
-                    jSonFileWords.append("}, ");
-                    jSonFileChars.append("}, ");
-                    /*for (Hour h : d.getHours()){
-                        jSonFile.append(y.getKey() + "/" + m.getKey() + "/" + d.getName() + " - " + h.getName() + ":00\n");
-                        //System.out.println(y.getKey() + "/" + m.getKey() + "/" + d.getName() + "\n");
-                        for (int i = 0; i < totalPersons; i++){
-                            jSonFile.append(persons.get(i).getName() + ": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getOneHour(h.getName()).getMessageCount() + "\n");
-                            //System.out.println(persons.get(i).getName() + ": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getOneHour(h.getName()).getMessageCount() + "\n");
-                        }
-                    }*/
+                    jSonMessages.append("}, ");
+                    jSonWords.append("}, ");
+                    jSonChars.append("}, ");
                 }
                 //Tenemos en cuenta que el counter de meses no se pase de 12
                 counterMonths++;
@@ -187,39 +178,116 @@ public class PersonManager{
             }
         }
         //Elimina la última coma innecesaria
-        jSonFileMessages.setLength(jSonFileMessages.length() - 2);
-        jSonFileWords.setLength(jSonFileWords.length() - 2);
-        jSonFileChars.setLength(jSonFileChars.length() - 2);
+        jSonMessages.setLength(jSonMessages.length() - 2);
+        jSonWords.setLength(jSonWords.length() - 2);
+        jSonChars.setLength(jSonChars.length() - 2);
         //Cerramos la extructura del json
-        jSonFileMessages.append("]");
-        jSonFileWords.append("]");
-        jSonFileChars.append("]");
+        jSonMessages.append("]");
+        jSonWords.append("]");
+        jSonChars.append("]");
         //Por último, creamos el fichero json
         try(FileOutputStream oFileMessages = new FileOutputStream("MessageCount.json", false)){
-            importJSonFileMessagesData(jSonFileMessages.toString());
-            oFileMessages.write(jSonFileMessages.toString().getBytes());
+            importJSonFileMessagesData(jSonMessages.toString());
+            oFileMessages.write(jSonMessages.toString().getBytes());
         } 
         catch (Exception e){
             System.out.println("Error: " + e);
         }
         
         try(FileOutputStream oFileWords = new FileOutputStream("WordsCount.json", false)){
-            oFileWords.write(jSonFileWords.toString().getBytes());
+            oFileWords.write(jSonWords.toString().getBytes());
         } 
         catch (Exception e){
             System.out.println("Error: " + e);
         }
         
         try(FileOutputStream oFileChars = new FileOutputStream("CharsCount.json", false)){
-            oFileChars.write(jSonFileChars.toString().getBytes());
+            oFileChars.write(jSonChars.toString().getBytes());
         } 
         catch (Exception e){
             System.out.println("Error: " + e);
         }
     }
-    //Configuraciones de gráficos (no sé si se usará). Van al final de los fichros json
-    private static final String conf = "\nhelloConf;";
-    
+    //JSon (chat): Medias
+    public void jSonAverage(){
+        //Dejo guardada la coletilla de cada indicador de fecha
+        String beginingDate = "{\"category\": \"";
+        StringBuilder jSonAverageM = new StringBuilder();
+        StringBuilder jSonAverageW = new StringBuilder();
+        StringBuilder jSonAverageC = new StringBuilder();
+        //Usamos un contador para los meses, ya que es necesaria su representación numérica en el json
+        int counterMonths;
+        //Abrimos brackets para empezar la extructura del json
+        jSonAverageM.append("[");
+        jSonAverageW.append("[");
+        jSonAverageC.append("[");
+        //Estos fors son pareceidos a los de la matrioshka, con la diferentea de que estos se usan para recorrers todos los días de los años del calensario que han hablado estas personas en el chat.
+        //Gracias a estos fors, podemos recorrer todas las fechas y anotarlas en el json
+        /*[{
+        "category": "December",
+        "value1":  0.0,
+        "value2":  0.0,
+        "value3":  0.0
+        },{*/
+        for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
+            counterMonths = 1;
+            for(HashMap.Entry<String, Month> m : personsMatrishka[0].get(y.getKey()).getAllMonths().entrySet()){
+                for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    //Limite de personas preparado de antemano
+                    //Dentro de esta fecha, anotamos las personas correspondientes, y el número de mensajes que tiene (preparado para recibir un número indefinído de personas)
+                    for (int i = 0; i < totalPersons; i++){
+                        if(i == totalPersons-1){
+                            jSonAverageM.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "");
+                            jSonAverageW.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + "");
+                            jSonAverageC.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + "");
+                        }else{
+                            jSonAverageM.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",");
+                            jSonAverageW.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",");
+                            jSonAverageC.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",");
+                        }    
+                    }
+                    //Se cierra esta fecha
+                    jSonAverageM.append("}, ");
+                    jSonAverageW.append("}, ");
+                    jSonAverageC.append("}, ");
+                }
+                //Tenemos en cuenta que el counter de meses no se pase de 12
+                counterMonths++;
+                if(m.getKey().equals(EnumMonths.DECEMBER))
+                    counterMonths = 1;
+            }
+        }
+        //Elimina la última coma innecesaria
+        jSonAverageM.setLength(jSonAverageM.length() - 2);
+        jSonAverageW.setLength(jSonAverageW.length() - 2);
+        jSonAverageC.setLength(jSonAverageC.length() - 2);
+        //Cerramos la extructura del json
+        jSonAverageM.append("]");
+        jSonAverageW.append("]");
+        jSonAverageC.append("]");
+        //Por último, creamos el fichero json
+        try(FileOutputStream oFileMessages = new FileOutputStream("MessageCount.json", false)){
+            importJSonFileMessagesData(jSonAverageM.toString());
+            oFileMessages.write(jSonAverageM.toString().getBytes());
+        } 
+        catch (Exception e){
+            System.out.println("Error: " + e);
+        }
+        
+        try(FileOutputStream oFileWords = new FileOutputStream("WordsCount.json", false)){
+            oFileWords.write(jSonAverageW.toString().getBytes());
+        } 
+        catch (Exception e){
+            System.out.println("Error: " + e);
+        }
+        
+        try(FileOutputStream oFileChars = new FileOutputStream("CharsCount.json", false)){
+            oFileChars.write(jSonAverageC.toString().getBytes());
+        } 
+        catch (Exception e){
+            System.out.println("Error: " + e);
+        }
+    }
     //Metodo que saca el numero total de dias de una conversación
     public void totalDaysChat(){
         for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
@@ -237,7 +305,7 @@ public class PersonManager{
         }
         System.out.println("Dias totales hablados --> "+ Colors.ANSI_YELLOW +daysGlobal+ Colors.ANSI_RESET); 
     }
-    //Con este metodo, extraigo todos los mensajes(textos) de cada persona, y los almaceno en un para asu posterior exportación en json
+    //Con este metodo, extraemos todos los mensajes(textos) de cada persona, y los almaceno en un para asu posterior exportación en json
     public void jSonWordsMostUsed(){
         StringBuilder jSonAllMessages = new StringBuilder();
         jSonAllMessages.append("[{");
