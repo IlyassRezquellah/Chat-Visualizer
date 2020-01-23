@@ -16,6 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 import users.Person;
 
 public class PersonManager{
@@ -109,15 +110,14 @@ public class PersonManager{
             }
         }
         //Se muestra por consola la información de medias grupals. Cambiar más tarde por un fichero json
-        System.out.println("\nMedia grupal por mes:");
+        /*System.out.println("\nMedia grupal por mes:");
         for (int year = 0, tY = totalYears; year < tY; year++){
             System.out.println("Añitos: " + year);
             for (int month = 0, tM = 12; month < tM; month++){
                 System.out.println("Media global del mes " + month + ": " + grupalAverageMonths[year][month]);
             }
             System.out.println("\n");
-        }
-        
+        }*/
     }
     //Creación y expotación de ficheros JSon
     public void exportJSons(){
@@ -210,82 +210,73 @@ public class PersonManager{
     }
     //JSon (chat): Medias
     public void jSonAverage(){
-        //Dejo guardada la coletilla de cada indicador de fecha
+        //Dejo guardada la coletilla de cada conjunto de datos
         String beginingDate = "{\"category\": \"";
-        StringBuilder jSonAverageM = new StringBuilder();
-        StringBuilder jSonAverageW = new StringBuilder();
-        StringBuilder jSonAverageC = new StringBuilder();
-        //Usamos un contador para los meses, ya que es necesaria su representación numérica en el json
-        int counterMonths;
-        //Abrimos brackets para empezar la extructura del json
-        jSonAverageM.append("[");
-        jSonAverageW.append("[");
-        jSonAverageC.append("[");
-        //Estos fors son pareceidos a los de la matrioshka, con la diferentea de que estos se usan para recorrers todos los días de los años del calensario que han hablado estas personas en el chat.
-        //Gracias a estos fors, podemos recorrer todas las fechas y anotarlas en el json
-        /*[{
-        "category": "December",
-        "value1":  0.0,
-        "value2":  0.0,
-        "value3":  0.0
-        },{*/
-        for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
-            counterMonths = 1;
-            for(HashMap.Entry<String, Month> m : personsMatrishka[0].get(y.getKey()).getAllMonths().entrySet()){
-                for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
-                    //Limite de personas preparado de antemano
-                    //Dentro de esta fecha, anotamos las personas correspondientes, y el número de mensajes que tiene (preparado para recibir un número indefinído de personas)
-                    for (int i = 0; i < totalPersons; i++){
-                        if(i == totalPersons-1){
-                            jSonAverageM.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "");
-                            jSonAverageW.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + "");
-                            jSonAverageC.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + "");
-                        }else{
-                            jSonAverageM.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",");
-                            jSonAverageW.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",");
-                            jSonAverageC.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",");
-                        }    
-                    }
-                    //Se cierra esta fecha
-                    jSonAverageM.append("}, ");
-                    jSonAverageW.append("}, ");
-                    jSonAverageC.append("}, ");
+        int totalYears = persons.get(0).getTotalYears();
+        //Creo los StringBuilder que serán el contenido de cada json más tarde
+        StringBuilder[] jSonAverageM = new StringBuilder[totalYears];
+        StringBuilder[] jSonAverageW = new StringBuilder[totalYears];
+        StringBuilder[] jSonAverageC = new StringBuilder[totalYears];
+
+        //Estos fors son una versión sencialla de la matrioshka, adaptado a las medias
+        //Gracias a estos fors, podemos recorrer todas las medias de cada personas. E incluso las generales
+        for (int y = 0; y < totalYears; y++){          
+            //Inicializamos los StringBuilder por año
+            jSonAverageM[y] = new StringBuilder();
+            jSonAverageW[y] = new StringBuilder();
+            jSonAverageC[y] = new StringBuilder();
+            //Abrimos brackets para empezar la extructura del json
+            jSonAverageM[y].append("[");
+            jSonAverageW[y].append("[");
+            jSonAverageC[y].append("[");
+            //for para recorrer los meses de cada media
+            for (int m = 1; m < 12; m++){
+                //Guardamos el inicio de cada conjunto de datos con el nombre de su mes
+                jSonAverageM[y].append(beginingDate + EnumMonths.values()[m].name() +"\", ");
+                jSonAverageW[y].append(beginingDate  + EnumMonths.values()[m].name() +"\", ");
+                jSonAverageC[y].append(beginingDate  + EnumMonths.values()[m].name() +"\", ");
+                //Usaremos estos fors para guardar las medias de cada una de las personas
+                for (int p = 0; p < totalPersons; p++){
+                    jSonAverageM[y].append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonth()[y][m]));
+                    jSonAverageW[y].append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonth()[y][m]));
+                    jSonAverageC[y].append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonth()[y][m]));
                 }
-                //Tenemos en cuenta que el counter de meses no se pase de 12
-                counterMonths++;
-                if(m.getKey().equals(EnumMonths.DECEMBER))
-                    counterMonths = 1;
+                //Guardamos las medias generales
+                jSonAverageM[y].append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonths[y][m]));
+                jSonAverageW[y].append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonths[y][m]));
+                jSonAverageC[y].append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonths[y][m]));
             }
-        }
-        //Elimina la última coma innecesaria
-        jSonAverageM.setLength(jSonAverageM.length() - 2);
-        jSonAverageW.setLength(jSonAverageW.length() - 2);
-        jSonAverageC.setLength(jSonAverageC.length() - 2);
-        //Cerramos la extructura del json
-        jSonAverageM.append("]");
-        jSonAverageW.append("]");
-        jSonAverageC.append("]");
-        //Por último, creamos el fichero json
-        try(FileOutputStream oFileMessages = new FileOutputStream("MessageCount.json", false)){
-            importJSonFileMessagesData(jSonAverageM.toString());
-            oFileMessages.write(jSonAverageM.toString().getBytes());
-        } 
-        catch (Exception e){
-            System.out.println("Error: " + e);
-        }
-        
-        try(FileOutputStream oFileWords = new FileOutputStream("WordsCount.json", false)){
-            oFileWords.write(jSonAverageW.toString().getBytes());
-        } 
-        catch (Exception e){
-            System.out.println("Error: " + e);
-        }
-        
-        try(FileOutputStream oFileChars = new FileOutputStream("CharsCount.json", false)){
-            oFileChars.write(jSonAverageC.toString().getBytes());
-        } 
-        catch (Exception e){
-            System.out.println("Error: " + e);
+            //Elimina la última coma innecesaria
+            jSonAverageM[y].setLength(jSonAverageM[y].length() - 2);
+            jSonAverageW[y].setLength(jSonAverageW[y].length() - 2);
+            jSonAverageC[y].setLength(jSonAverageC[y].length() - 2);
+            //Cerramos la extructura del json
+            jSonAverageM[y].append("]");
+            jSonAverageW[y].append("]");
+            jSonAverageC[y].append("]");
+            
+            //Por último, creamos el fichero json
+            try(FileOutputStream oFileMessages = new FileOutputStream("AverageMessage"+y+".json", false)){
+              //importJSonFileMessagesData(jSonAverageM.toString());
+              oFileMessages.write(jSonAverageM[y].toString().getBytes());
+            } 
+            catch (Exception e){
+              System.out.println("Error: " + e);
+            }
+
+            try(FileOutputStream oFileWords = new FileOutputStream("AverageWords"+y+".json", false)){
+              oFileWords.write(jSonAverageW[y].toString().getBytes());
+            } 
+            catch (Exception e){
+              System.out.println("Error: " + e);
+            }
+
+            try(FileOutputStream oFileChars = new FileOutputStream("AverageChars"+y+".json", false)){
+              oFileChars.write(jSonAverageC[y].toString().getBytes());
+            } 
+            catch (Exception e){
+              System.out.println("Error: " + e);
+            }
         }
     }
     //Metodo que saca el numero total de dias de una conversación

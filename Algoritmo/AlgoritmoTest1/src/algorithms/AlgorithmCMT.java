@@ -288,12 +288,12 @@ public class AlgorithmCMT{
             counMonths = 0;
         }
         //Muestara por consola de todos los datos obteneidos. Se cambiará más tarde por un json
-        for (int year = 0, tY = averageMonthByYear.length; year < tY; year++){
+        /*for (int year = 0, tY = averageMonthByYear.length; year < tY; year++){
             System.out.println("Año: " + year);
             for (int month = 0, tM = 12; month < tM; month++){
                 System.out.println("Media del mes " + month + ": " + averageMonthByYear[year][month]);
             }
         }
-        System.out.println("\n");
+        System.out.println("\n");*/
     }
 }
