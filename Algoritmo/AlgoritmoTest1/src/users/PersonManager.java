@@ -8,7 +8,11 @@ import algorithms.matrioshka.Hour;
 import algorithms.matrioshka.Month;
 import algorithms.matrioshka.Year;
 import interpreters.InterpreterWhatsapp;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -147,18 +151,18 @@ public class PersonManager{
                 
                 for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
                     //Escribimos la fecha en el json
-                    jSonFileMessages.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
+                    jSonFileMessages.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
                     jSonFileWords.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
                     jSonFileChars.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",\n");
                     //Limite de personas preparado de antemano
                     //Dentro de esta fecha, anotamos las personas correspondientes, y el número de mensajes que tiene (preparado para recibir un número indefinído de personas)
                     for (int i = 0; i < totalPersons; i++){
                         if(i == totalPersons-1){
-                            jSonFileMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "\n");
+                            jSonFileMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "");
                             jSonFileWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + "\n");
                             jSonFileChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + "\n");
                         }else{
-                            jSonFileMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",\n");
+                            jSonFileMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",");
                             jSonFileWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",\n");
                             jSonFileChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",\n");
                         }    
@@ -192,6 +196,7 @@ public class PersonManager{
         jSonFileChars.append("]");
         //Por último, creamos el fichero json
         try(FileOutputStream oFileMessages = new FileOutputStream("MessageCount.json", false)){
+            importJSonFileMessagesData(jSonFileMessages.toString());
             oFileMessages.write(jSonFileMessages.toString().getBytes());
         } 
         catch (Exception e){
@@ -227,7 +232,6 @@ public class PersonManager{
                             daysTalked = true;
                         }
                     }
-                   
                 }
             }
         }
@@ -251,6 +255,24 @@ public class PersonManager{
         } 
         catch (Exception e){
             System.out.println("Error: " + e);
+        }
+    }
+    public void importJSonFileMessagesData(String jsonData){
+        String jsonFile = "src/web/index.js";
+        StringBuilder fullFile = new StringBuilder();
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(
+            new FileInputStream(jsonFile), StandardCharsets.UTF_8));){
+            String data = "";
+            fullFile.append("var data = " + jsonData);
+            while((data = br.readLine()) != null){
+                fullFile.append(data + "\n");
+            }
+            
+            FileOutputStream oFileWords = new FileOutputStream("src/web/newindex.js", false);
+            oFileWords.write(fullFile.toString().getBytes());
+        }
+        catch (Exception e){
+            System.out.println("Algo fue mal: " + e);
         }
     }
 }
