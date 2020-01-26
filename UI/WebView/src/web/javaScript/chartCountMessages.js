@@ -9,29 +9,6 @@
  * https://www.amcharts.com/docs/v4/
  * ---------------------------------------
  */
-//https://www.w3schools.com/js/js_json_http.asp
-// Load json
-var xmlhttp = new XMLHttpRequest();
-var url = "hola/MessageCount.json";
-xmlhttp.onreadystatechange = function(){
-    if (this.readyState == 4 && this.status == 200) {
-        chart.data = JSON.parse(this.responseText);
-        //myLog(chart.data);
-    }
-};
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-
-//Log
-function myLog(arr) {
-    var out = "";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-        out += '<a href="' + arr[i].url + '">' +
-        arr[i].display + '</a><br>';
-    }
-    document.getElementById("log").innerHTML = out;
-}
 
 // Themes begin
 am4core.useTheme(am4themes_dataviz);
@@ -39,10 +16,14 @@ am4core.useTheme(am4themes_animated);
 // Themes end
 
 // Create chart instance
-var chart = am4core.create("chartdiv", am4charts.XYChart);
+var chart = am4core.create("chartCountMessages", am4charts.XYChart);
 
-//chart.jsonData = jsonData;
-//chart.dataSource.url = "https://raw.githubusercontent.com/EliassReque/FinalProject/master/Graficas/Grafica%20Total%20Mensajes/hola/MessageCount.json";
+// Add data
+//chart.data = [];
+
+chart.dataSource.url = "MessageCount.json";
+//chart.dataSource.load();
+
 
 // Set input format for the dates
 chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";

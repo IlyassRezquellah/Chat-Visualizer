@@ -1,0 +1,39 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#chartCountMessages {
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 48.5%;
+    height: 500px;
+}
+#chartAverage {
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 48.5%;
+    height: 500px;
+}
+#chartTops {
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width:40%;
+    height: 250px;
+}
+#chartPercentages {
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 30%;
+    height: 250px;
+}
+#chartHourFrequency {
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 26%;
+    height: 250px;
+}
+  

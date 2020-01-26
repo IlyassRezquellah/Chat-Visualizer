@@ -20,7 +20,7 @@ public class Main extends Application{
     @Override
     public void start(Stage stage) throws Exception{
         //Guardamos la configuración de la escena
-        legalUse = FXMLLoader.load(getClass().getResource("LegalUseFXML.fxml"));
+        legalUse = FXMLLoader.load(getClass().getResource("UIStyle.fxml"));
         //Creamos una escena con la configuración anterior
         legalUseScene = new Scene(legalUse);
         

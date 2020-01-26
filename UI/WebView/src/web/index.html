@@ -1,19 +1,29 @@
+<!--Main index html-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grafica total mensajes</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Graficas</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="chartdiv"></div>
-    <div id="log"></div>
+    <div id="chartCountMessages"></div>
+    <div id="chartAverage"></div>
+    <br/>
+    <div id="chartTops"></div>
+    <div id="chartPercentages"></div>
+    <div id="chartHourFrequency"></div>
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
     <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/dataviz.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-    <script src="index.js"></script>
+    <script src="javaScript/chartCountMessages.js"></script>
+    <script src="javaScript/chartAverage.js"></script>
+    <script src="javaScript/chartTops.js"></script>
+    <script src="javaScript/chartPercentages.js"></script>
+    <script src="javaScript/chartHourFrequency.js"></script>
 </body>
 </html>
