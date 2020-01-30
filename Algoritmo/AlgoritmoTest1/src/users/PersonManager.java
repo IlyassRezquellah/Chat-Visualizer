@@ -21,7 +21,7 @@ import users.Person;
 
 public class PersonManager{
     //Variable estatica con la ruta del chat a analizar
-    private static String filePath = "..\\..\\Chats\\ChatBase(total).txt";
+    private static String filePath = "theChat.txt";
     InterpreterWhatsapp InterWhatsapp;
     List<Person> persons;
     
@@ -99,14 +99,16 @@ public class PersonManager{
         //Inicializamos el array 2D donde se almacenará la media grupal
         grupalAverageMonths = new double[totalYears][12];
         //Conjunto de bucles usados para extraer la media de cada media mensual individual, por cada año de las diferentes personas que han hablado en el chat.
-        for (int year = 0, tY = persons.get(year).getAverageMonth().length; year < tY; year++){  
-            for (int month = 0, tM = persons.get(year).getAverageMonth()[year].length; month < tM; month++){
-                for (Person p : persons){
+        for (Person p : persons){
+            for (int year = 0, tY = persons.get(year).getAverageMonth().length; year < tY; year++){ 
+                System.out.println("Year: " + year);
+                for (int month = 0, tM = p.getAverageMonth()[year].length; month < tM; month++){
                     totalAverage += p.getOneAverageMonth(year, month);
+                   
+                    //Se calcula la media de este mes y se almacena
+                    grupalAverageMonths[year][month] = totalAverage / totalPersons;
+                    totalAverage = 0;
                 }
-                //Se calcula la media de este mes y se almacena
-                grupalAverageMonths[year][month] = totalAverage / totalPersons;
-                totalAverage = 0;
             }
         }
         //Se muestra por consola la información de medias grupals. Cambiar más tarde por un fichero json
