@@ -20,11 +20,11 @@ chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
 chart.data = [
   {
-    country: "Christian",
+    country: name0,
     value: 401
   },
   {
-    country: "Ilyass",
+    country: name1,
     value: 300
   }
 ];

@@ -9,7 +9,6 @@
  * https://www.amcharts.com/docs/v4/
  * ---------------------------------------
  */
-
 // Themes begin
 am4core.useTheme(am4themes_dataviz);
 am4core.useTheme(am4themes_animated);
@@ -19,9 +18,9 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("chartCountMessages", am4charts.XYChart);
 
 // Add data
-//chart.data = [];
+chart.data = dataMessagesCount;
 
-chart.dataSource.url = "MessageCount.json";
+//chart.dataSource.url = "MessageCount.json";
 //chart.dataSource.load();
 
 
@@ -35,7 +34,7 @@ var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 
 // Create series
 var series = chart.series.push(new am4charts.LineSeries());
-series.dataFields.valueY = "Christian";
+series.dataFields.valueY = name0;
 series.dataFields.dateX = "date";
 //series.tooltipText = "{Christian}"
 //series.tooltipText = "[bold]{date.formatDate()}:[/] {Christian}\n[bold]{previousDate.formatDate()}:[/] {Ilyass}";
@@ -44,7 +43,7 @@ series.minBulletDistance = 15;
 
 //Create series 2
 var series2 = chart.series.push(new am4charts.LineSeries());
-series2.dataFields.valueY = "Ilyass";
+series2.dataFields.valueY = name1;
 series2.dataFields.dateX = "date";
 //series.tooltipText = "{Ilyass}"
 series2.strokeWidth = 2;
@@ -53,11 +52,11 @@ series2.strokeDasharray = "3,4";
 series2.stroke = series.stroke;
 
 series.tooltipText = `{dateX}[/]
-Christian: {Christian}`;
+`+name0+`: {`+name0+`}`;
 series.tooltip.pointerOrientation = "vertical";
 
 series2.tooltipText = `{dateX}[/]
-Ilyass: {Ilyass}`;
+`+name1+`: {`+name1+`}`;
 series2.tooltip.pointerOrientation = "vertical";
 
 //Sacar las bullets en hover --> Bullet series 2

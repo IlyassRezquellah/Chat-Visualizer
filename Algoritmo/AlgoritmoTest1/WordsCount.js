@@ -1,4 +1,4 @@
-var data = var name0 = "Christian"
+var name0 = "Christian"
 var name1 = "Ilyass"
 var data = [{"date": "2018-01-01","Christian": 0,"Ilyass": 0},
 {"date": "2018-01-02","Christian": 0,"Ilyass": 0},
@@ -276,265 +276,265 @@ var data = [{"date": "2018-01-01","Christian": 0,"Ilyass": 0},
 {"date": "2018-10-01","Christian": 0,"Ilyass": 0},
 {"date": "2018-10-02","Christian": 0,"Ilyass": 0},
 {"date": "2018-10-03","Christian": 0,"Ilyass": 0},
-{"date": "2018-10-04","Christian": 2,"Ilyass": 0},
-{"date": "2018-10-05","Christian": 3,"Ilyass": 4},
+{"date": "2018-10-04","Christian": 25,"Ilyass": 0},
+{"date": "2018-10-05","Christian": 12,"Ilyass": 8},
 {"date": "2018-10-06","Christian": 0,"Ilyass": 0},
-{"date": "2018-10-07","Christian": 15,"Ilyass": 10},
+{"date": "2018-10-07","Christian": 69,"Ilyass": 48},
 {"date": "2018-10-08","Christian": 0,"Ilyass": 0},
-{"date": "2018-10-09","Christian": 6,"Ilyass": 4},
-{"date": "2018-10-10","Christian": 1,"Ilyass": 0},
-{"date": "2018-10-11","Christian": 33,"Ilyass": 29},
+{"date": "2018-10-09","Christian": 31,"Ilyass": 10},
+{"date": "2018-10-10","Christian": 5,"Ilyass": 0},
+{"date": "2018-10-11","Christian": 125,"Ilyass": 69},
 {"date": "2018-10-12","Christian": 0,"Ilyass": 0},
 {"date": "2018-10-13","Christian": 0,"Ilyass": 0},
-{"date": "2018-10-14","Christian": 11,"Ilyass": 13},
-{"date": "2018-10-15","Christian": 1,"Ilyass": 1},
-{"date": "2018-10-16","Christian": 6,"Ilyass": 9},
+{"date": "2018-10-14","Christian": 67,"Ilyass": 45},
+{"date": "2018-10-15","Christian": 11,"Ilyass": 1},
+{"date": "2018-10-16","Christian": 54,"Ilyass": 32},
 {"date": "2018-10-17","Christian": 0,"Ilyass": 0},
 {"date": "2018-10-18","Christian": 0,"Ilyass": 0},
-{"date": "2018-10-19","Christian": 1,"Ilyass": 1},
-{"date": "2018-10-20","Christian": 12,"Ilyass": 6},
+{"date": "2018-10-19","Christian": 10,"Ilyass": 1},
+{"date": "2018-10-20","Christian": 44,"Ilyass": 12},
 {"date": "2018-10-21","Christian": 0,"Ilyass": 0},
-{"date": "2018-10-22","Christian": 5,"Ilyass": 3},
+{"date": "2018-10-22","Christian": 18,"Ilyass": 6},
 {"date": "2018-10-23","Christian": 0,"Ilyass": 0},
-{"date": "2018-10-24","Christian": 3,"Ilyass": 2},
-{"date": "2018-10-25","Christian": 7,"Ilyass": 6},
-{"date": "2018-10-26","Christian": 3,"Ilyass": 3},
-{"date": "2018-10-27","Christian": 42,"Ilyass": 45},
-{"date": "2018-10-28","Christian": 12,"Ilyass": 13},
-{"date": "2018-10-29","Christian": 1,"Ilyass": 1},
-{"date": "2018-10-30","Christian": 46,"Ilyass": 35},
-{"date": "2018-10-31","Christian": 24,"Ilyass": 18},
+{"date": "2018-10-24","Christian": 42,"Ilyass": 13},
+{"date": "2018-10-25","Christian": 58,"Ilyass": 50},
+{"date": "2018-10-26","Christian": 32,"Ilyass": 10},
+{"date": "2018-10-27","Christian": 243,"Ilyass": 130},
+{"date": "2018-10-28","Christian": 65,"Ilyass": 45},
+{"date": "2018-10-29","Christian": 4,"Ilyass": 7},
+{"date": "2018-10-30","Christian": 242,"Ilyass": 128},
+{"date": "2018-10-31","Christian": 105,"Ilyass": 63},
 {"date": "2018-11-01","Christian": 0,"Ilyass": 0},
-{"date": "2018-11-02","Christian": 18,"Ilyass": 13},
-{"date": "2018-11-03","Christian": 0,"Ilyass": 1},
+{"date": "2018-11-02","Christian": 86,"Ilyass": 37},
+{"date": "2018-11-03","Christian": 0,"Ilyass": 7},
 {"date": "2018-11-04","Christian": 0,"Ilyass": 0},
-{"date": "2018-11-05","Christian": 12,"Ilyass": 14},
+{"date": "2018-11-05","Christian": 65,"Ilyass": 36},
 {"date": "2018-11-06","Christian": 0,"Ilyass": 0},
 {"date": "2018-11-07","Christian": 0,"Ilyass": 0},
-{"date": "2018-11-08","Christian": 13,"Ilyass": 11},
-{"date": "2018-11-09","Christian": 14,"Ilyass": 14},
+{"date": "2018-11-08","Christian": 107,"Ilyass": 60},
+{"date": "2018-11-09","Christian": 70,"Ilyass": 61},
 {"date": "2018-11-10","Christian": 0,"Ilyass": 0},
 {"date": "2018-11-11","Christian": 0,"Ilyass": 0},
-{"date": "2018-11-12","Christian": 14,"Ilyass": 22},
-{"date": "2018-11-13","Christian": 6,"Ilyass": 6},
-{"date": "2018-11-14","Christian": 7,"Ilyass": 1},
-{"date": "2018-11-15","Christian": 3,"Ilyass": 1},
-{"date": "2018-11-16","Christian": 46,"Ilyass": 38},
-{"date": "2018-11-17","Christian": 11,"Ilyass": 12},
-{"date": "2018-11-18","Christian": 25,"Ilyass": 33},
-{"date": "2018-11-19","Christian": 56,"Ilyass": 58},
-{"date": "2018-11-20","Christian": 1,"Ilyass": 1},
-{"date": "2018-11-21","Christian": 5,"Ilyass": 9},
-{"date": "2018-11-22","Christian": 3,"Ilyass": 1},
-{"date": "2018-11-23","Christian": 3,"Ilyass": 0},
-{"date": "2018-11-24","Christian": 11,"Ilyass": 16},
-{"date": "2018-11-25","Christian": 12,"Ilyass": 20},
-{"date": "2018-11-26","Christian": 34,"Ilyass": 41},
-{"date": "2018-11-27","Christian": 11,"Ilyass": 11},
-{"date": "2018-11-28","Christian": 26,"Ilyass": 25},
+{"date": "2018-11-12","Christian": 96,"Ilyass": 100},
+{"date": "2018-11-13","Christian": 30,"Ilyass": 28},
+{"date": "2018-11-14","Christian": 56,"Ilyass": 2},
+{"date": "2018-11-15","Christian": 26,"Ilyass": 1},
+{"date": "2018-11-16","Christian": 195,"Ilyass": 136},
+{"date": "2018-11-17","Christian": 55,"Ilyass": 54},
+{"date": "2018-11-18","Christian": 113,"Ilyass": 131},
+{"date": "2018-11-19","Christian": 259,"Ilyass": 222},
+{"date": "2018-11-20","Christian": 12,"Ilyass": 1},
+{"date": "2018-11-21","Christian": 22,"Ilyass": 23},
+{"date": "2018-11-22","Christian": 14,"Ilyass": 1},
+{"date": "2018-11-23","Christian": 32,"Ilyass": 0},
+{"date": "2018-11-24","Christian": 55,"Ilyass": 55},
+{"date": "2018-11-25","Christian": 31,"Ilyass": 68},
+{"date": "2018-11-26","Christian": 160,"Ilyass": 158},
+{"date": "2018-11-27","Christian": 53,"Ilyass": 52},
+{"date": "2018-11-28","Christian": 125,"Ilyass": 74},
 {"date": "2018-11-29","Christian": 0,"Ilyass": 0},
-{"date": "2018-11-30","Christian": 11,"Ilyass": 9},
-{"date": "2018-12-01","Christian": 25,"Ilyass": 30},
-{"date": "2018-12-02","Christian": 50,"Ilyass": 38},
-{"date": "2018-12-03","Christian": 40,"Ilyass": 24},
-{"date": "2018-12-04","Christian": 1,"Ilyass": 3},
-{"date": "2018-12-05","Christian": 15,"Ilyass": 13},
-{"date": "2018-12-06","Christian": 31,"Ilyass": 19},
+{"date": "2018-11-30","Christian": 124,"Ilyass": 31},
+{"date": "2018-12-01","Christian": 65,"Ilyass": 99},
+{"date": "2018-12-02","Christian": 196,"Ilyass": 137},
+{"date": "2018-12-03","Christian": 224,"Ilyass": 86},
+{"date": "2018-12-04","Christian": 2,"Ilyass": 8},
+{"date": "2018-12-05","Christian": 89,"Ilyass": 46},
+{"date": "2018-12-06","Christian": 203,"Ilyass": 91},
 {"date": "2018-12-07","Christian": 0,"Ilyass": 0},
-{"date": "2018-12-08","Christian": 8,"Ilyass": 14},
-{"date": "2018-12-09","Christian": 16,"Ilyass": 10},
-{"date": "2018-12-10","Christian": 5,"Ilyass": 3},
+{"date": "2018-12-08","Christian": 21,"Ilyass": 77},
+{"date": "2018-12-09","Christian": 112,"Ilyass": 33},
+{"date": "2018-12-10","Christian": 25,"Ilyass": 17},
 {"date": "2018-12-11","Christian": 0,"Ilyass": 0},
-{"date": "2018-12-12","Christian": 13,"Ilyass": 20},
-{"date": "2018-12-13","Christian": 16,"Ilyass": 17},
+{"date": "2018-12-12","Christian": 34,"Ilyass": 43},
+{"date": "2018-12-13","Christian": 58,"Ilyass": 70},
 {"date": "2018-12-14","Christian": 0,"Ilyass": 0},
-{"date": "2018-12-15","Christian": 29,"Ilyass": 28},
-{"date": "2018-12-16","Christian": 5,"Ilyass": 5},
+{"date": "2018-12-15","Christian": 154,"Ilyass": 113},
+{"date": "2018-12-16","Christian": 27,"Ilyass": 18},
 {"date": "2018-12-17","Christian": 0,"Ilyass": 0},
-{"date": "2018-12-18","Christian": 9,"Ilyass": 13},
-{"date": "2018-12-19","Christian": 11,"Ilyass": 6},
-{"date": "2018-12-20","Christian": 60,"Ilyass": 53},
-{"date": "2018-12-21","Christian": 9,"Ilyass": 5},
+{"date": "2018-12-18","Christian": 51,"Ilyass": 49},
+{"date": "2018-12-19","Christian": 65,"Ilyass": 16},
+{"date": "2018-12-20","Christian": 383,"Ilyass": 230},
+{"date": "2018-12-21","Christian": 45,"Ilyass": 14},
 {"date": "2018-12-22","Christian": 0,"Ilyass": 0},
-{"date": "2018-12-23","Christian": 9,"Ilyass": 5},
+{"date": "2018-12-23","Christian": 41,"Ilyass": 23},
 {"date": "2018-12-24","Christian": 0,"Ilyass": 0},
 {"date": "2018-12-25","Christian": 0,"Ilyass": 0},
 {"date": "2018-12-26","Christian": 0,"Ilyass": 0},
 {"date": "2018-12-27","Christian": 0,"Ilyass": 0},
-{"date": "2018-12-28","Christian": 5,"Ilyass": 1},
+{"date": "2018-12-28","Christian": 29,"Ilyass": 1},
 {"date": "2018-12-29","Christian": 0,"Ilyass": 0},
-{"date": "2018-12-30","Christian": 27,"Ilyass": 14},
-{"date": "2018-12-31","Christian": 5,"Ilyass": 4},
-{"date": "2019-01-01","Christian": 5,"Ilyass": 3},
+{"date": "2018-12-30","Christian": 175,"Ilyass": 57},
+{"date": "2018-12-31","Christian": 35,"Ilyass": 16},
+{"date": "2019-01-01","Christian": 19,"Ilyass": 2},
 {"date": "2019-01-02","Christian": 0,"Ilyass": 0},
 {"date": "2019-01-03","Christian": 0,"Ilyass": 0},
 {"date": "2019-01-04","Christian": 0,"Ilyass": 0},
-{"date": "2019-01-05","Christian": 4,"Ilyass": 9},
+{"date": "2019-01-05","Christian": 25,"Ilyass": 45},
 {"date": "2019-01-06","Christian": 0,"Ilyass": 0},
 {"date": "2019-01-07","Christian": 0,"Ilyass": 0},
-{"date": "2019-01-08","Christian": 4,"Ilyass": 5},
-{"date": "2019-01-09","Christian": 30,"Ilyass": 29},
-{"date": "2019-01-10","Christian": 49,"Ilyass": 50},
+{"date": "2019-01-08","Christian": 12,"Ilyass": 21},
+{"date": "2019-01-09","Christian": 136,"Ilyass": 100},
+{"date": "2019-01-10","Christian": 212,"Ilyass": 210},
 {"date": "2019-01-11","Christian": 0,"Ilyass": 0},
 {"date": "2019-01-12","Christian": 0,"Ilyass": 0},
-{"date": "2019-01-13","Christian": 3,"Ilyass": 5},
-{"date": "2019-01-14","Christian": 3,"Ilyass": 2},
-{"date": "2019-01-15","Christian": 28,"Ilyass": 20},
-{"date": "2019-01-16","Christian": 5,"Ilyass": 2},
+{"date": "2019-01-13","Christian": 25,"Ilyass": 23},
+{"date": "2019-01-14","Christian": 20,"Ilyass": 2},
+{"date": "2019-01-15","Christian": 168,"Ilyass": 80},
+{"date": "2019-01-16","Christian": 27,"Ilyass": 6},
 {"date": "2019-01-17","Christian": 0,"Ilyass": 0},
-{"date": "2019-01-18","Christian": 7,"Ilyass": 10},
-{"date": "2019-01-19","Christian": 2,"Ilyass": 6},
+{"date": "2019-01-18","Christian": 46,"Ilyass": 47},
+{"date": "2019-01-19","Christian": 6,"Ilyass": 23},
 {"date": "2019-01-20","Christian": 0,"Ilyass": 0},
 {"date": "2019-01-21","Christian": 0,"Ilyass": 0},
-{"date": "2019-01-22","Christian": 4,"Ilyass": 2},
+{"date": "2019-01-22","Christian": 19,"Ilyass": 5},
 {"date": "2019-01-23","Christian": 0,"Ilyass": 0},
 {"date": "2019-01-24","Christian": 0,"Ilyass": 1},
 {"date": "2019-01-25","Christian": 0,"Ilyass": 0},
 {"date": "2019-01-26","Christian": 0,"Ilyass": 0},
 {"date": "2019-01-27","Christian": 0,"Ilyass": 0},
-{"date": "2019-01-28","Christian": 5,"Ilyass": 8},
-{"date": "2019-01-29","Christian": 8,"Ilyass": 9},
-{"date": "2019-01-30","Christian": 3,"Ilyass": 3},
-{"date": "2019-01-31","Christian": 1,"Ilyass": 0},
-{"date": "2019-02-01","Christian": 2,"Ilyass": 0},
-{"date": "2019-02-02","Christian": 19,"Ilyass": 10},
-{"date": "2019-02-03","Christian": 7,"Ilyass": 10},
-{"date": "2019-02-04","Christian": 116,"Ilyass": 66},
+{"date": "2019-01-28","Christian": 15,"Ilyass": 21},
+{"date": "2019-01-29","Christian": 35,"Ilyass": 44},
+{"date": "2019-01-30","Christian": 16,"Ilyass": 10},
+{"date": "2019-01-31","Christian": 5,"Ilyass": 0},
+{"date": "2019-02-01","Christian": 7,"Ilyass": 0},
+{"date": "2019-02-02","Christian": 119,"Ilyass": 44},
+{"date": "2019-02-03","Christian": 22,"Ilyass": 24},
+{"date": "2019-02-04","Christian": 638,"Ilyass": 268},
 {"date": "2019-02-05","Christian": 0,"Ilyass": 0},
 {"date": "2019-02-06","Christian": 0,"Ilyass": 0},
-{"date": "2019-02-07","Christian": 2,"Ilyass": 4},
-{"date": "2019-02-08","Christian": 4,"Ilyass": 5},
+{"date": "2019-02-07","Christian": 14,"Ilyass": 13},
+{"date": "2019-02-08","Christian": 14,"Ilyass": 20},
 {"date": "2019-02-09","Christian": 0,"Ilyass": 0},
 {"date": "2019-02-10","Christian": 0,"Ilyass": 0},
 {"date": "2019-02-11","Christian": 0,"Ilyass": 0},
-{"date": "2019-02-12","Christian": 22,"Ilyass": 15},
-{"date": "2019-02-13","Christian": 5,"Ilyass": 0},
-{"date": "2019-02-14","Christian": 15,"Ilyass": 14},
+{"date": "2019-02-12","Christian": 109,"Ilyass": 55},
+{"date": "2019-02-13","Christian": 21,"Ilyass": 0},
+{"date": "2019-02-14","Christian": 70,"Ilyass": 67},
 {"date": "2019-02-15","Christian": 0,"Ilyass": 0},
 {"date": "2019-02-16","Christian": 0,"Ilyass": 0},
 {"date": "2019-02-17","Christian": 0,"Ilyass": 0},
 {"date": "2019-02-18","Christian": 0,"Ilyass": 0},
-{"date": "2019-02-19","Christian": 26,"Ilyass": 8},
+{"date": "2019-02-19","Christian": 168,"Ilyass": 20},
 {"date": "2019-02-20","Christian": 0,"Ilyass": 0},
-{"date": "2019-02-21","Christian": 7,"Ilyass": 5},
+{"date": "2019-02-21","Christian": 28,"Ilyass": 14},
 {"date": "2019-02-22","Christian": 0,"Ilyass": 0},
 {"date": "2019-02-23","Christian": 0,"Ilyass": 0},
 {"date": "2019-02-24","Christian": 0,"Ilyass": 0},
-{"date": "2019-02-25","Christian": 6,"Ilyass": 3},
-{"date": "2019-02-26","Christian": 19,"Ilyass": 21},
-{"date": "2019-02-27","Christian": 34,"Ilyass": 33},
+{"date": "2019-02-25","Christian": 24,"Ilyass": 9},
+{"date": "2019-02-26","Christian": 119,"Ilyass": 78},
+{"date": "2019-02-27","Christian": 171,"Ilyass": 108},
 {"date": "2019-02-28","Christian": 0,"Ilyass": 0},
 {"date": "2019-03-01","Christian": 0,"Ilyass": 0},
 {"date": "2019-03-02","Christian": 0,"Ilyass": 0},
-{"date": "2019-03-03","Christian": 57,"Ilyass": 37},
+{"date": "2019-03-03","Christian": 392,"Ilyass": 139},
 {"date": "2019-03-04","Christian": 0,"Ilyass": 0},
-{"date": "2019-03-05","Christian": 9,"Ilyass": 7},
+{"date": "2019-03-05","Christian": 39,"Ilyass": 26},
 {"date": "2019-03-06","Christian": 0,"Ilyass": 0},
 {"date": "2019-03-07","Christian": 0,"Ilyass": 0},
-{"date": "2019-03-08","Christian": 1,"Ilyass": 1},
+{"date": "2019-03-08","Christian": 7,"Ilyass": 1},
 {"date": "2019-03-09","Christian": 0,"Ilyass": 0},
 {"date": "2019-03-10","Christian": 0,"Ilyass": 0},
-{"date": "2019-03-11","Christian": 10,"Ilyass": 3},
-{"date": "2019-03-12","Christian": 11,"Ilyass": 14},
+{"date": "2019-03-11","Christian": 51,"Ilyass": 7},
+{"date": "2019-03-12","Christian": 47,"Ilyass": 71},
 {"date": "2019-03-13","Christian": 0,"Ilyass": 0},
 {"date": "2019-03-14","Christian": 1,"Ilyass": 2},
 {"date": "2019-03-15","Christian": 0,"Ilyass": 0},
 {"date": "2019-03-16","Christian": 0,"Ilyass": 0},
 {"date": "2019-03-17","Christian": 0,"Ilyass": 0},
-{"date": "2019-03-18","Christian": 1,"Ilyass": 2},
-{"date": "2019-03-19","Christian": 3,"Ilyass": 2},
-{"date": "2019-03-20","Christian": 4,"Ilyass": 1},
-{"date": "2019-03-21","Christian": 3,"Ilyass": 1},
+{"date": "2019-03-18","Christian": 3,"Ilyass": 10},
+{"date": "2019-03-19","Christian": 2,"Ilyass": 2},
+{"date": "2019-03-20","Christian": 3,"Ilyass": 1},
+{"date": "2019-03-21","Christian": 11,"Ilyass": 2},
 {"date": "2019-03-22","Christian": 0,"Ilyass": 0},
-{"date": "2019-03-23","Christian": 11,"Ilyass": 2},
-{"date": "2019-03-24","Christian": 39,"Ilyass": 17},
-{"date": "2019-03-25","Christian": 21,"Ilyass": 22},
-{"date": "2019-03-26","Christian": 12,"Ilyass": 9},
-{"date": "2019-03-27","Christian": 1,"Ilyass": 2},
+{"date": "2019-03-23","Christian": 112,"Ilyass": 3},
+{"date": "2019-03-24","Christian": 248,"Ilyass": 66},
+{"date": "2019-03-25","Christian": 121,"Ilyass": 72},
+{"date": "2019-03-26","Christian": 59,"Ilyass": 32},
+{"date": "2019-03-27","Christian": 4,"Ilyass": 5},
 {"date": "2019-03-28","Christian": 0,"Ilyass": 0},
-{"date": "2019-03-29","Christian": 2,"Ilyass": 1},
+{"date": "2019-03-29","Christian": 80,"Ilyass": 1},
 {"date": "2019-03-30","Christian": 0,"Ilyass": 0},
 {"date": "2019-03-31","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-01","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-02","Christian": 1,"Ilyass": 0},
+{"date": "2019-04-02","Christian": 4,"Ilyass": 0},
 {"date": "2019-04-03","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-04","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-05","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-06","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-07","Christian": 1,"Ilyass": 1},
+{"date": "2019-04-07","Christian": 3,"Ilyass": 4},
 {"date": "2019-04-08","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-09","Christian": 3,"Ilyass": 5},
-{"date": "2019-04-10","Christian": 7,"Ilyass": 6},
+{"date": "2019-04-09","Christian": 10,"Ilyass": 17},
+{"date": "2019-04-10","Christian": 38,"Ilyass": 23},
 {"date": "2019-04-11","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-12","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-13","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-14","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-15","Christian": 4,"Ilyass": 2},
+{"date": "2019-04-15","Christian": 28,"Ilyass": 7},
 {"date": "2019-04-16","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-17","Christian": 4,"Ilyass": 9},
+{"date": "2019-04-17","Christian": 15,"Ilyass": 28},
 {"date": "2019-04-18","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-19","Christian": 10,"Ilyass": 8},
+{"date": "2019-04-19","Christian": 42,"Ilyass": 21},
 {"date": "2019-04-20","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-21","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-22","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-23","Christian": 5,"Ilyass": 3},
+{"date": "2019-04-23","Christian": 24,"Ilyass": 11},
 {"date": "2019-04-24","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-25","Christian": 2,"Ilyass": 2},
+{"date": "2019-04-25","Christian": 14,"Ilyass": 4},
 {"date": "2019-04-26","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-27","Christian": 0,"Ilyass": 0},
 {"date": "2019-04-28","Christian": 0,"Ilyass": 0},
-{"date": "2019-04-29","Christian": 4,"Ilyass": 1},
-{"date": "2019-04-30","Christian": 2,"Ilyass": 0},
+{"date": "2019-04-29","Christian": 29,"Ilyass": 1},
+{"date": "2019-04-30","Christian": 24,"Ilyass": 0},
 {"date": "2019-05-01","Christian": 0,"Ilyass": 0},
 {"date": "2019-05-02","Christian": 0,"Ilyass": 0},
 {"date": "2019-05-03","Christian": 0,"Ilyass": 0},
 {"date": "2019-05-04","Christian": 0,"Ilyass": 0},
 {"date": "2019-05-05","Christian": 0,"Ilyass": 0},
 {"date": "2019-05-06","Christian": 0,"Ilyass": 0},
-{"date": "2019-05-07","Christian": 2,"Ilyass": 2},
+{"date": "2019-05-07","Christian": 6,"Ilyass": 2},
 {"date": "2019-05-08","Christian": 0,"Ilyass": 0},
 {"date": "2019-05-09","Christian": 0,"Ilyass": 0},
-{"date": "2019-05-10","Christian": 5,"Ilyass": 5},
-{"date": "2019-05-11","Christian": 8,"Ilyass": 0},
+{"date": "2019-05-10","Christian": 10,"Ilyass": 25},
+{"date": "2019-05-11","Christian": 64,"Ilyass": 0},
 {"date": "2019-05-12","Christian": 0,"Ilyass": 0},
-{"date": "2019-05-13","Christian": 6,"Ilyass": 6},
+{"date": "2019-05-13","Christian": 17,"Ilyass": 16},
 {"date": "2019-05-14","Christian": 0,"Ilyass": 0},
-{"date": "2019-05-15","Christian": 4,"Ilyass": 2},
+{"date": "2019-05-15","Christian": 22,"Ilyass": 10},
 {"date": "2019-05-16","Christian": 0,"Ilyass": 0},
 {"date": "2019-05-17","Christian": 0,"Ilyass": 0},
-{"date": "2019-05-18","Christian": 17,"Ilyass": 15},
-{"date": "2019-05-19","Christian": 15,"Ilyass": 16},
-{"date": "2019-05-20","Christian": 11,"Ilyass": 9},
+{"date": "2019-05-18","Christian": 94,"Ilyass": 52},
+{"date": "2019-05-19","Christian": 111,"Ilyass": 57},
+{"date": "2019-05-20","Christian": 59,"Ilyass": 44},
 {"date": "2019-05-21","Christian": 0,"Ilyass": 0},
-{"date": "2019-05-22","Christian": 22,"Ilyass": 22},
-{"date": "2019-05-23","Christian": 7,"Ilyass": 0},
-{"date": "2019-05-24","Christian": 1,"Ilyass": 0},
+{"date": "2019-05-22","Christian": 154,"Ilyass": 70},
+{"date": "2019-05-23","Christian": 106,"Ilyass": 0},
+{"date": "2019-05-24","Christian": 7,"Ilyass": 0},
 {"date": "2019-05-25","Christian": 0,"Ilyass": 0},
 {"date": "2019-05-26","Christian": 0,"Ilyass": 0},
-{"date": "2019-05-27","Christian": 89,"Ilyass": 69},
-{"date": "2019-05-28","Christian": 9,"Ilyass": 12},
+{"date": "2019-05-27","Christian": 548,"Ilyass": 204},
+{"date": "2019-05-28","Christian": 46,"Ilyass": 33},
 {"date": "2019-05-29","Christian": 0,"Ilyass": 0},
-{"date": "2019-05-30","Christian": 2,"Ilyass": 3},
+{"date": "2019-05-30","Christian": 4,"Ilyass": 14},
 {"date": "2019-05-31","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-01","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-02","Christian": 0,"Ilyass": 0},
-{"date": "2019-06-03","Christian": 2,"Ilyass": 2},
+{"date": "2019-06-03","Christian": 13,"Ilyass": 11},
 {"date": "2019-06-04","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-05","Christian": 0,"Ilyass": 0},
-{"date": "2019-06-06","Christian": 4,"Ilyass": 0},
+{"date": "2019-06-06","Christian": 56,"Ilyass": 0},
 {"date": "2019-06-07","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-08","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-09","Christian": 0,"Ilyass": 0},
-{"date": "2019-06-10","Christian": 32,"Ilyass": 56},
-{"date": "2019-06-11","Christian": 5,"Ilyass": 10},
-{"date": "2019-06-12","Christian": 6,"Ilyass": 9},
+{"date": "2019-06-10","Christian": 182,"Ilyass": 171},
+{"date": "2019-06-11","Christian": 13,"Ilyass": 29},
+{"date": "2019-06-12","Christian": 37,"Ilyass": 46},
 {"date": "2019-06-13","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-14","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-15","Christian": 0,"Ilyass": 0},
-{"date": "2019-06-16","Christian": 12,"Ilyass": 12},
+{"date": "2019-06-16","Christian": 52,"Ilyass": 34},
 {"date": "2019-06-17","Christian": 0,"Ilyass": 0},
-{"date": "2019-06-18","Christian": 2,"Ilyass": 2},
-{"date": "2019-06-19","Christian": 5,"Ilyass": 1},
+{"date": "2019-06-18","Christian": 9,"Ilyass": 9},
+{"date": "2019-06-19","Christian": 35,"Ilyass": 4},
 {"date": "2019-06-20","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-21","Christian": 0,"Ilyass": 0},
 {"date": "2019-06-22","Christian": 0,"Ilyass": 0},
@@ -560,7 +560,7 @@ var data = [{"date": "2018-01-01","Christian": 0,"Ilyass": 0},
 {"date": "2019-07-12","Christian": 0,"Ilyass": 0},
 {"date": "2019-07-13","Christian": 0,"Ilyass": 0},
 {"date": "2019-07-14","Christian": 0,"Ilyass": 0},
-{"date": "2019-07-15","Christian": 1,"Ilyass": 0},
+{"date": "2019-07-15","Christian": 11,"Ilyass": 0},
 {"date": "2019-07-16","Christian": 0,"Ilyass": 1},
 {"date": "2019-07-17","Christian": 0,"Ilyass": 0},
 {"date": "2019-07-18","Christian": 0,"Ilyass": 0},
@@ -610,11 +610,11 @@ var data = [{"date": "2018-01-01","Christian": 0,"Ilyass": 0},
 {"date": "2019-08-31","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-01","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-02","Christian": 0,"Ilyass": 0},
-{"date": "2019-09-03","Christian": 38,"Ilyass": 54},
+{"date": "2019-09-03","Christian": 193,"Ilyass": 158},
 {"date": "2019-09-04","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-05","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-06","Christian": 0,"Ilyass": 0},
-{"date": "2019-09-07","Christian": 21,"Ilyass": 22},
+{"date": "2019-09-07","Christian": 106,"Ilyass": 74},
 {"date": "2019-09-08","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-09","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-10","Christian": 0,"Ilyass": 0},
@@ -625,20 +625,20 @@ var data = [{"date": "2018-01-01","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-15","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-16","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-17","Christian": 0,"Ilyass": 0},
-{"date": "2019-09-18","Christian": 1,"Ilyass": 2},
-{"date": "2019-09-19","Christian": 16,"Ilyass": 19},
-{"date": "2019-09-20","Christian": 26,"Ilyass": 21},
+{"date": "2019-09-18","Christian": 1,"Ilyass": 6},
+{"date": "2019-09-19","Christian": 78,"Ilyass": 51},
+{"date": "2019-09-20","Christian": 153,"Ilyass": 70},
 {"date": "2019-09-21","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-22","Christian": 0,"Ilyass": 0},
-{"date": "2019-09-23","Christian": 9,"Ilyass": 10},
-{"date": "2019-09-24","Christian": 12,"Ilyass": 15},
-{"date": "2019-09-25","Christian": 8,"Ilyass": 5},
-{"date": "2019-09-26","Christian": 6,"Ilyass": 6},
-{"date": "2019-09-27","Christian": 19,"Ilyass": 8},
+{"date": "2019-09-23","Christian": 48,"Ilyass": 26},
+{"date": "2019-09-24","Christian": 59,"Ilyass": 62},
+{"date": "2019-09-25","Christian": 35,"Ilyass": 15},
+{"date": "2019-09-26","Christian": 28,"Ilyass": 17},
+{"date": "2019-09-27","Christian": 144,"Ilyass": 26},
 {"date": "2019-09-28","Christian": 0,"Ilyass": 0},
 {"date": "2019-09-29","Christian": 0,"Ilyass": 0},
-{"date": "2019-09-30","Christian": 14,"Ilyass": 13},
-{"date": "2019-10-01","Christian": 2,"Ilyass": 2},
+{"date": "2019-09-30","Christian": 94,"Ilyass": 42},
+{"date": "2019-10-01","Christian": 3,"Ilyass": 2},
 {"date": "2019-10-02","Christian": 0,"Ilyass": 0},
 {"date": "2019-10-03","Christian": 6,"Ilyass": 1},
 {"date": "2019-10-04","Christian": 0,"Ilyass": 0},
@@ -729,115 +729,4 @@ var data = [{"date": "2018-01-01","Christian": 0,"Ilyass": 0},
 {"date": "2019-12-28","Christian": 0,"Ilyass": 0},
 {"date": "2019-12-29","Christian": 0,"Ilyass": 0},
 {"date": "2019-12-30","Christian": 0,"Ilyass": 0},
-{"date": "2019-12-31","Christian": 0,"Ilyass": 0}]/**
- * ---------------------------------------
- * This demo was created using amCharts 4.
- * 
- * For more information visit:
- * https://www.amcharts.com/
- * 
- * Documentation is available at:
- * https://www.amcharts.com/docs/v4/
- * ---------------------------------------
- */
-//https://www.w3schools.com/js/js_json_http.asp
-
-// Themes begin
-am4core.useTheme(am4themes_dataviz);
-am4core.useTheme(am4themes_animated);
-// Themes end
-
-// Create chart instance
-var chart = am4core.create("chartdiv", am4charts.XYChart);
-chart.data = data;
-//chart.jsonData = jsonData;
-//chart.dataSource.url = "https://raw.githubusercontent.com/EliassReque/FinalProject/master/Graficas/Grafica%20Total%20Mensajes/hola/MessageCount.json";
-
-// Set input format for the dates
-chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
-
-// Create axes
-var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-
-
-// Create series
-var series = chart.series.push(new am4charts.LineSeries());
-series.dataFields.valueY = "Christian";
-series.dataFields.dateX = "date";
-//series.tooltipText = "{Christian}"
-//series.tooltipText = "[bold]{date.formatDate()}:[/] {Christian}\n[bold]{previousDate.formatDate()}:[/] {Ilyass}";
-series.strokeWidth = 2;
-series.minBulletDistance = 15;
-
-//Create series 2
-var series2 = chart.series.push(new am4charts.LineSeries());
-series2.dataFields.valueY = "Ilyass";
-series2.dataFields.dateX = "date";
-//series.tooltipText = "{Ilyass}"
-series2.strokeWidth = 2;
-series2.minBulletDistance = 15;
-series2.strokeDasharray = "3,4";
-series2.stroke = series.stroke;
-
-series.tooltipText = `{dateX}[/]
-Christian: {Christian}`;
-series.tooltip.pointerOrientation = "vertical";
-
-series2.tooltipText = `{dateX}[/]
-Ilyass: {Ilyass}`;
-series2.tooltip.pointerOrientation = "vertical";
-
-//Sacar las bullets en hover --> Bullet series 2
-var bullet2 = series2.bullets.push(new am4charts.Bullet());
-bullet2.width = 12;
-bullet2.height = 12;
-bullet2.horizontalCenter = "middle";
-bullet2.verticalCenter = "middle";
-
-//Darle forma a los bullets
-var triangle = bullet2.createChild(am4core.Triangle);
-triangle.strokeWidth = 2;
-triangle.direction = "top";
-triangle.width = 12;
-triangle.height = 12;
-triangle.fill = am4core.color("#fff");
-
-var bullethover = bullet2.states.create("hover");
-bullethover.properties.scale = 1.3;
-
-
-// Drop-shaped tooltips
-series.tooltip.background.cornerRadius = 20;
-series.tooltip.background.strokeOpacity = 0;
-series.tooltip.pointerOrientation = "vertical";
-series.tooltip.label.minWidth = 40;
-series.tooltip.label.minHeight = 40;
-series.tooltip.label.textAlign = "middle";
-series.tooltip.label.textValign = "middle";
-
-//Sacar las bullets en hover  --> Bullet series 1
-var bullet = series.bullets.push(new am4charts.CircleBullet());
-bullet.circle.strokeWidth = 2;
-bullet.circle.radius = 4;
-bullet.circle.fill = am4core.color("#fff");
-
-var bullethover = bullet.states.create("hover");
-bullethover.properties.scale = 1.3;
-
-// Make a panning cursor
-chart.cursor = new am4charts.XYCursor();
-chart.cursor.behavior = "panXY";
-chart.cursor.xAxis = dateAxis;
-chart.cursor.snapToSeries = series;
-
-// Create vertical scrollbar and place it before the value axis
-chart.scrollbarY = new am4core.Scrollbar();
-chart.scrollbarY.parent = chart.leftAxesContainer;
-chart.scrollbarY.toBack();
-
-// Create a horizontal scrollbar with previe and place it underneath the date axis
-chart.scrollbarX = new am4charts.XYChartScrollbar();
-chart.scrollbarX.series.push(series);
-chart.scrollbarX.parent = chart.bottomAxesContainer;
-
+{"date": "2019-12-31","Christian": 0,"Ilyass": 0}]
