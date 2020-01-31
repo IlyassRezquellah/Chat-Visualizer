@@ -91,8 +91,7 @@ public class Person{
         //Post calculo matrioshka
         algorithm.postMatrioshka();
         //Comprueba los datos extrayendolos (Consola, fichero log)
-        algorithm.extractData(this.getName());
-       // System.out.println("Total messages de " + getName() +" "+ Colors.ANSI_YELLOW + getTotalMessages() + Colors.ANSI_RESET+ "\n\n");
+        //algorithm.extractData(this.getName());
     }
     //Crea un log con toda la estructura matrioshka creada, así como el numero de años, meses, días y horas creados
     public void createLogOfTheMatrioshkaStructure(){
@@ -119,5 +118,8 @@ public class Person{
     }
     public int getTotalYears(){
         return algorithm.getMatrioshka().size();
+    }
+    public int getYearNumber(int position){
+        return algorithm.getYearNumber(position);
     }
 }

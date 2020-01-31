@@ -4,7 +4,9 @@ import Utils.Regex;
 import algorithms.matrioshka.*;
 import Utils.Colors;
 import java.io.FileOutputStream;
+import java.security.KeyStore;
 import java.util.*;
+import java.util.Map.Entry;
 import users.data.Message;
 
 public class AlgorithmCMT{
@@ -34,6 +36,9 @@ public class AlgorithmCMT{
         daysGlobal = 0;
     }
     //Getters de datos globales
+    public int getYearNumber(int position){
+        return (int)yearTree.keySet().toArray()[position];
+    }
     public int getMessagesGlobal(){
         return messagesGlobal;
     }
