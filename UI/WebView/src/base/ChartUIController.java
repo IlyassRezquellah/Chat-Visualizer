@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
-public class UIController implements Initializable{
+public class ChartUIController implements Initializable{
     @FXML
     //Esta sería la ventana en si (la web)
     private WebView webView;

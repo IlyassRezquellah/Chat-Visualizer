@@ -19,7 +19,7 @@ var interfaceColors = new am4core.InterfaceColorSet();
 
 var chart = am4core.create("chartAverage", am4charts.XYChart);
 //Import data
-chart.data = dataMessagesAverage1;
+chart.data = dataMessagesAverage;
 //chart.data = data;
 
 // the following line makes value axes to be arranged vertically.
