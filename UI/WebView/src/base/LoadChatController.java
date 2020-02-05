@@ -32,21 +32,15 @@ public class LoadChatController implements Initializable{
         fileChooser = new FileChooser();
         //Configuramos el file chosser para slo mostrar TXT
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("TXT Files", "*.txt"));
-        
-        try{
-            //Guardamos la escena en la que estamos
-            loadChatFXML = FXMLLoader.load(getClass().getResource("UIStyle.fxml"));
-            loadChatFXMLScene = new Scene(loadChatFXML);
-        } catch (IOException ex){
-            Logger.getLogger(LoadChatController.class.getName()).log(Level.SEVERE, null, ex);
-        }
     }    
     
     public void selectFile(ActionEvent event) throws IOException{
         File file = fileChooser.showOpenDialog(null);
         
-        if(file != null)
-            System.out.println("File get it: " + file.getName());
+        if(file != null){
+            System.out.println("File get it: " + file.getPath());
+            Utils.Auxiliary.chatPath = file.getPath();
+        }
     }
     //crear la modificación para que se puedan arrastrar fichero (https://www.youtube.com/watch?v=pKGu9ZuMvig)
     public void spaceToDrag()
@@ -62,15 +56,15 @@ public class LoadChatController implements Initializable{
             
     public void changeScreenButtonPushed(ActionEvent event) throws IOException{
          //Guardamos la configuración de la escena
-        Parent uIStyle = FXMLLoader.load(getClass().getResource("UIStyle.fxml"));
+        Parent ChartUIFXML = FXMLLoader.load(getClass().getResource("ChartUIFXML.fxml"));
         //Creamos una escena con la configuración anterior
-        Scene uIStyleScene = new Scene(uIStyle);
+        Scene ChartUIFXMLScene = new Scene(ChartUIFXML);
         
         //Obtiene la inforamción del Stage actual
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
         //Carga y muestra la nueva escena
-        window.setScene(uIStyleScene);
+        window.setScene(ChartUIFXMLScene);
         window.show();
     }
 }
