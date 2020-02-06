@@ -99,3 +99,6 @@ series.dataFields.valueY = "litres";
 series.dataFields.categoryX = "country";
 series.name = "Sales";
 series.strokeWidth = 3;
+
+//Hide shadow tooltip
+series.tooltip.background.filters.clear();

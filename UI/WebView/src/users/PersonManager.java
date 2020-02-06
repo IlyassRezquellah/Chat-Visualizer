@@ -60,6 +60,7 @@ public class PersonManager{
         //Calculos post almacenaje de mensajes en la matrioshka
         getTotalNumber();
         totalDaysChat();
+        getPercentages();
         //Saca la media grupal de lo que se habla mensualmente en la conversación
         getGrupAverageMonths();
         
@@ -91,6 +92,12 @@ public class PersonManager{
         System.out.println("Numero total de palabras --> "+ Colors.ANSI_YELLOW + wordGlobal + Colors.ANSI_RESET);
         System.out.println("Numero total de chars --> "+ Colors.ANSI_YELLOW + charsGlobal + Colors.ANSI_RESET);
     }
+    public void getPercentages(){
+        for(int i = 0; i < totalPersons; i++){
+            System.out.println(persons.get(i).getName() + " --> "+ Colors.ANSI_YELLOW + persons.get(i).getPercentageSpoke()+ Colors.ANSI_RESET);
+        }
+    
+    }
     //Calcula y anota la media mensual que se habla de manera grupal en una convresación
     public void getGrupAverageMonths(){
         //Guardo la cantidad de años que hay en este chat, dado que se usa mucho este valor
@@ -112,6 +119,7 @@ public class PersonManager{
             }
         }
     }
+    
     //Creación y expotación de ficheros JSon
     public boolean exportJSData(){       
         try(FileOutputStream oFileMessages = new FileOutputStream("src/web/javaScript/data.js", false)){
@@ -125,6 +133,9 @@ public class PersonManager{
             jSData.append(jSonAverage());
             //JSon con todos los mensajes, para sacar las palabras más usadas
             jSonWordsMostUsed();
+            //Json con la media para la grafica de percentage de la convo
+            jSData.append(jSonPercentage());
+            
             //Creamos el javaScript Con toda la información
             oFileMessages.write(jSData.toString().getBytes());
         }
@@ -236,6 +247,28 @@ public class PersonManager{
         jSonAverageW.append("]\n");
         jSonAverageC.append("]\n");
         return (jSonAverageM.toString() + jSonAverageW.toString() + jSonAverageC.toString());
+    }
+    public String jSonPercentage(){
+        
+        StringBuilder jSonPercent = new StringBuilder();
+        jSonPercent.append("var dataChatGlobalPercentage = [");
+        
+        for (int i = 0; i < totalPersons; i++){
+            if(i == totalPersons-1){
+                 jSonPercent.append(
+                         "{ name: \"" + persons.get(i).getName() + "\", value: " + persons.get(i).getPercentageSpoke() + " }");
+                            
+            }else{
+                 jSonPercent.append(
+                         "{ name: \"" + persons.get(i).getName() + "\", value: " + persons.get(i).getPercentageSpoke() + " },");
+                
+            }    
+        }
+        //Elimina la última coma innecesaria
+        //jSonPercent.setLength(jSonPercent.length() - 2);
+        //Cerramos la extructura del json
+        jSonPercent.append("]\n");
+        return  jSonPercent.toString();
     }
     //Metodo que saca el numero total de dias de una conversación
     public void totalDaysChat(){
