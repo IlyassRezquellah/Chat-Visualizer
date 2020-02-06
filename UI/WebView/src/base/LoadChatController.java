@@ -36,10 +36,10 @@ public class LoadChatController implements Initializable{
     
     public void selectFile(ActionEvent event) throws IOException{
         File file = fileChooser.showOpenDialog(null);
-        
         if(file != null){
             System.out.println("File get it: " + file.getPath());
             Utils.Auxiliary.chatPath = file.getPath();
+            changeScreenButtonPushed(event);
         }
     }
     //crear la modificación para que se puedan arrastrar fichero (https://www.youtube.com/watch?v=pKGu9ZuMvig)
@@ -55,7 +55,7 @@ public class LoadChatController implements Initializable{
     }
             
     public void changeScreenButtonPushed(ActionEvent event) throws IOException{
-         //Guardamos la configuración de la escena
+        //Guardamos la configuración de la escena
         Parent ChartUIFXML = FXMLLoader.load(getClass().getResource("ChartUIFXML.fxml"));
         //Creamos una escena con la configuración anterior
         Scene ChartUIFXMLScene = new Scene(ChartUIFXML);

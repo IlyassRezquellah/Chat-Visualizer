@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="base.LegalUseController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.LegalUseController">
     <stylesheets>
         <URL value="@LegalUseStyle.css" />
     </stylesheets>
    <children>
-      <Button fx:id="button" onAction="#changeScreenButtonPushed" layoutX="201.0" layoutY="156.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="160.0" text="Button" />
+      <Button fx:id="button" layoutX="466.0" layoutY="343.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="43.0" prefWidth="120.0" text="Acepto">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TextArea editable="false" prefHeight="324.0" prefWidth="600.0" text="sadfdfa\ndaddd&#10;dsfad&#10;dv&#10;sv&#10;dsv&#10;ds&#10;vsdvsadvsadvsadvasvas&#10;v&#10;VDS&#10;BD&#10;BVDS&#10;VBDAV&#10;DAV&#10;DSAV&#10;SADV&#10;SAV&#10;SDV&#10;SA&#10;&#10;dva&#10;dvasdgas&#10;">
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </TextArea>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7d7d7" height="68.0" layoutX="6.0" layoutY="329.0" stroke="#ebebeb" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" width="261.0" />
+      <Text layoutX="13.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desea compartir los datos del análisis?:" wrappingWidth="275.13671875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="check_Yes" layoutX="13.0" layoutY="367.0" mnemonicParsing="false" text="Compartir">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
    </children>
 </AnchorPane>
