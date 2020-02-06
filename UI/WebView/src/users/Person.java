@@ -110,6 +110,9 @@ public class Person{
     public int getDaysGlobal(){
         return algorithm.getDaysGlobal();
     }
+    public float getPercentageSpoke(){
+        return algorithm.getPercentageSpoke();
+    }
     public double[][] getAverageMonth(){
         return algorithm.getAverageMonth();
     }

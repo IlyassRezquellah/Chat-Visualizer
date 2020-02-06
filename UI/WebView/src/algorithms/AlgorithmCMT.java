@@ -22,6 +22,7 @@ public class AlgorithmCMT{
     private int wordsGlobal;
     private int charsGlobal;
     private int daysGlobal;
+    private float percentageSpoke;
     private double[][] averageMonthByYear;
     
     public AlgorithmCMT(){
@@ -34,11 +35,13 @@ public class AlgorithmCMT{
         wordsGlobal = 0;
         charsGlobal = 0;
         daysGlobal = 0;
+        percentageSpoke = 0.0f;
     }
     //Getters de datos globales
     public int getYearNumber(int position){
         return (int)yearTree.keySet().toArray()[position];
     }
+    //Getters para pasar datos a la clase de PersonManager
     public int getMessagesGlobal(){
         return messagesGlobal;
     }
@@ -51,6 +54,11 @@ public class AlgorithmCMT{
     public int getDaysGlobal(){
         return daysGlobal;
     }
+    public float getPercentageSpoke(){
+        return percentageSpoke;
+    }
+    
+    //----------------------------------
     public double[][] getAverageMonth(){
         return averageMonthByYear;
     }
@@ -108,6 +116,8 @@ public class AlgorithmCMT{
         personCountDays();
         //Obtiene la media de mensajes que se escriben de manera mensual
         averageMonthMessagesPerson();
+        //Obtiene media de cuanto habla cada persona 
+        percentagePersonCount();
     }
     
     //Este metodo es demasiado complejo, hay que cambiarlo.
@@ -268,6 +278,13 @@ public class AlgorithmCMT{
                 }
             }
         }
+    }
+    //Obtener media (palabras totales de la convo/mensajes totales de la convo) de cada persona en la conversación 
+    public void percentagePersonCount(){
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            percentageSpoke += (float)(yearTree.get(y.getKey()).getWordCount())/ (yearTree.get(y.getKey()).getMessageCount());
+        }
+    
     }
     //Calcula la media que habla mensualmente una persona (en base al conteo de mensajes que tiene esta)
     public void averageMonthMessagesPerson(){
