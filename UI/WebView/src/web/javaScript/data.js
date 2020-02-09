@@ -2262,4 +2262,3 @@ var dataChatsAverage = [{"category": "2018 JUNARY", "Christian": 0.000000, "Ilya
 {"category": "2019 OCTOBER", "Christian": 0.258065, "Ilyass": 0.096774, "general": 0.048387},
 {"category": "2019 NOVEMBER", "Christian": 0.000000, "Ilyass": 0.000000, "general": 0.000000},
 {"category": "2019 DECEMBER", "Christian": 0.000000, "Ilyass": 0.000000, "general": 0.000000}]
-var dataChatGlobalPercentage = [{ name: "Christian", value: 10.91869 },{ name: "Ilyass", value: 7.1551948 }]

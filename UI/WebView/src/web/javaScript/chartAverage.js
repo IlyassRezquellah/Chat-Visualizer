@@ -96,8 +96,3 @@ chart.cursor.behavior = "zoomY";
 
 var scrollbarY = new am4core.Scrollbar();
 chart.scrollbarY = scrollbarY;
-
-//Hide shadow tooltip
-series2.tooltip.background.filters.clear();
-series1.tooltip.background.filters.clear();
-series3.tooltip.background.filters.clear();
