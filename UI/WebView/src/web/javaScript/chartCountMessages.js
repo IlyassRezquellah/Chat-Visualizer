@@ -112,3 +112,6 @@ chart.scrollbarX = new am4charts.XYChartScrollbar();
 chart.scrollbarX.series.push(series);
 chart.scrollbarX.parent = chart.bottomAxesContainer;
 
+//Hide shadow tooltip
+series2.tooltip.background.filters.clear();
+series.tooltip.background.filters.clear();
