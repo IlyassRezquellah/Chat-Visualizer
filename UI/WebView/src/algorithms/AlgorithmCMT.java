@@ -24,6 +24,7 @@ public class AlgorithmCMT{
     private int daysGlobal;
     private float percentageSpoke;
     private double[][] averageMonthByYear;
+    private double[] dataHours;
     
     public AlgorithmCMT(){
         //Inicializamos el HashMap de años
@@ -116,6 +117,8 @@ public class AlgorithmCMT{
         personCountDays();
         //Obtiene la media de mensajes que se escriben de manera mensual
         averageMonthMessagesPerson();
+        //Obtiene el numero de messages de cada hora de cada persona
+        countHourMessagesPerson();
         //Obtiene media de cuanto habla cada persona 
         percentagePersonCount();
     }
@@ -301,7 +304,7 @@ public class AlgorithmCMT{
                 for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
                     averageMonth += d.getMessageCount();
                 }
-                averageMonthByYear[counYears][counMonths] = averageMonth / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;;
+                averageMonthByYear[counYears][counMonths] = averageMonth / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;
                 //System.out.println("Media del mes de " + m.getKey() + "--> " + averageMonthByYear[counYears][counMonths]); 
                 averageMonth = 0;
                 counMonths++;
@@ -317,5 +320,32 @@ public class AlgorithmCMT{
             }
         }
         System.out.println("\n");*/
+    }
+    //Metodo para sacar los mensajes por hora de cada persona
+    public void countHourMessagesPerson(){
+        //Inicializamos el array  donde guardaremos los messages de cada hora que mandado cada persona a lo largo de todos los años de la conversacion
+        dataHours = new double[24];
+        double messagesHours = 0f;
+        //Contador --> <24
+        int countHours = 0;
+        //Bucle de la matrioshka para obtener la información pertienen sobre los días, meses y años
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
+                for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    countHours =0;
+                    for (Hour h : d.getHours()){
+                       //messagesHours += (float)(h.getWordCount())/ (h.getMessageCount());
+                       messagesHours += h.getMessageCount();
+                       dataHours[countHours] += messagesHours;
+                       messagesHours=0;
+                       countHours++;
+                       
+                    }
+                    
+                }
+            }
+        } 
+        System.out.println(Arrays.toString(dataHours));
+        
     }
 }
