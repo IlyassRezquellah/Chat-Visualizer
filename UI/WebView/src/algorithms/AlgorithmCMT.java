@@ -337,6 +337,7 @@ public class AlgorithmCMT{
                        //messagesHours += (float)(h.getWordCount())/ (h.getMessageCount());
                        messagesHours += h.getMessageCount();
                        dataHours[countHours] += messagesHours;
+                       //System.out.println("Hora" + countHours +": " + dataHours[countHours]);
                        messagesHours=0;
                        countHours++;
                        
@@ -345,7 +346,10 @@ public class AlgorithmCMT{
                 }
             }
         } 
-        System.out.println(Arrays.toString(dataHours));
+        //System.out.println(Arrays.toString(dataHours));
+        for (int i = 0; i < 24; i++) {
+            System.out.println("Hora" + i +": " + dataHours[i]);
+        }
         
     }
 }
