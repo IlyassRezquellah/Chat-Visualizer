@@ -158,6 +158,8 @@ public class PersonManager{
             jSonWordsMostUsed();
             //Json con la media para la grafica de percentage de la convo
             jSData.append(jSonPercentage());
+            //JavaScript con la frecuencia hablada, mostrada en horas
+            jSData.append(jSHourAverageMessagesPerson());
 
             //Creamos el javaScript Con toda la información
             oFileMessages.write(jSData.toString().getBytes());
@@ -330,6 +332,18 @@ public class PersonManager{
         catch (Exception e){
             System.out.println("Error: " + e);
         }
+    }
+    //Con este metodos sacamos la media de la frecuencia en la que se suele hablar en la conversación (Mostrada den formato 24h)
+    public String jSHourAverageMessagesPerson(){
+        StringBuilder jSHourAverage = new StringBuilder();
+        jSHourAverage.append("var HourAverage = [");
+        for (int i = 0; i < 24; i++){
+            jSHourAverage.append(String.format(Locale.US,"{hour: '%02d', data: '%.2f'},\n", i, dataHours[i]));
+        }
+        //Elimina la última coma innecesaria
+        jSHourAverage.setLength(jSHourAverage.length() - 2);
+        jSHourAverage.append("]");
+        return jSHourAverage.toString();
     }
     public void importJSonFileMessagesData(String jsonData){
         String jsonFile = "src/web/index.js";
