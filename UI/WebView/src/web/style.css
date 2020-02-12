@@ -20,20 +20,19 @@ body {
     margin-left: 0.5%;
     margin-right: 0.5%;
     width:40%;
-    height: 250px;
+    height: 400px;
 }
 #chartPercentages {
     display: inline-block;
     margin-left: 0.5%;
     margin-right: 0.5%;
     width: 30%;
-    height: 250px;
+    height: 400px;
 }
 #chartHourFrequency {
     display: inline-block;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    width: 26%;
-    height: 250px;
+    width: 25%;
+    height: 400px;
 }
-  

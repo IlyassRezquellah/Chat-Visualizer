@@ -8,97 +8,71 @@ am4core.useTheme(am4themes_animated);
 var chart = am4core.create("chartHourFrequency", am4charts.RadarChart);
 
 /* Add data */
-chart.data = [{
-  "country": "0H",
-  "litres": 301
-}, {
-  "country": "1H",
-  "litres": 40
-}, {
-  "country": "2H",
-  "litres": 301
-}, {
-  "country": "3H",
-  "litres": 266
-}, {
-  "country": "4H",
-  "litres": 165
-}, {
-  "country": "5H",
-  "litres": 139
-}, {
-  "country": "6H",
-  "litres": 336
-}, {
-  "country": "7H",
-  "litres": 290
-}, {
-  "country": "8H",
-  "litres": 325
-}, {
-  "country": "9H",
-  "litres": 160
-}, {
-    "country": "10H",
-    "litres": 320
-  }, {
-    "country": "11H",
-    "litres": 400
-  }, {
-    "country": "12H",
-    "litres": 250
-  }, {
-    "country": "13H",
-    "litres": 180
-  }, {
-    "country": "14H",
-    "litres": 97
-  }, {
-    "country": "15H",
-    "litres": 100
-  }, {
-    "country": "16H",
-    "litres": 300
-  }, {
-    "country": "17H",
-    "litres": 350
-  }, {
-    "country": "18H",
-    "litres": 280
-  }, {
-    "country": "19H",
-    "litres": 120
-  }, {
-    "country": "20H",
-    "litres": 70
-  }, {
-    "country": "21H",
-    "litres": 260
-  }, {
-    "country": "22H",
-    "litres": 340
-  }, {
-    "country": "23H",
-    "litres": 400
-  }, {
+/*
+chart.data = [ {
     "country": "9H",
     "litres": 40
-  }];
+  }];*/
 
-/* Create axes */
+chart.data =HourAverage ;
+
+  // Create axes 
 var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-categoryAxis.dataFields.category = "country";
+categoryAxis.dataFields.category = "hour";
 
 var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.axisFills.template.fill = chart.colors.getIndex(2);
 valueAxis.renderer.axisFills.template.fillOpacity = 0.05;
 
-/* Create and configure series */
+// Create and configure series 
 var series = chart.series.push(new am4charts.RadarSeries());
-series.dataFields.valueY = "litres";
-series.dataFields.categoryX = "country";
+series.dataFields.valueY = "data";
+series.dataFields.categoryX = "hour";
 series.name = "Sales";
 series.strokeWidth = 3;
 
+/*
+chart.radius = am4core.percent(95);
+chart.startAngle = 270 - 180;
+chart.endAngle = 270 + 180;
+chart.innerRadius = am4core.percent(60);
+
+var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+categoryAxis.dataFields.category = "hour";
+categoryAxis.renderer.labels.template.location = 0.5;
+categoryAxis.renderer.grid.template.strokeOpacity = 0.1;
+categoryAxis.renderer.axisFills.template.disabled = true;
+categoryAxis.mouseEnabled = false;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+valueAxis.renderer.grid.template.strokeOpacity = 0.05;
+valueAxis.renderer.axisFills.template.disabled = true;
+valueAxis.renderer.axisAngle = 260;
+valueAxis.renderer.labels.template.horizontalCenter = "right";
+valueAxis.min = 0;
+
+var series1 = chart.series.push(new am4charts.RadarColumnSeries());
+series1.columns.template.radarColumn.strokeOpacity = 1;
+series1.name = "Series 1";
+series1.dataFields.categoryX = "hour";
+series1.columns.template.tooltipText = "{name}: {valueY.data}";
+series1.dataFields.valueY = "data";
+series1.stacked = true;
+
+
+chart.seriesContainer.zIndex = -1;
+
+var slider = chart.createChild(am4core.Slider);
+slider.start = 0.5;
+slider.exportable = false;
+slider.events.on("rangechanged", function() {
+  var start = slider.start;
+
+  chart.startAngle = 270 - start * 179 - 1;
+  chart.endAngle = 270 + start * 179 + 1;
+
+  valueAxis.renderer.axisAngle = chart.startAngle;
+});*/
 //Hide shadow tooltip
 series.tooltip.background.filters.clear(); 
