@@ -45,6 +45,8 @@ public class PersonManager{
     private int daysGlobal;
     //Media de mensajes mensuales
     private double[][] grupalAverageMonths;
+    //Count Messages per hour
+    private double[] dataHours;
     //Arranque inicial del algoritmo
     public boolean startAlgorythm(){
         //Pruebas del algoritmo
@@ -63,6 +65,8 @@ public class PersonManager{
         getPercentages();
         //Saca la media grupal de lo que se habla mensualmente en la conversación
         getGrupAverageMonths();
+        //comentar algo
+        getCountHourAverageMessagesPerson();
         
         //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
         return exportJSData();
@@ -118,6 +122,25 @@ public class PersonManager{
                 }
             }
         }
+    }
+    
+    //Count messages per hour
+    public void getCountHourAverageMessagesPerson(){
+        int personsSize = persons.size();
+        dataHours = new double[24];
+        double[][] data = new double[personsSize][24];
+        for (int i = 0, t = personsSize; i < t; i++) {
+            data[i] = persons.get(i).getCountHourPerson();
+         }
+     
+        for (int i = 0; i < 24; i++) {
+            for (int p = 0; p < personsSize; p++){ 
+                dataHours[i] += data[p][i];
+            }
+        }
+        /*for (double num: dataHours) {
+            System.out.println("Hours->: " + num);
+        }*/
     }
     
     //Creación y expotación de ficheros JSon

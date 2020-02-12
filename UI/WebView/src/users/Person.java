@@ -119,6 +119,9 @@ public class Person{
     public double getOneAverageMonth(int y, int m){
         return algorithm.getOneAverageMonth(y, m);
     }
+     public double[] getCountHourPerson(){
+        return algorithm.getCountHourPerson();
+    }
     public int getTotalYears(){
         return algorithm.getMatrioshka().size();
     }

@@ -66,6 +66,11 @@ public class AlgorithmCMT{
     public double getOneAverageMonth(int y, int m){
         return averageMonthByYear[y][m];
     }
+    //-----------------------------------
+    //Getter del array de messages dia
+    public double[] getCountHourPerson(){
+        return dataHours;
+    }
     //A partir de un numero (año); crea ese año e inicializa todos sus meses, días y horas
     public void createNewYear(int year){//9013 contructores aprox
         this.yearTree.put(year, new Year(year));
@@ -339,17 +344,15 @@ public class AlgorithmCMT{
                        dataHours[countHours] += messagesHours;
                        //System.out.println("Hora" + countHours +": " + dataHours[countHours]);
                        messagesHours=0;
-                       countHours++;
-                       
+                       countHours++;                     
                     }
-                    
                 }
             }
         } 
         //System.out.println(Arrays.toString(dataHours));
-        for (int i = 0; i < 24; i++) {
+        /*for (int i = 0; i < 24; i++) {
             System.out.println("Hora" + i +": " + dataHours[i]);
-        }
+        }*/
         
     }
 }
