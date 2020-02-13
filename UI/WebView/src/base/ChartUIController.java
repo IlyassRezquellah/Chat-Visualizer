@@ -1,6 +1,7 @@
 package base;
 
 import com.sun.javafx.webkit.WebConsoleListener;
+import java.io.FileOutputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -41,9 +42,13 @@ public class ChartUIController implements Initializable{
             //Hacer algo con los rectangulos transparente!!!!
             
             //Un enlace directo al documentdo index
-            URL url = getClass().getResource("/web/index.html");
+            ClassLoader classLoader = getClass().getClassLoader();
+            String url = classLoader.getResource("web/index.html").toExternalForm();
+            try(FileOutputStream oFileMessages = new FileOutputStream("path.txt", false)){
+                oFileMessages.write(url.getBytes());
+            }
             //Carga de la web en el navegador
-            engine.load(url.toString());
+            engine.load(url);
         }
         catch (Exception e){
             System.out.println("Error: " + e);

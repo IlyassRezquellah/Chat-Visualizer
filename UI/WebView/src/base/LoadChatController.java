@@ -32,6 +32,7 @@ public class LoadChatController implements Initializable{
         fileChooser = new FileChooser();
         //Configuramos el file chosser para slo mostrar TXT
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("TXT Files", "*.txt"));
+        
     }    
     
     public void selectFile(ActionEvent event) throws IOException{
