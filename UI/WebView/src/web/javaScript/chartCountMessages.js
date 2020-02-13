@@ -115,3 +115,11 @@ chart.scrollbarX.parent = chart.bottomAxesContainer;
 //Hide shadow tooltip
 series2.tooltip.background.filters.clear();
 series.tooltip.background.filters.clear();
+
+//zoom dataaxis
+dateAxis.start = 0.879;
+dateAxis.end = 0.37;
+dateAxis.keepSelection = true;
+
+//Hide shadow tooltip
+series.tooltip.background.filters.clear(); 
