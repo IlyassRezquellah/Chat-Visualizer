@@ -23,7 +23,9 @@ public class AlgorithmCMT{
     private int charsGlobal;
     private int daysGlobal;
     private float percentageSpoke;
-    private double[][] averageMonthByYear;
+    private double[][] averageMonthMessagesByYear;
+    private double[][] averageMonthWordsByYear;
+    private double[][] averageMonthCharsByYear;
     private double[] dataHours;
     
     public AlgorithmCMT(){
@@ -60,11 +62,28 @@ public class AlgorithmCMT{
     }
 
     //----------------------------------
-    public double[][] getAverageMonth(){
-        return averageMonthByYear;
+    //Media de messages mensuales
+    public double[][] getAverageMonthMessages(){
+        return averageMonthMessagesByYear;
     }
-    public double getOneAverageMonth(int y, int m){
-        return averageMonthByYear[y][m];
+    public double getOneAverageMonthMessages(int y, int m){
+        return averageMonthMessagesByYear[y][m];
+    }
+    //----------------------------------
+    //Media de words mensuales
+    public double[][] getAverageMonthWords(){
+        return averageMonthWordsByYear;
+    }
+    public double getOneAverageMonthWords(int y, int m){
+        return averageMonthWordsByYear[y][m];
+    }
+    //----------------------------------
+    //Media de chars mensuales
+    public double[][] getAverageMonthChars(){
+        return averageMonthCharsByYear;
+    }
+    public double getOneAverageMonthChars(int y, int m){
+        return averageMonthCharsByYear[y][m];
     }
     //-----------------------------------
     //Getter del array de messages dia
@@ -120,8 +139,10 @@ public class AlgorithmCMT{
         topsGlobalData();
         //Calcula los días que ha hablado esta persona en la consversación
         personCountDays();
-        //Obtiene la media de mensajes que se escriben de manera mensual
+        //Obtiene la media de mensajes/words/chars que se escriben de manera mensual
         averageMonthMessagesPerson();
+        averageMonthWordsPerson();
+        averageMonthCharsPerson();
         //Obtiene el numero de messages de cada hora de cada persona
         countHourMessagesPerson();
         //Obtiene media de cuanto habla cada persona 
@@ -294,12 +315,12 @@ public class AlgorithmCMT{
         }
 
     }
-    //Calcula la media que habla mensualmente una persona (en base al conteo de mensajes que tiene esta)
+    //Calcula la media de messages que manda cada persona mensualmente
     public void averageMonthMessagesPerson(){
-        //Inicializamos el array 2D donde guardaremos las medias de mensajes menssuales escritos de cada año
-        averageMonthByYear = new double[yearTree.size()][12];
+        //Inicializamos el array 2D donde guardaremos las medias de mensajes mensuales escritos de cada año
+        averageMonthMessagesByYear = new double[yearTree.size()][12];
         //Variable auxiliar para guardar lo que habla una persona
-        double averageMonth = 0.0f;
+        double averageMonthMessages = 0.0f;
         //Contadores pra moverse automaticamente entre los datos del array 2D
         int counYears = 0;
         int counMonths = 0;
@@ -307,11 +328,11 @@ public class AlgorithmCMT{
         for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
             for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
                 for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
-                    averageMonth += d.getMessageCount();
+                    averageMonthMessages += d.getMessageCount();
                 }
-                averageMonthByYear[counYears][counMonths] = averageMonth / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;
+                averageMonthMessagesByYear[counYears][counMonths] = averageMonthMessages / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;
                 //System.out.println("Media del mes de " + m.getKey() + "--> " + averageMonthByYear[counYears][counMonths]); 
-                averageMonth = 0;
+                averageMonthMessages = 0;
                 counMonths++;
             }
             counYears++;
@@ -325,6 +346,57 @@ public class AlgorithmCMT{
             }
         }
         System.out.println("\n");*/
+    }
+     //Calcula la media de palabras que manda cada persona mensualmente
+    public void averageMonthWordsPerson(){
+        //Inicializamos el array 2D donde guardaremos las medias de palabras mensuales escritos de cada año
+        averageMonthWordsByYear = new double[yearTree.size()][12];
+        //Variable auxiliar para guardar lo que habla una persona
+        double averageMonthWords = 0.0f;
+        //Contadores pra moverse automaticamente entre los datos del array 2D
+        int counYears = 0;
+        int counMonths = 0;
+        //Bucle de la matrioshka para obtener la información pertienen sobre los días, meses y años
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
+                for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    averageMonthWords += d.getWordCount();
+                }
+                averageMonthWordsByYear[counYears][counMonths] = averageMonthWords / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;
+                //System.out.println("Media del mes de " + m.getKey() + "--> " + averageMonthByYear[counYears][counMonths]); 
+                averageMonthWords = 0;
+                counMonths++;
+            }
+            counYears++;
+            counMonths = 0;
+        }
+        
+    }
+    
+     //Calcula la media de chars que manda cada persona mensualmente
+    public void averageMonthCharsPerson(){
+        //Inicializamos el array 2D donde guardaremos las medias de chars mensuales escritos de cada año
+        averageMonthCharsByYear = new double[yearTree.size()][12];
+        //Variable auxiliar para guardar lo que habla una persona
+        double averageMonthChars = 0.0f;
+        //Contadores pra moverse automaticamente entre los datos del array 2D
+        int counYears = 0;
+        int counMonths = 0;
+        //Bucle de la matrioshka para obtener la información pertienen sobre los días, meses y años
+        for(HashMap.Entry<Integer, Year> y : yearTree.entrySet()){
+            for(HashMap.Entry<String, Month> m : yearTree.get(y.getKey()).getAllMonths().entrySet()){
+                for(Day d : yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays()){
+                    averageMonthChars += d.getCharCount();
+                }
+                averageMonthCharsByYear[counYears][counMonths] = averageMonthChars / yearTree.get(y.getKey()).getOneMonth(m.getKey()).getDays().length;
+                //System.out.println("Media del mes de " + m.getKey() + "--> " + averageMonthByYear[counYears][counMonths]); 
+                averageMonthChars = 0;
+                counMonths++;
+            }
+            counYears++;
+            counMonths = 0;
+        }
+        
     }
     //Metodo para sacar los mensajes por hora de cada persona
     public void countHourMessagesPerson(){

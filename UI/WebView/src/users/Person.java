@@ -113,15 +113,34 @@ public class Person{
     public float getPercentageSpoke(){
         return algorithm.getPercentageSpoke();
     }
-    public double[][] getAverageMonth(){
-        return algorithm.getAverageMonth();
+    //------------------------------------------
+    //Medias Messages
+    public double[][] getAverageMonthMessages(){
+        return algorithm.getAverageMonthMessages();
     }
-    public double getOneAverageMonth(int y, int m){
-        return algorithm.getOneAverageMonth(y, m);
+    public double getOneAverageMonthMessages(int y, int m){
+        return algorithm.getOneAverageMonthMessages(y, m);
     }
+    //Medias Words
+    public double[][] getAverageMonthWords(){
+        return algorithm.getAverageMonthWords();
+    }
+    public double getOneAverageMonthWords(int y, int m){
+        return algorithm.getOneAverageMonthWords(y, m);
+    }
+    //Medias Chars
+    public double[][] getAverageMonthChars(){
+        return algorithm.getAverageMonthChars();
+    }
+    public double getOneAverageMonthChars(int y, int m){
+        return algorithm.getOneAverageMonthChars(y, m);
+    }
+    //------------------------------------
+    //Hours --> messages totales per hour
      public double[] getCountHourPerson(){
         return algorithm.getCountHourPerson();
     }
+     //----------------------------------
     public int getTotalYears(){
         return algorithm.getMatrioshka().size();
     }

@@ -43,8 +43,10 @@ public class PersonManager{
     private int wordGlobal;
     private int charsGlobal;
     private int daysGlobal;
-    //Media de mensajes mensuales
-    private double[][] grupalAverageMonths;
+    //Media de mensajes/words/chars mensuales de todas las personas
+    private double[][] grupalAverageMonthsMessages;
+    private double[][] grupalAverageMonthsWords;
+    private double[][] grupalAverageMonthsChars;
     //Count Messages per hour
     private double[] dataHours;
     //Arranque inicial del algoritmo
@@ -63,8 +65,10 @@ public class PersonManager{
         getTotalNumber();
         totalDaysChat();
         getPercentages();
-        //Saca la media grupal de lo que se habla mensualmente en la conversación
-        getGrupAverageMonths();
+        //Saca la media grupal de lo que se habla mensualmente(messages/words/chars) en la conversación
+        getGrupAverageMonthsMessages();
+        getGrupAverageMonthsWords();
+        getGrupAverageMonthsChars();
         //comentar algo
         getCountHourAverageMessagesPerson();
         
@@ -102,22 +106,64 @@ public class PersonManager{
         }
 
     }
-    //Calcula y anota la media mensual que se habla de manera grupal en una convresación
-    public void getGrupAverageMonths(){
+    //Calcula y anota la media mensual de messages que se habla de manera grupal en una conversación
+    public void getGrupAverageMonthsMessages(){
         //Guardo la cantidad de años que hay en este chat, dado que se usa mucho este valor
-        int totalYears = persons.get(0).getAverageMonth().length;
+        int totalYears = persons.get(0).getAverageMonthMessages().length;
         //Al igual que en su versión individual, se usa una variable local para almacenar el conteo de mensajes mensuales de cada persona
         double totalAverage = 0.0f;
         //Inicializamos el array 2D donde se almacenará la media grupal
-        grupalAverageMonths = new double[totalYears][12];
+        grupalAverageMonthsMessages = new double[totalYears][12];
         //Conjunto de bucles usados para extraer la media de cada media mensual individual, por cada año de las diferentes personas que han hablado en el chat.
         for (Person p : persons){
-            for (int year = 0, tY = persons.get(year).getAverageMonth().length; year < tY; year++){ 
-                for (int month = 0, tM = p.getAverageMonth()[year].length; month < tM; month++){
-                    totalAverage += p.getOneAverageMonth(year, month);
+            for (int year = 0, tY = persons.get(year).getAverageMonthMessages().length; year < tY; year++){ 
+                for (int month = 0, tM = p.getAverageMonthMessages()[year].length; month < tM; month++){
+                    totalAverage += p.getOneAverageMonthMessages(year, month);
                    
                     //Se calcula la media de este mes y se almacena
-                    grupalAverageMonths[year][month] = totalAverage / totalPersons;
+                    grupalAverageMonthsMessages[year][month] = totalAverage / totalPersons;
+                    totalAverage = 0;
+                }
+            }
+        }
+    }
+    //Calcula y anota la media mensual de words que se habla de manera grupal en una conversación
+    public void getGrupAverageMonthsWords(){
+        //Guardo la cantidad de años que hay en este chat, dado que se usa mucho este valor
+        int totalYears = persons.get(0).getAverageMonthWords().length;
+        //Al igual que en su versión individual, se usa una variable local para almacenar el conteo de words mensuales de cada persona
+        double totalAverage = 0.0f;
+        //Inicializamos el array 2D donde se almacenará la media grupal
+        grupalAverageMonthsWords = new double[totalYears][12];
+        //Conjunto de bucles usados para extraer la media de cada media mensual individual, por cada año de las diferentes personas que han hablado en el chat.
+        for (Person p : persons){
+            for (int year = 0, tY = persons.get(year).getAverageMonthWords().length; year < tY; year++){ 
+                for (int month = 0, tM = p.getAverageMonthWords()[year].length; month < tM; month++){
+                    totalAverage += p.getOneAverageMonthWords(year, month);
+                   
+                    //Se calcula la media de este mes y se almacena
+                    grupalAverageMonthsWords[year][month] = totalAverage / totalPersons;
+                    totalAverage = 0;
+                }
+            }
+        }
+    }
+    //Calcula y anota la media mensual de chars que se habla de manera grupal en una conversación
+    public void getGrupAverageMonthsChars(){
+        //Guardo la cantidad de años que hay en este chat, dado que se usa mucho este valor
+        int totalYears = persons.get(0).getAverageMonthChars().length;
+        //Al igual que en su versión individual, se usa una variable local para almacenar el conteo de chars mensuales de cada persona
+        double totalAverage = 0.0f;
+        //Inicializamos el array 2D donde se almacenará la media grupal
+        grupalAverageMonthsChars = new double[totalYears][12];
+        //Conjunto de bucles usados para extraer la media de cada media mensual individual, por cada año de las diferentes personas que han hablado en el chat.
+        for (Person p : persons){
+            for (int year = 0, tY = persons.get(year).getAverageMonthChars().length; year < tY; year++){ 
+                for (int month = 0, tM = p.getAverageMonthChars()[year].length; month < tM; month++){
+                    totalAverage += p.getOneAverageMonthChars(year, month);
+                   
+                    //Se calcula la media de este mes y se almacena
+                    grupalAverageMonthsChars[year][month] = totalAverage / totalPersons;
                     totalAverage = 0;
                 }
             }
@@ -230,6 +276,7 @@ public class PersonManager{
         return jSonMessages.toString() + jSonWords.toString() + jSonChars.toString();
     }
     //JSon (chat): Medias
+    //Media al dia de mensajes/words/chars de cada mes 
     public String jSonAverage(){
         //Dejo guardada la coletilla de cada conjunto de datos
         String beginingDate = "{\"category\": \"";
@@ -241,7 +288,7 @@ public class PersonManager{
         //Abrimos brackets para empezar la extructura del json
         jSonAverageM.append("var dataMessagesAverage = [");
         jSonAverageW.append("var dataWordsAverage = [");
-        jSonAverageC.append("var dataChatsAverage = [");
+        jSonAverageC.append("var dataCharsAverage = [");
         //Estos fors son una versión sencialla de la matrioshka, adaptado a las medias
         //Gracias a estos fors, podemos recorrer todas las medias de cada personas. E incluso las generales
         for (int y = 0; y < totalYears; y++){          
@@ -253,14 +300,14 @@ public class PersonManager{
                 jSonAverageC.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
                 //Usaremos estos fors para guardar las medias de cada una de las personas
                 for (int p = 0; p < totalPersons; p++){
-                    jSonAverageM.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonth()[y][m]));
-                    jSonAverageW.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonth()[y][m]));
-                    jSonAverageC.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonth()[y][m]));
+                    jSonAverageM.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthMessages()[y][m]));
+                    jSonAverageW.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthWords()[y][m]));
+                    jSonAverageC.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthChars()[y][m]));
                 }
                 //Guardamos las medias generales
-                jSonAverageM.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonths[y][m]));
-                jSonAverageW.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonths[y][m]));
-                jSonAverageC.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonths[y][m]));
+                jSonAverageM.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsMessages[y][m]));
+                jSonAverageW.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsWords[y][m]));
+                jSonAverageC.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsChars[y][m]));
             }          
         }
         //Elimina la última coma innecesaria
