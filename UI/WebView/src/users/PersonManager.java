@@ -228,7 +228,7 @@ public class PersonManager{
 
         //Abrimos brackets para empezar la extructura del json
         jSonMessages.append("var dataMessagesCount = [");
-        jSonWords.append("var dataWordSCount = [");
+        jSonWords.append("var dataWordsCount = [");
         jSonChars.append("var dataChartsCount = [");
         //Estos fors son pareceidos a los de la matrioshka, con la diferentea de que estos se usan para recorrers todos los días de los años del calensario que han hablado estas personas en el chat.
         //Gracias a estos fors, podemos recorrer todas las fechas y anotarlas en el json
