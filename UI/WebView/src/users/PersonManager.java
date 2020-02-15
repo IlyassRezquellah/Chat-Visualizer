@@ -145,7 +145,7 @@ public class PersonManager{
     
     //Creación y expotación de ficheros JSon
     public boolean exportJSData(){       
-        try(FileOutputStream oFileMessages = new FileOutputStream(/*Utils.Auxiliary.jSDataPatch*/"data.js", false)){
+        try(FileOutputStream oFileMessages = new FileOutputStream(Utils.Auxiliary.jSDataPatch, false)){
             //Cargar fichero de texto
             StringBuilder jSData = new StringBuilder();
             for (int i = 0, t = persons.size(); i < t; i++)

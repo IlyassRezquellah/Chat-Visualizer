@@ -6,6 +6,7 @@
 package base;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,12 +21,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import users.PersonManager;
 
 public class LoadChatController implements Initializable{
     //Explorador de archivos de windows
     FileChooser fileChooser;
     Parent loadChatFXML;
     Scene loadChatFXMLScene;
+    
+    private PersonManager pManager;
     
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -40,7 +44,10 @@ public class LoadChatController implements Initializable{
         if(file != null){
             System.out.println("File get it: " + file.getPath());
             Utils.Auxiliary.chatPath = file.getPath();
+            prepareData();
             changeScreenButtonPushed(event);
+            //Cerrar el programa tras terminar todo (no se si espera a que todo termine)
+            //System.exit(0);
         }
     }
     //crear la modificación para que se puedan arrastrar fichero (https://www.youtube.com/watch?v=pKGu9ZuMvig)
@@ -56,6 +63,18 @@ public class LoadChatController implements Initializable{
     }
             
     public void changeScreenButtonPushed(ActionEvent event) throws IOException{
+         //Mirar de cambiar
+         //Esta comentado para evitar que genere un log. Es solo de emergencia
+        try/*(FileOutputStream oFileMessages = new FileOutputStream("\\log.txt", false))*/{
+            /*oFileMessages.write(("Working Directory = " + System.getProperty("user.dir")).getBytes());*/
+            //Abre el html con los gráficos en tu navegador predeterminado
+            Process p = Runtime.getRuntime().exec("cmd /c explorer \"web\\index.html\"");
+        }
+        catch (IOException ex)
+        {
+            System.out.println("Error");
+        }
+        /*
         //Guardamos la configuración de la escena
         Parent ChartUIFXML = FXMLLoader.load(getClass().getResource("ChartUIFXML.fxml"));
         //Creamos una escena con la configuración anterior
@@ -66,6 +85,20 @@ public class LoadChatController implements Initializable{
         
         //Carga y muestra la nueva escena
         window.setScene(ChartUIFXMLScene);
-        window.show();
+        window.show();*/
+    }
+    public void prepareData()
+    {
+        //Inicializamos el manager de personas, cargando la lista de personas con sus mensajes de chat que nos devuelve la clase PersonManager que analiza el txt del chat (whatsapp)
+        pManager = new PersonManager();
+        //Una vez toda la información del chat es alamacenada, se inicia el algoritmo que creará los datos de análisis.
+        if(pManager.startAlgorythm()){
+            System.out.println("JS Created");
+        }
+        else{
+            System.out.println("Algo ha fallado.");
+            System.exit(0);
+        }
+        System.out.println("All green!");
     }
 }

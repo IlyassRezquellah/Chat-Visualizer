@@ -36,19 +36,7 @@ public class LegalUseController implements Initializable
         
         //Obtiene la inforamción del Stage actual
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
-        //MIrar de cambiar
-        try(FileOutputStream oFileMessages = new FileOutputStream("\\log.txt", false)){
-            oFileMessages.write(("Working Directory = " + System.getProperty("user.dir")).getBytes());
-            //Process p = Runtime.getRuntime().exec("cmd /c explorer \"C:\\Users\\Cristian\\OpenHTMALFile\\web\\index.html\"");
-            Process p = Runtime.getRuntime().exec("cmd /c explorer \"web\\index.html\"");
-            //Process process = new ProcessBuilder("C:\\Users\\Cristian\\OpenHTMALFile\\web\\index.html", "").start();
-        }
-        catch (IOException ex)
-        {
-            System.out.println("Error");
-        }
-        
+                
         //Carga y muestra la nueva escena
         window.setScene(LoadChatScene);
         window.show();
