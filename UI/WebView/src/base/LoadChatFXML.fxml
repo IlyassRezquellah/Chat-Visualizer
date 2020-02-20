@@ -13,14 +13,14 @@
     </stylesheets>
    <children>
       <Label fx:id="dragSpace" onDragEntered="#dragFile" prefHeight="400.0" prefWidth="600.0" />
-      <Button fx:id="btn_ChangeScene" layoutX="521.0" layoutY="361.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Continue">
+      <Button fx:id="btn_ChangeScene" layoutX="521.0" layoutY="361.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" stylesheets="@LoadChatStyle.css" text="Continue">
          <font>
             <Font name="Consolas" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btn_LoadFile" layoutX="238.0" layoutY="185.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectFile" prefHeight="30.0" prefWidth="125.0" text="Select" textAlignment="CENTER">
+      <Button fx:id="btn_LoadFile" layoutX="192.0" layoutY="157.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectFile" prefHeight="87.0" prefWidth="216.0" style="-fx-background-color: #0075FF; -fx-background-radius: 25;" stylesheets="@LoadChatStyle.css" text="Choose File" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font size="30.0" />
          </font>
       </Button>
       <CheckBox fx:id="check_Drag" layoutX="74.0" layoutY="358.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="69.0" text="Drag" />

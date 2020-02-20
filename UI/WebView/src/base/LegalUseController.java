@@ -33,6 +33,7 @@ public class LegalUseController implements Initializable
         Parent LoadChat = FXMLLoader.load(getClass().getResource("LoadChatFXML.fxml"));
         //Creamos una escena con la configuración anterior
         Scene LoadChatScene = new Scene(LoadChat);
+        LoadChatScene.getStylesheets().add("LoadChatStyle.css");
         
         //Obtiene la inforamción del Stage actual
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
