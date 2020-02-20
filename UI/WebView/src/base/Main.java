@@ -20,7 +20,8 @@ public class Main extends Application{
     //Crea la primera ventana de JavaFX
     @Override
     public void start(Stage stage) throws Exception{
-        resetWebEngine();
+        
+        reset();
         //Guardamos la configuración de la escena
         legalUse = FXMLLoader.load(getClass().getResource("LegalUseFXML.fxml"));
         //Creamos una escena con la configuración anterior
@@ -31,12 +32,12 @@ public class Main extends Application{
         stage.setScene(legalUseScene);
         stage.show();
     }
-    public void resetWebEngine(){
+    public void reset(){
         //Elimina el cache del navegador JavaFX
         //java.net.CookieHandler.setDefault(new java.net.CookieManager());
-        java.net.CookieManager manager = new java.net.CookieManager();
-        java.net.CookieHandler.setDefault(manager);
-        manager.getCookieStore().removeAll();
+        //java.net.CookieManager manager = new java.net.CookieManager();
+        //java.net.CookieHandler.setDefault(manager);
+        //manager.getCookieStore().removeAll();
         //Si el archivo data existe, se elemina para que nunca se cargue el data anterior
         File dataFile = new File(Utils.Auxiliary.jSDataPatch);
         if(dataFile.exists()){
