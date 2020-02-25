@@ -5,7 +5,7 @@ am4core.useTheme(am4themes_animated);
 // Themes end
 
 /* Create chart instance */
-var chart = am4core.create("chartHourFrequency", am4charts.RadarChart);
+var chartHourFrequency = am4core.create("chartHourFrequency", am4charts.RadarChart);
 
 /* Add data */
 /*
@@ -14,18 +14,18 @@ chart.data = [ {
     "litres": 40
   }];*/
 
-chart.data =HourAverage ;
+  chartHourFrequency.data =HourAverage ;
 
   // Create axes 
-var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+var categoryAxis = chartHourFrequency.xAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "hour";
 
-var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-valueAxis.renderer.axisFills.template.fill = chart.colors.getIndex(2);
+var valueAxis = chartHourFrequency.yAxes.push(new am4charts.ValueAxis());
+valueAxis.renderer.axisFills.template.fill = chartHourFrequency.colors.getIndex(2);
 valueAxis.renderer.axisFills.template.fillOpacity = 0.05;
 
 // Create and configure series 
-var series = chart.series.push(new am4charts.RadarSeries());
+var series = chartHourFrequency.series.push(new am4charts.RadarSeries());
 series.dataFields.valueY = "data";
 series.dataFields.categoryX = "hour";
 series.name = "Sales";

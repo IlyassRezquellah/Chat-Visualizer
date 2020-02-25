@@ -10,21 +10,30 @@
     <script src="javaScript/data.js"></script>
 </head>
 <body>
+    <div id="uiPanel">
+        <input id="btnMessages" type="image" src="media/messages_icon.png" title="Show messages" onclick="setMessages()" value="Messages"/>
+        <input id="btnWords" type="image" src="/" title="Show Words" onclick="setWords()" value="Words"/>
+        <input id="btnCharts" type="image" src="/" title="Show Charts" onclick="setCharts()" value="Charts"/>
+    </div>
     <div id="chartCountMessages"></div>
     <div id="chartAverage"></div>
     <br/>
     <div id="chartTops"></div>
     <div id="chartPercentages"></div>
     <div id="chartHourFrequency"></div>
+    <!--AmCharts4-->
     <script src="dependencies/core.js"></script>
     <script src="dependencies/charts.js"></script>
     <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
     <script src="dependencies/dataviz.js"></script>
     <script src="dependencies/animated.js"></script>
+    <!--ChartsData JS-->
     <script src="javaScript/chartCountMessages.js"></script>
     <script src="javaScript/chartAverage.js"></script>
     <script src="javaScript/chartTops.js"></script>
     <script src="javaScript/chartPercentages.js"></script>
     <script src="javaScript/chartHourFrequency.js"></script>
+    <!--UI JS-->
+    <script src="javaScript/uiControl.js"></script>
 </body>
 </html>

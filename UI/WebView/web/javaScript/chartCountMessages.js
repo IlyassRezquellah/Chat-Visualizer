@@ -15,25 +15,25 @@ am4core.useTheme(am4themes_animated);
 // Themes end
 
 // Create chart instance
-var chart = am4core.create("chartCountMessages", am4charts.XYChart);
+var chartMessagesCount = am4core.create("chartCountMessages", am4charts.XYChart);
 
 // Add data
-chart.data = dataMessagesCount;
+chartMessagesCount.data = dataMessagesCount;
 
 //chart.dataSource.url = "MessageCount.json";
 //chart.dataSource.load();
 
 
 // Set input format for the dates
-chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+chartMessagesCount.dateFormatter.inputDateFormat = "yyyy-MM-dd";
 
 // Create axes
-var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+var dateAxis = chartMessagesCount.xAxes.push(new am4charts.DateAxis());
+var valueAxis = chartMessagesCount.yAxes.push(new am4charts.ValueAxis());
 
 
 // Create series
-var series = chart.series.push(new am4charts.LineSeries());
+var series = chartMessagesCount.series.push(new am4charts.LineSeries());
 series.dataFields.valueY = name0;
 series.dataFields.dateX = "date";
 //series.tooltipText = "{Christian}"
@@ -42,7 +42,7 @@ series.strokeWidth = 2;
 series.minBulletDistance = 15;
 
 //Create series 2
-var series2 = chart.series.push(new am4charts.LineSeries());
+var series2 = chartMessagesCount.series.push(new am4charts.LineSeries());
 series2.dataFields.valueY = name1;
 series2.dataFields.dateX = "date";
 //series.tooltipText = "{Ilyass}"
@@ -97,20 +97,20 @@ var bullethover = bullet.states.create("hover");
 bullethover.properties.scale = 1.3;
 
 // Make a panning cursor
-chart.cursor = new am4charts.XYCursor();
-chart.cursor.behavior = "panXY";
-chart.cursor.xAxis = dateAxis;
-chart.cursor.snapToSeries = series;
+chartMessagesCount.cursor = new am4charts.XYCursor();
+chartMessagesCount.cursor.behavior = "panXY";
+chartMessagesCount.cursor.xAxis = dateAxis;
+chartMessagesCount.cursor.snapToSeries = series;
 
 // Create vertical scrollbar and place it before the value axis
-chart.scrollbarY = new am4core.Scrollbar();
-chart.scrollbarY.parent = chart.leftAxesContainer;
-chart.scrollbarY.toBack();
+chartMessagesCount.scrollbarY = new am4core.Scrollbar();
+chartMessagesCount.scrollbarY.parent = chartMessagesCount.leftAxesContainer;
+chartMessagesCount.scrollbarY.toBack();
 
 // Create a horizontal scrollbar with previe and place it underneath the date axis
-chart.scrollbarX = new am4charts.XYChartScrollbar();
-chart.scrollbarX.series.push(series);
-chart.scrollbarX.parent = chart.bottomAxesContainer;
+chartMessagesCount.scrollbarX = new am4charts.XYChartScrollbar();
+chartMessagesCount.scrollbarX.series.push(series);
+chartMessagesCount.scrollbarX.parent = chartMessagesCount.bottomAxesContainer;
 
 //Hide shadow tooltip
 series2.tooltip.background.filters.clear();

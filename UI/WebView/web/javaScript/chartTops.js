@@ -16,8 +16,8 @@ am4core.useTheme(am4themes_animated);
 // Themes end
 
 
-var chart = am4core.create("chartTops", am4plugins_wordCloud.WordCloud);
-var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
+var chartTops = am4core.create("chartTops", am4plugins_wordCloud.WordCloud);
+var series = chartTops.series.push(new am4plugins_wordCloud.WordCloudSeries());
 
 series.accuracy = 4;
 series.step = 15;

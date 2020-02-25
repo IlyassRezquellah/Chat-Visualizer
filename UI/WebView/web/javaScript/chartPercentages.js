@@ -15,8 +15,8 @@ am4core.useTheme(am4themes_dataviz);
 am4core.useTheme(am4themes_animated);
 // Themes end
 
-var chart = am4core.create("chartPercentages", am4charts.PieChart);
-chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+var chartPercentages = am4core.create("chartPercentages", am4charts.PieChart);
+chartPercentages.hiddenState.properties.opacity = 0; // this creates initial fade-in
 /*
 chart.data = [	
   {	
@@ -29,13 +29,13 @@ chart.data = [
   }	  
 ];	
 */ 
-chart.data = dataChatGlobalPercentage;
-chart.radius = am4core.percent(70);
-chart.innerRadius = am4core.percent(40);
-chart.startAngle = 180;
-chart.endAngle = 360;  
+chartPercentages.data = dataChatGlobalPercentage;
+chartPercentages.radius = am4core.percent(70);
+chartPercentages.innerRadius = am4core.percent(40);
+chartPercentages.startAngle = 180;
+chartPercentages.endAngle = 360;  
 
-var series = chart.series.push(new am4charts.PieSeries());
+var series = chartPercentages.series.push(new am4charts.PieSeries());
 series.dataFields.value = "value";
 series.dataFields.category = "name";
 
@@ -48,7 +48,7 @@ series.alignLabels = false;
 series.hiddenState.properties.startAngle = 90;
 series.hiddenState.properties.endAngle = 90;
 
-chart.legend = new am4charts.Legend();
+chartPercentages.legend = new am4charts.Legend();
 //Editar contenido tooltip
 series.slices.template.tooltipText = "{category}";
 

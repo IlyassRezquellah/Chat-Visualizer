@@ -1,9 +1,21 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   
+}
+input{
+    padding-left: 2%;
+    width: 30px; 
+    height: 30px;
+}
+#uiPanel {
+    position: fixed;
+    height: 100%;
+    width: 45px;
+    /*background-color: blue; */
 }
 #chartCountMessages {
     display: inline-block;
-    margin-left: 0.5%;
+    margin-left: 36px;
     margin-right: 0.5%;
     width: 48.5%;
     height: 500px;
@@ -12,12 +24,12 @@ body {
     display: inline-block;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    width: 48.5%;
+    width: 44.5%;
     height: 500px;
 }
 #chartTops {
     display: inline-block;
-    margin-left: 0.5%;
+    margin-left: 55px;
     margin-right: 0.5%;
     width:40%;
     height: 400px;
@@ -33,6 +45,6 @@ body {
     display: inline-block;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    width: 25%;
+    width: 21%;
     height: 400px;
 }

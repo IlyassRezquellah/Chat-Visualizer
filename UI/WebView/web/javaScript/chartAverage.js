@@ -17,16 +17,16 @@ am4core.useTheme(am4themes_animated);
 
 var interfaceColors = new am4core.InterfaceColorSet();
 
-var chart = am4core.create("chartAverage", am4charts.XYChart);
+var chartAverage = am4core.create("chartAverage", am4charts.XYChart);
 //Import data
-chart.data = dataCharsAverage;
+chartAverage.data = dataCharsAverage;
 //chart.data = data;
 
 // the following line makes value axes to be arranged vertically.
-chart.bottomAxesContainer.layout = "horizontal";
-chart.bottomAxesContainer.reverseOrder = true;
+chartAverage.bottomAxesContainer.layout = "horizontal";
+chartAverage.bottomAxesContainer.reverseOrder = true;
 
-var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+var categoryAxis = chartAverage.yAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "category";
 categoryAxis.renderer.grid.template.stroke = interfaceColors.getFor("background");
 categoryAxis.renderer.grid.template.strokeOpacity = 1;
@@ -34,7 +34,7 @@ categoryAxis.renderer.grid.template.location = 1;
 categoryAxis.renderer.minGridDistance = 20;
 
 //Person 1
-var valueAxis1 = chart.xAxes.push(new am4charts.ValueAxis());
+var valueAxis1 = chartAverage.xAxes.push(new am4charts.ValueAxis());
 valueAxis1.tooltip.disabled = true;
 valueAxis1.renderer.baseGrid.disabled = true;
 valueAxis1.marginRight = 30;
@@ -44,7 +44,7 @@ valueAxis1.renderer.grid.template.stroke = interfaceColors.getFor("background");
 valueAxis1.renderer.grid.template.strokeOpacity = 1;
 valueAxis1.title.text = name0;
 
-var series1 = chart.series.push(new am4charts.LineSeries());
+var series1 = chartAverage.series.push(new am4charts.LineSeries());
 series1.dataFields.categoryY = "category";
 series1.dataFields.valueX = name0;
 series1.xAxis = valueAxis1;
@@ -53,7 +53,7 @@ var bullet1 = series1.bullets.push(new am4charts.CircleBullet());
 bullet1.tooltipText = "{valueX.value}";
 
 //Person 2
-var valueAxis2 = chart.xAxes.push(new am4charts.ValueAxis());
+var valueAxis2 = chartAverage.xAxes.push(new am4charts.ValueAxis());
 valueAxis2.tooltip.disabled = true;
 valueAxis2.renderer.baseGrid.disabled = true;
 valueAxis2.marginRight = 30;
@@ -63,7 +63,7 @@ valueAxis2.renderer.grid.template.stroke = interfaceColors.getFor("background");
 valueAxis2.renderer.grid.template.strokeOpacity = 1;
 valueAxis2.title.text = "general";
 
-var series2 = chart.series.push(new am4charts.ColumnSeries());
+var series2 = chartAverage.series.push(new am4charts.ColumnSeries());
 series2.dataFields.categoryY = "category";
 series2.dataFields.valueX = "general";
 series2.xAxis = valueAxis2;
@@ -74,7 +74,7 @@ bullet2.strokeOpacity = 0;
 bullet2.tooltipText = "{valueX.value}";
 
 //Person 3
-var valueAxis3 = chart.xAxes.push(new am4charts.ValueAxis());
+var valueAxis3 = chartAverage.xAxes.push(new am4charts.ValueAxis());
 valueAxis3.tooltip.disabled = true;
 valueAxis3.renderer.baseGrid.disabled = true;
 valueAxis3.renderer.gridContainer.background.fill = interfaceColors.getFor("alternativeBackground");
@@ -83,7 +83,7 @@ valueAxis3.renderer.grid.template.stroke = interfaceColors.getFor("background");
 valueAxis3.renderer.grid.template.strokeOpacity = 1;
 valueAxis3.title.text = name1;
 
-var series3 = chart.series.push(new am4charts.LineSeries());
+var series3 = chartAverage.series.push(new am4charts.LineSeries());
 series3.dataFields.categoryY = "category";
 series3.dataFields.valueX = name1;
 series3.xAxis = valueAxis3;
@@ -91,11 +91,11 @@ series3.name = "Series 3";
 var bullet3 = series3.bullets.push(new am4charts.CircleBullet());
 bullet3.tooltipText = "{valueX.value}";
 
-chart.cursor = new am4charts.XYCursor();
-chart.cursor.behavior = "zoomY";
+chartAverage.cursor = new am4charts.XYCursor();
+chartAverage.cursor.behavior = "zoomY";
 
 var scrollbarY = new am4core.Scrollbar();
-chart.scrollbarY = scrollbarY;
+chartAverage.scrollbarY = scrollbarY;
 
 //Hide shadow tooltip
 series2.tooltip.background.filters.clear();
