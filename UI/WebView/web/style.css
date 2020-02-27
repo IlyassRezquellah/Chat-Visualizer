@@ -17,34 +17,94 @@ input{
     display: inline-block;
     margin-left: 36px;
     margin-right: 0.5%;
-    width: 48.5%;
+    width: 95%;
     height: 500px;
 }
 #chartAverage {
     display: inline-block;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    width: 44.5%;
+    width: 46%;
     height: 500px;
+}
+#Numbers{
+    display: inline-block;
+    margin-left: 0%;
+    margin-right: 0.5%;
+    width: 30%;
+    height: 400px;
+    
 }
 #chartTops {
     display: inline-block;
     margin-left: 55px;
     margin-right: 0.5%;
-    width:40%;
-    height: 400px;
+    width:45%;
+    height: 500px;
 }
 #chartPercentages {
     display: inline-block;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    width: 30%;
+    width: 32%;
     height: 400px;
 }
 #chartHourFrequency {
     display: inline-block;
     margin-left: 0.5%;
     margin-right: 0.5%;
-    width: 21%;
+    width: 32.5%;
     height: 400px;
 }
+table{
+    margin-top: 7.5%;
+    border-collapse: separate;
+    border-spacing: 90px 0;
+}
+td{
+    font-size: 50px;
+    color:#283150;
+    text-align: left;
+}
+#date{
+    font-size: 26px;
+}
+th {
+    color: grey;
+    text-align: left;
+}
+
+/*On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 1200px) {
+    #chartTops{
+      
+      width: 95%;
+    }
+    #chartAverage{
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        width: 95%;
+    }
+    #chartCountMessages{
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        width: 95%;
+    }
+    #chartPercentages{
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        width: 95%;
+    }
+    #chartHourFrequency{
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        width: 95%;
+    }
+    #Numbers{
+        margin-left: 30%;
+        margin-right: 35%;;
+        text-align: left;
+        width: 95%;
+        
+    }
+  }
