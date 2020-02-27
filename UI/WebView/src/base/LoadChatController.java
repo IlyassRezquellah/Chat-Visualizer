@@ -5,13 +5,18 @@
  */
 package base;
 
+import Utils.Regex;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -41,18 +46,44 @@ public class LoadChatController implements Initializable{
     
     public void selectFile(ActionEvent event) throws IOException{
         File file = fileChooser.showOpenDialog(null);
-        if(file != null){
+        if(file != null && validateChat(file)){
             System.out.println("File get it: " + file.getPath());
             Utils.Auxiliary.chatPath = file.getPath();
             prepareData();
             changeScreenButtonPushed(event);
             //Cerrar el programa tras terminar todo (no se si espera a que todo termine)
-            //System.exit(0);
+            System.exit(0);
         }
     }
+    //Verficia si el archivo exportado es correcto
+    public boolean validateChat(File file){
+        //verificationCounter cuenta las líneas correctas detectadas
+        int verificationCounter = 0;
+        try(BufferedReader reader = new BufferedReader(new FileReader(file.getAbsolutePath()))){
+            //Define el límite de lineas que se leeran para validar el fichero (Previene la tardanza de a la hora de leer grandes archivos)
+            int limitLines = 9;
+            Pattern patternMessage = Pattern.compile(Regex.VALIDATE_MENSSAGE);
+            Pattern patternDateTime = Pattern.compile(Regex.VALIDATE_DATE_TIME);
+            String line;
+            //Leemos el chat txt linea a linea
+            while ((line = reader.readLine()) != null && verificationCounter <= limitLines){
+                //Usando los patterns para determinar si el archivo txt importado es realmente un chat de whatsapp
+                if(patternDateTime.matcher(line).matches() || patternMessage.matcher(line).matches()){
+                    verificationCounter++;
+                    System.out.println("GoodLine");
+                }
+            }
+        } catch (IOException ex)
+        {
+            System.out.println("La validación no funcionó: " + ex);
+        }
+        if(verificationCounter>0)
+            return true;
+        else
+            return false;
+    }
     //crear la modificación para que se puedan arrastrar fichero (https://www.youtube.com/watch?v=pKGu9ZuMvig)
-    public void spaceToDrag()
-    {
+    public void spaceToDrag(){
         
     }
     
