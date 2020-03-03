@@ -49,7 +49,10 @@ series2.dataFields.dateX = "date";
 series2.strokeWidth = 2;
 series2.minBulletDistance = 15;
 series2.strokeDasharray = "3,4";
-series2.stroke = series.stroke;
+//Con la linea de abajo las dos series tendran el mismo color
+//series2.stroke = series.stroke;
+//Con la linea de abajo la serie tiene un color personalizado 
+series2.stroke = am4core.color("#953B3C");
 
 series.tooltipText = `{dateX}[/]
 `+name0+`: {`+name0+`}`;
