@@ -7,6 +7,7 @@ import users.data.Message;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import users.data.Date;
 
 public class Person{
     //Nombre de la personas que envia estos mensajes
@@ -41,7 +42,13 @@ public class Person{
         totalMessages = 0;
         addNewMessage(day, month, year, minute, hour, text);
     }
-    
+    //Calcular fechas de inicio y fin
+    public java.util.Date getMessageFromFirstDate(){
+        return getMessageObj(0).getDate();
+    }
+    public java.util.Date getMessageFromLastDate(){
+        return getMessageObj(mensajes.size()-1).getDate();
+    }
     //Añade un mensaje a esta persona
     public void addNewMessage(int day, int month, int year, int minute, int hour, String text){
         mensajes.add(new Message(day, month, year, minute, hour, text));

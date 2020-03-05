@@ -59,13 +59,13 @@ public class Message
         return time.getMinute();
     }
     public int getDay(){
-        return date.getDia();
+        return date.getDay();
     }
     public int getMonth(){
-        return date.getMes();
+        return date.getMonth();
     }
     public int getYear(){
-        return date.getAno();
+        return date.getYear();
     }
     public boolean isMedia(){
         return isMedia;
@@ -89,5 +89,8 @@ public class Message
     }
     public void setMoreText(String text){
         this.text += ("\n\r" + text);
-    }  
+    }
+     public java.util.Date getDate(){
+        return date.getDate(); 
+    }
 }

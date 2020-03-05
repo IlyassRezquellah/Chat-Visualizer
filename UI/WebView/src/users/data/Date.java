@@ -6,36 +6,50 @@ public class Date
     private int mes;
     private int ano;
     
-    public Date(int dia, int mes, int ano){
-        setDia(dia);
-        setMes(mes);
-        setAno(ano);
+    public Date(int day, int month, int year){
+        setDay(day);
+        setMonth(month);
+        setYear(year);
+    }
+    public Date(Date date){
+        setDay(date.getDay());
+        setMonth(date.getMonth());
+        setYear(date.getYear());
     }
     
-    public int getDia(){
+    public int getDay(){
         return dia;
     }
-    public int getMes(){
+    public int getMonth(){
         return mes;
     }
-    public int getAno(){
+    public int getYear(){
         return ano;
     }
     public String getFullDate(){
-        return String.format("%02d/%02d/%4d", getDia(), getMes(), getAno());
+        return String.format("%02d/%02d/%4d", getDay(), getMonth(), getYear());
     }
-    public void setDia(int dia){
+    public void setDay(int dia){
         this.dia = dia;
     }
-    public void setMes(int mes){
+    public void setMonth(int mes){
         this.mes = mes;
     }
-    public void setAno(int ano){
+    public void setYear(int ano){
         this.ano = ano;
     }
-    public void setTodo(int dia, int mes, int ano){
-        setDia(dia);
-        setMes(mes);
-        setAno(ano);
+    public void setAll(int dia, int mes, int ano){
+        setDay(dia);
+        setMonth(mes);
+        setYear(ano);
     }
+    public java.util.Date getDate(){
+        return new java.util.Date(getYear(), getMonth(), getDay()); 
+    }
+    @Override
+    public String toString()
+    {
+        return String.format("%d-%d-%d", getDay(), getMonth(), getYear());
+    }
+    
 }

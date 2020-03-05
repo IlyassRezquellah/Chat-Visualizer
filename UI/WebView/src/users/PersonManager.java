@@ -2,9 +2,7 @@ package users;
 
 import Utils.Colors;
 import Utils.enums.EnumMonths;
-import algorithms.AlgorithmCMT;
 import algorithms.matrioshka.Day;
-import algorithms.matrioshka.Hour;
 import algorithms.matrioshka.Month;
 import algorithms.matrioshka.Year;
 import interpreters.InterpreterWhatsapp;
@@ -18,6 +16,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import users.Person;
+import users.data.Date;
 
 public class PersonManager{
     //Variable estatica con la ruta del chat a analizar
@@ -49,6 +48,9 @@ public class PersonManager{
     private double[][] grupalAverageMonthsChars;
     //Count Messages per hour
     private double[] dataHours;
+    //Guarda el día que comienza y finaliza la conversación
+    java.util.Date firstDateComvo;
+    java.util.Date lastDateComvo;
     //Arranque inicial del algoritmo
     public boolean startAlgorythm(){
         //Pruebas del algoritmo
@@ -60,7 +62,6 @@ public class PersonManager{
         }
         //Inizialización de variables auxiliares
         auxiliaryInitialization();
-        
         //Calculos post almacenaje de mensajes en la matrioshka
         getTotalNumber();
         totalDaysChat();
@@ -71,7 +72,6 @@ public class PersonManager{
         getGrupAverageMonthsChars();
         //comentar algo
         getCountHourAverageMessagesPerson();
-        
         //Exportar/crear los json necesarios para las gráficas una vez ya tenemos todos los números
         return exportJSData();
     }
@@ -86,6 +86,24 @@ public class PersonManager{
         wordGlobal = 0;
         charsGlobal = 0;
         daysGlobal = 0;
+        //Almacena los días que comenzó y terminó la conversación
+        int firstDayComvo = 0;
+        int lastDayComvo = 0;
+        //System.out.println("IntSDate: "+persons.get(0).getIntegerFromFirstDate());
+        //System.out.println("IntFDate: "+persons.get(0).getMessageFromLastDate());
+        for(int i = 1; i < totalPersons;i++){
+            System.out.println("IntSDate: "+persons.get(i).getMessageFromFirstDate());
+            System.out.println("IntFDate: "+persons.get(i).getMessageFromLastDate());
+            if(persons.get(i).getMessageFromFirstDate().compareTo(persons.get(firstDayComvo).getMessageFromFirstDate()) > 0)
+                firstDayComvo = i;
+            if(persons.get(i).getMessageFromLastDate().compareTo(persons.get(lastDayComvo).getMessageFromLastDate()) < 0)
+                lastDayComvo = i;
+        }
+        System.out.println("El menor es el: "+firstDayComvo+" / "+persons.get(firstDayComvo).getMessageFromFirstDate().toString());
+        System.out.println("El mayor es el: "+lastDayComvo+" / "+persons.get(lastDayComvo).getMessageFromLastDate().toString());
+        firstDateComvo = persons.get(firstDayComvo).getMessageFromFirstDate();
+        lastDateComvo = persons.get(lastDayComvo).getMessageFromLastDate();
+        
     }
      //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
     //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"
@@ -235,29 +253,32 @@ public class PersonManager{
         for(HashMap.Entry<Integer, Year> y : personsMatrishka[0].entrySet()){
             counterMonths = 1;
             for(HashMap.Entry<String, Month> m : personsMatrishka[0].get(y.getKey()).getAllMonths().entrySet()){
-                
                 for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
-                    //Escribimos la fecha en el json
-                    jSonMessages.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
-                    jSonWords.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
-                    jSonChars.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
-                    //Limite de personas preparado de antemano
-                    //Dentro de esta fecha, anotamos las personas correspondientes, y el número de mensajes que tiene (preparado para recibir un número indefinído de personas)
-                    for (int i = 0; i < totalPersons; i++){
-                        if(i == totalPersons-1){
-                            jSonMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "");
-                            jSonWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + "");
-                            jSonChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + "");
-                        }else{
-                            jSonMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",");
-                            jSonWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",");
-                            jSonChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",");
-                        }    
+                    //Delimita la inforamción exportada a partir del día que comienza y termina la conversación
+                    //startDateComvo endDateComvo
+                    if(insideOfDateRangeCombo(new java.util.Date(y.getKey(), counterMonths, d.getName()))){
+                        //Escribimos la fecha en el json
+                        jSonMessages.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
+                        jSonWords.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
+                        jSonChars.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
+                        //Limite de personas preparado de antemano
+                        //Dentro de esta fecha, anotamos las personas correspondientes, y el número de mensajes que tiene (preparado para recibir un número indefinído de personas)
+                        for (int i = 0; i < totalPersons; i++){
+                            if(i == totalPersons-1){
+                                jSonMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + "");
+                                jSonWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + "");
+                                jSonChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + "");
+                            }else{
+                                jSonMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",");
+                                jSonWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",");
+                                jSonChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",");
+                            }    
+                        }
+                        //Se cierra esta fecha
+                        jSonMessages.append("},\n");
+                        jSonWords.append("},\n");
+                        jSonChars.append("},\n");
                     }
-                    //Se cierra esta fecha
-                    jSonMessages.append("},\n");
-                    jSonWords.append("},\n");
-                    jSonChars.append("},\n");
                 }
                 //Tenemos en cuenta que el counter de meses no se pase de 12
                 counterMonths++;
@@ -294,20 +315,23 @@ public class PersonManager{
         for (int y = 0; y < totalYears; y++){          
             //for para recorrer los meses de cada media
             for (int m = 0; m < 12; m++){
-                //Guardamos el inicio de cada conjunto de datos con el nombre de su mes
-                jSonAverageM.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
-                jSonAverageW.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
-                jSonAverageC.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
-                //Usaremos estos fors para guardar las medias de cada una de las personas
-                for (int p = 0; p < totalPersons; p++){
-                    jSonAverageM.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthMessages()[y][m]));
-                    jSonAverageW.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthWords()[y][m]));
-                    jSonAverageC.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthChars()[y][m]));
-                }
-                //Guardamos las medias generales
-                jSonAverageM.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsMessages[y][m]));
-                jSonAverageW.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsWords[y][m]));
-                jSonAverageC.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsChars[y][m]));
+                //Delimita la inforamción exportada a partir del día que comienza y termina la conversación
+                //if(insideOfDateRangeCombo(new java.util.Date(1, m, y))){
+                    //Guardamos el inicio de cada conjunto de datos con el nombre de su mes
+                    jSonAverageM.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
+                    jSonAverageW.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
+                    jSonAverageC.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
+                    //Usaremos estos fors para guardar las medias de cada una de las personas
+                    for (int p = 0; p < totalPersons; p++){
+                        jSonAverageM.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthMessages()[y][m]));
+                        jSonAverageW.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthWords()[y][m]));
+                        jSonAverageC.append(String.format(Locale.US, "\"%s\": %f, ", persons.get(p).getName(), persons.get(p).getAverageMonthChars()[y][m]));
+                    }
+                    //Guardamos las medias generales
+                    jSonAverageM.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsMessages[y][m]));
+                    jSonAverageW.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsWords[y][m]));
+                    jSonAverageC.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsChars[y][m]));
+                //}
             }          
         }
         //Elimina la última coma innecesaria
@@ -329,11 +353,9 @@ public class PersonManager{
             if(i == totalPersons-1){
                  jSonPercent.append(
                          "{ name: \"" + persons.get(i).getName() + "\", value: " + persons.get(i).getPercentageSpoke() + " }");
-
             }else{
                  jSonPercent.append(
                          "{ name: \"" + persons.get(i).getName() + "\", value: " + persons.get(i).getPercentageSpoke() + " },");
-
             }    
         }
         //Elimina la última coma innecesaria
@@ -410,4 +432,16 @@ public class PersonManager{
             System.out.println("Algo fue mal: " + e);
         }
     }
+    //Comprobar meses
+    public boolean insideOfDateRangeCombo(java.util.Date date){
+        //System.out.println(Colors.ANSI_YELLOW+"Date: " + date.()+Colors.ANSI_GREEN+"\nFirst: " +firstDateComvo.getIntegerFromDate()+Colors.ANSI_CYAN+"\nLast: " +  lastDateComvo.getIntegerFromDate()+Colors.ANSI_RESET);
+        if((date.compareTo(firstDateComvo) >= 0) && (date.compareTo(lastDateComvo)) <= 0)
+        {
+            System.out.println("Enter!!!");
+            return true;
+        }
+        else
+            return false;
+    }
+
 }
