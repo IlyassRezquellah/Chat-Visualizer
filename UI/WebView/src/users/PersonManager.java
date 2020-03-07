@@ -94,9 +94,9 @@ public class PersonManager{
         for(int i = 1; i < totalPersons;i++){
             System.out.println("IntSDate: "+persons.get(i).getMessageFromFirstDate());
             System.out.println("IntFDate: "+persons.get(i).getMessageFromLastDate());
-            if(persons.get(i).getMessageFromFirstDate().compareTo(persons.get(firstDayComvo).getMessageFromFirstDate()) > 0)
+            if(persons.get(firstDayComvo).getMessageFromFirstDate().compareTo(persons.get(i).getMessageFromFirstDate()) > 0)
                 firstDayComvo = i;
-            if(persons.get(i).getMessageFromLastDate().compareTo(persons.get(lastDayComvo).getMessageFromLastDate()) < 0)
+            if(persons.get(lastDayComvo).getMessageFromLastDate().compareTo(persons.get(i).getMessageFromLastDate()) < 0)
                 lastDayComvo = i;
         }
         System.out.println("El menor es el: "+firstDayComvo+" / "+persons.get(firstDayComvo).getMessageFromFirstDate().toString());
@@ -316,7 +316,8 @@ public class PersonManager{
             //for para recorrer los meses de cada media
             for (int m = 0; m < 12; m++){
                 //Delimita la inforamción exportada a partir del día que comienza y termina la conversación
-                //if(insideOfDateRangeCombo(new java.util.Date(1, m, y))){
+                if(insideOfDateRangeCombo(new java.util.Date((firstDateComvo.getYear()+y), (m+1), 1)) || 
+                    insideOfDateRangeCombo(new java.util.Date((firstDateComvo.getYear()+y), (m+1), 31))){
                     //Guardamos el inicio de cada conjunto de datos con el nombre de su mes
                     jSonAverageM.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
                     jSonAverageW.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
@@ -331,7 +332,7 @@ public class PersonManager{
                     jSonAverageM.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsMessages[y][m]));
                     jSonAverageW.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsWords[y][m]));
                     jSonAverageC.append(String.format(Locale.US, "\"general\": %f},\n", grupalAverageMonthsChars[y][m]));
-                //}
+                }
             }          
         }
         //Elimina la última coma innecesaria
@@ -436,10 +437,7 @@ public class PersonManager{
     public boolean insideOfDateRangeCombo(java.util.Date date){
         //System.out.println(Colors.ANSI_YELLOW+"Date: " + date.()+Colors.ANSI_GREEN+"\nFirst: " +firstDateComvo.getIntegerFromDate()+Colors.ANSI_CYAN+"\nLast: " +  lastDateComvo.getIntegerFromDate()+Colors.ANSI_RESET);
         if((date.compareTo(firstDateComvo) >= 0) && (date.compareTo(lastDateComvo)) <= 0)
-        {
-            System.out.println("Enter!!!");
             return true;
-        }
         else
             return false;
     }
