@@ -48,7 +48,7 @@ public class PersonManager{
     private double[][] grupalAverageMonthsChars;
     //Count Messages per hour
     private double[] dataHours;
-    //Guarda el día que comienza y finaliza la conversación
+    //Guardan los días que comienza y finaliza la conversación
     java.util.Date firstDateComvo;
     java.util.Date lastDateComvo;
     //Arranque inicial del algoritmo
@@ -86,11 +86,16 @@ public class PersonManager{
         wordGlobal = 0;
         charsGlobal = 0;
         daysGlobal = 0;
+        
+        getTotalNumber();
+    }
+    public void getComvoDateRange(){
         //Almacena los días que comenzó y terminó la conversación
         int firstDayComvo = 0;
         int lastDayComvo = 0;
-        //System.out.println("IntSDate: "+persons.get(0).getIntegerFromFirstDate());
-        //System.out.println("IntFDate: "+persons.get(0).getMessageFromLastDate());
+        //Teniendo el cuenta el primer y último mensaje de cada participante del chat,
+        //registra el primer y último día que se habló en el chat.
+        //Más tarde se usa para delimitar el rango en que se exportaran los datos que mostrarán las gráficas.
         for(int i = 1; i < totalPersons;i++){
             System.out.println("IntSDate: "+persons.get(i).getMessageFromFirstDate());
             System.out.println("IntFDate: "+persons.get(i).getMessageFromLastDate());
@@ -103,9 +108,8 @@ public class PersonManager{
         System.out.println("El mayor es el: "+lastDayComvo+" / "+persons.get(lastDayComvo).getMessageFromLastDate().toString());
         firstDateComvo = persons.get(firstDayComvo).getMessageFromFirstDate();
         lastDateComvo = persons.get(lastDayComvo).getMessageFromLastDate();
-        
     }
-     //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
+    //Con este metodo obtenemos el numero total de mensajes,words y chars usando variables globales
     //El valor de cada variable global lo obtenemos en la clase "AlgorithmCMT.java"
     public void getTotalNumber(){
         //Suma de los tops globales de cada persona para agruparlo
@@ -433,9 +437,8 @@ public class PersonManager{
             System.out.println("Algo fue mal: " + e);
         }
     }
-    //Comprobar meses
+    //Comprueba si la fecha pasada se encuentra entre el rango de días que empezó y finalizó al conversación
     public boolean insideOfDateRangeCombo(java.util.Date date){
-        //System.out.println(Colors.ANSI_YELLOW+"Date: " + date.()+Colors.ANSI_GREEN+"\nFirst: " +firstDateComvo.getIntegerFromDate()+Colors.ANSI_CYAN+"\nLast: " +  lastDateComvo.getIntegerFromDate()+Colors.ANSI_RESET);
         if((date.compareTo(firstDateComvo) >= 0) && (date.compareTo(lastDateComvo)) <= 0)
             return true;
         else
