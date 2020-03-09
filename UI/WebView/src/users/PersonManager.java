@@ -317,7 +317,7 @@ public class PersonManager{
             for (int m = 0; m < 12; m++){
                 //Delimita la inforamción exportada a partir del día que comienza y termina la conversación
                 if(insideOfDateRangeCombo(new java.util.Date((firstDateComvo.getYear()+y), (m+1), 1)) || 
-                    insideOfDateRangeCombo(new java.util.Date((firstDateComvo.getYear()+y), (m+1), 31))){
+                    insideOfDateRangeCombo(new java.util.Date((firstDateComvo.getYear()+y), (m+1), Utils.Auxiliary.getNumberDaysGivenYear((firstDateComvo.getYear()+y), (m+1))))){
                     //Guardamos el inicio de cada conjunto de datos con el nombre de su mes
                     jSonAverageM.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
                     jSonAverageW.append(String.format("%s%d %s\", ", beginingDate, persons.get(0).getYearNumber(y), EnumMonths.values()[m+1].name()));
