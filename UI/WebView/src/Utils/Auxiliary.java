@@ -19,24 +19,24 @@ public class Auxiliary{
         return YearMonth.of(year, month).lengthOfMonth();
     }
     public static String purge[]= {
-        /*Preposiciones*/
+        /*Preposiciones español*/
         "a", "ante", "bajo", "cabe", "con", "contra", "de", "desde", "durante", "en", "entre", "hacia", "hasta", "mediante", "para", "por", "según", "sin", "sobre", "tras", "versus", "vía",
-        /*Conjunciones*/
+        /*Conjunciones español*/
         "mas","ni","o","ora","pero","sino","siquiera","u","y","aunque","como","conque","cuando","donde","entonces","ergo","e","empero","incluso","luego","mientras","porque","pues","que","sea","si","ya","adonde","aun","como","conque"
+    
     };
-    public static void countAndPrintRepeatedWordOccurences(
-            String strContent) {
+    public static Map<String, Integer> countAndPrintRepeatedWordOccurences(String strContent) {
  
         // Step 1: create Map of String-Integer
-        Map<String, Integer> mapOfRepeatedWord = 
-                new HashMap<String, Integer>();
+        Map<String, Integer> mapOfRepeatedWord = new HashMap<String, Integer>();
  
-        // Step 2: split line using space as delimiter
-        strContent = strContent.toLowerCase().replaceAll("[^a-zñáéíóú0-9 ]", "");
+        // Step 2: borramos words innecesarias(preposiciones,conjunciones tanto del español como en ingles)
+        strContent = strContent.toLowerCase().replaceAll("[\\s]+"," ").replaceAll("[^a-zñáéíóú0-9 ]", "");
         for (int i = 0, t=Utils.Auxiliary.purge.length; i < t; i++) {
             strContent = strContent.replace(" "+Utils.Auxiliary.purge[i]+" ", " ");
             
         }
+         // Step 2.5: split line using space as delimiter
         String[] words = strContent.split(" ");
  
         // Step 3: iterate through String[] array
@@ -50,8 +50,7 @@ public class Auxiliary{
             if(mapOfRepeatedWord.containsKey(tempUCword)){
  
                 // Step 6: If contains, increase count value by 1
-                mapOfRepeatedWord.put(tempUCword, 
-                        mapOfRepeatedWord.get(tempUCword) + 1);
+                mapOfRepeatedWord.put(tempUCword, mapOfRepeatedWord.get(tempUCword) + 1);
             } 
             else {
  
@@ -72,55 +71,40 @@ public class Auxiliary{
         }*/
  
         // Step 9: Sorting logic by invoking sortByCountValue()
-        Map<String, Integer> wordLHMap = sortByCountValue(
-                mapOfRepeatedWord);
+        Map<String, Integer> wordLHMap = sortByCountValue( mapOfRepeatedWord);
  
-        System.out.println("\n\nAfter sorting"
-                + " in descending order of count : \n");
+        System.out.println("\n\nAfter sorting"+ " in descending order of count : \n");
         System.out.println("Words" + "\t\t" + "Count");
         System.out.println("======" + "\t\t" + "=====");
  
         // Step 10: Again print after sorting
-        for(Map.Entry<String, Integer> entry : 
-            wordLHMap.entrySet()) {
-            System.out.println(entry.getKey() 
-                    + "\t\t" + entry.getValue());
+        for(Map.Entry<String, Integer> entry : wordLHMap.entrySet()) {
+            System.out.println(entry.getKey()+ "\t\t" + entry.getValue());
         }
+        return wordLHMap;
     }
  
-     /**
-     * this method sort acc. to count value
-     * @param mapOfRepeatedWord
-     * @return
-     */
     
-    public static Map<String, Integer> sortByCountValue(
-            Map<String, Integer> mapOfRepeatedWord) {
+    public static Map<String, Integer> sortByCountValue( Map<String, Integer> mapOfRepeatedWord) {
  
         // get entrySet from HashMap object
-        Set<Map.Entry<String, Integer>> setOfWordEntries = 
-                mapOfRepeatedWord.entrySet();
+        Set<Map.Entry<String, Integer>> setOfWordEntries = mapOfRepeatedWord.entrySet();
  
         // convert HashMap to List of Map entries
-        List<Map.Entry<String, Integer>> listOfwordEntry = 
-                new ArrayList<Map.Entry<String, Integer>>(
-                        setOfWordEntries);
+        List<Map.Entry<String, Integer>> listOfwordEntry =  new ArrayList<Map.Entry<String, Integer>>(setOfWordEntries);
  
         // sort list of entries using Collections.sort(ls, cmptr);
         
-        Collections.sort(listOfwordEntry, 
-                new Comparator<Map.Entry<String, Integer>>() {
+        Collections.sort(listOfwordEntry,new Comparator<Map.Entry<String, Integer>>() {
  
             @Override
-            public int compare(Entry<String, Integer> es1, 
-                    Entry<String, Integer> es2) {
+            public int compare(Entry<String, Integer> es1, Entry<String, Integer> es2) {
                 return es2.getValue().compareTo(es1.getValue());
             }
         });
  
         // store into LinkedHashMap for maintaining insertion
-        Map<String, Integer> wordLHMap = 
-                new LinkedHashMap<String, Integer>();
+        Map<String, Integer> wordLHMap = new LinkedHashMap<String, Integer>();
  
         // iterating list and storing in LinkedHahsMap
         for(Map.Entry<String, Integer> map : listOfwordEntry){

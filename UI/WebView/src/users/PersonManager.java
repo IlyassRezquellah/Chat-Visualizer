@@ -19,6 +19,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Set;
 import users.Person;
 import users.data.Date;
@@ -402,7 +403,7 @@ public class PersonManager{
         jSonAllMessages.append("}]");
         System.out.println();
         //Más tarde se usará este TopWordsMostUsed.json para calcular las palabras más usadas en la conversación
-        try(FileOutputStream oFileChars = new FileOutputStream("TopWordsMostUsed.json", false)){
+        try(FileOutputStream oFileChars = new FileOutputStream(Utils.Auxiliary.jSDataPatch+"TopWordsMostUsed.js", false)){
             oFileChars.write(countWordsFromHugeString(jSonAllMessages.toString()).getBytes());
         } 
         catch (Exception e){
@@ -412,30 +413,25 @@ public class PersonManager{
     
     //Contar el numero de veces que se repite cada palabra de la string con todos los messages concatenados del chat de cada persona
     public String  countWordsFromHugeString(String texto){
-        //String text = "a r b k c d se f g a d f s s f d s ft gh f ws w f v x s g h d h j j k f sd j e wed a d f";
-        //texto = cleanStringTopWordsUsed(texto);
-        Utils.Auxiliary.countAndPrintRepeatedWordOccurences(texto);
+        Map<String, Integer> wordsWithCount = Utils.Auxiliary.countAndPrintRepeatedWordOccurences(texto);
         StringBuilder output = new StringBuilder();
-        output.append("");
-        /*
-        List<String> list = Arrays.asList(texto.split(" "));
-        
-        Set<String> uniqueWords = new HashSet<String>(list);
-        for (String word : uniqueWords) {
-            output.append(word + " --> " + Collections.frequency(list, word)+"\n");
-        }
-        */
+        output.append("var dataChartTops = [");
+        int limit = (wordsWithCount.size() > 300) ? 300 : wordsWithCount.size();
+        int limitCounter = 1;
+        System.out.println("límite: " + limit);
+        // Step 10: Again print after sorting
+        for(Map.Entry<String, Integer> entry : wordsWithCount.entrySet()) {
+            
+            if((limit-1) < (limitCounter++)){
+                output.append(String.format("{ word: \"%s\", weight: \"%s\"}]%n", entry.getKey(), entry.getValue()));
+                break;
+            }
+            else
+                output.append(String.format("{ word: \"%s\", weight: \"%s\"},%n", entry.getKey(), entry.getValue()));
+        }      
         return output.toString();
     }
-    /*
-    public String cleanStringTopWordsUsed(String texto){
-        texto = texto.replaceAll("[^a-zA-Z0-9 ]", "").toLowerCase();
-        for (int i = 0, t=Utils.Auxiliary.purge.length; i < t; i++) {
-            texto = texto.replace(" "+Utils.Auxiliary.purge[i]+" ", " ");
-            
-        }
-        return texto;
-    }*/
+
     //Con este metodos sacamos la media de la frecuencia en la que se suele hablar en la conversación (Mostrada den formato 24h)
     public String jSHourAverageMessagesPerson(){
         StringBuilder jSHourAverage = new StringBuilder();
