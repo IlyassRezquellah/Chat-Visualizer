@@ -17,14 +17,22 @@
     </div>
 
     <div id="chartCountMessages"></div>
-    <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    <a href="#popupChartCountMessages">
+      <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    </a>
     <div id="chartTops"></div>
-    <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    <a href="#popupChartTops">
+      <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    </a>
     <div id="chartAverage"></div>
-    <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    <a href="#popupChartAverage">
+      <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    </a>
     <br/>
     <div id="chartPercentages"></div>
-    <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    <a href="#popupChartPercentages">
+      <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    </a>
     <div id="Numbers">
         
         <table>
@@ -62,7 +70,59 @@
 
     </div>
     <div id="chartHourFrequency"></div>
-    <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    <a href="#popupChartHourFrecuency">
+      <input id="btnInfo" type="image" src="media/info.png" title="Show information" onclick="" value="Information"/>
+    </a>
+      <!--ChartCountMessages info-->
+    <div id="popupChartCountMessages" class="overlay">
+      <div class="popup">
+        <h2>Count messages</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
+        </div>
+      </div>
+    </div>
+    <!--ChartTops info-->
+    <div id="popupChartTops" class="overlay">
+      <div class="popup">
+        <h2>Top Words most used</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
+        </div>
+      </div>
+    </div>
+    <!--ChartAverage info-->
+    <div id="popupChartAverage" class="overlay">
+      <div class="popup">
+        <h2>Average number of x each day during that month</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
+        </div>
+      </div>
+    </div>
+    <!--ChartPercentages info-->
+    <div id="popupChartPercentages" class="overlay">
+      <div class="popup">
+        <h2>Percentage of each person during the whole conversation</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
+        </div>
+      </div>
+    </div>
+    <!--ChartHourFrecuency info-->
+    <div id="popupChartHourFrecuency" class="overlay">
+      <div class="popup">
+        <h2>Frecuency hours</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          Thank to pop me out of that button, but now i'm done so you can close this window.
+        </div>
+      </div>
+    </div>
     <!--AmCharts4-->
     <script src="dependencies/core.js"></script>
     <script src="dependencies/charts.js"></script>
