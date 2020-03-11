@@ -21,14 +21,12 @@ var series = chartTops.series.push(new am4plugins_wordCloud.WordCloudSeries());
 
 series.data = dataChartTops;
 
-/*series.accuracy = 4;
+series.accuracy = 4;
 series.step = 15;
 series.rotationThreshold = 0.7;
-series.maxCount = 200;
-series.minWordLength = 2;
 series.labels.template.tooltipText = "{word}: {value}";
 series.fontFamily = "Courier New";
-series.maxFontSize = am4core.percent(30);*/
+series.maxFontSize = am4core.percent(30);
 
 series.dataFields.word = "word";
 series.dataFields.value = "weight";

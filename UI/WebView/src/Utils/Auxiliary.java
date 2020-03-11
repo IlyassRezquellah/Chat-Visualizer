@@ -18,12 +18,26 @@ public class Auxiliary{
     public static int getNumberDaysGivenYear(int year, int month){
         return YearMonth.of(year, month).lengthOfMonth();
     }
+    //La grafica de TopsWordsMostUsed ignora todas las palabras que esten dentro de este array
     public static String purge[]= {
+        /*Archivos multimedia*/
+        "multimedia",
         /*Preposiciones español*/
         "a", "ante", "bajo", "cabe", "con", "contra", "de", "desde", "durante", "en", "entre", "hacia", "hasta", "mediante", "para", "por", "según", "sin", "sobre", "tras", "versus", "vía",
         /*Conjunciones español*/
-        "mas","ni","o","ora","pero","sino","siquiera","u","y","aunque","como","conque","cuando","donde","entonces","ergo","e","empero","incluso","luego","mientras","porque","pues","que","sea","si","ya","adonde","aun","como","conque"
-    
+        "mas","ni","o","ora","pero","sino","siquiera","u","y","aunque","como","conque","cuando","donde","entonces","ergo","e","empero","incluso","luego","mientras","porque","pues","que","sea","si","ya","adonde","aun","como","conque",
+        /*Preposiciones en ingles*/
+        "a","abaft","aboard","about","above","absent", "across", "afore", "after",  "against", "along", "alongside", "amid", "amidst", "among", "amongst", "an", "anenst", "apropos", "apud", "around", "as","aside","astride",
+        "at","athwart","atop","barring","before", "behind", "below", "beneath", "beside", "besides", "between", "beyond", "but", "by", "circa", "concerning", "despite", "down", "during", "except", "excluding", "failing", "following", "for",
+        "forenenst","from", "given",  "in", "including", "inside", "into", "lest", "like", "mid", "midst", "minus", "modulo", "near", "next", "notwithstanding", "of", "off", "on", "onto", "opposite", "out", "outside",
+        "over", "pace", "past", "per", "plus", "pro", "qua", "regarding", "round", "sans", "save", "since", "than", "through", "throughout", "till", "times", "to", "toward", "towards", "under", "underneath", "unlike",
+        "until", "unto", "up", "upon", "versus", "via", "vice", "with", "within", "without", "worth",
+        /*English Pronouns */    
+        "i","me","my","mine","myself","you","your","yours","yourself","he","him","his","himself","she","her","hers","herself","it","its","itself","we","us","our","ours","ourselves","yourselves","they","them","their","their","themselves",        
+        /*Conjuctions english*/
+        "Actually","and","the","also","after","afterwards","another","because","before","but","finally","first","however","just","later","next","now","or","so","too","since","then","yet","who","what","where","which",
+        /*Verb to be*/
+        "im","is","are","was","were"
     };
     public static Map<String, Integer> countAndPrintRepeatedWordOccurences(String strContent) {
  

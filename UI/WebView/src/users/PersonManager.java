@@ -403,7 +403,7 @@ public class PersonManager{
         jSonAllMessages.append("}]");
         System.out.println();
         //Más tarde se usará este TopWordsMostUsed.json para calcular las palabras más usadas en la conversación
-        try(FileOutputStream oFileChars = new FileOutputStream(Utils.Auxiliary.jSDataPatch+"TopWordsMostUsed.js", false)){
+        try(FileOutputStream oFileChars = new FileOutputStream("web/javaScript/"+"TopWordsMostUsed.js", false)){
             oFileChars.write(countWordsFromHugeString(jSonAllMessages.toString()).getBytes());
         } 
         catch (Exception e){
@@ -416,7 +416,7 @@ public class PersonManager{
         Map<String, Integer> wordsWithCount = Utils.Auxiliary.countAndPrintRepeatedWordOccurences(texto);
         StringBuilder output = new StringBuilder();
         output.append("var dataChartTops = [");
-        int limit = (wordsWithCount.size() > 300) ? 300 : wordsWithCount.size();
+        int limit = (wordsWithCount.size() > 190) ? 190 : wordsWithCount.size();
         int limitCounter = 1;
         System.out.println("límite: " + limit);
         // Step 10: Again print after sorting
