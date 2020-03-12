@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="23.0" opacity="0.06" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Desktop/Captura.PNG" />
+            <Image url="@../../media/Captura.PNG" />
          </image>
       </ImageView>
       <Button fx:id="btn_LoadFile" layoutX="192.0" layoutY="236.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectFile" prefHeight="87.0" prefWidth="216.0" style="-fx-background-color: #2E3A5D; -fx-background-radius: 25;" stylesheets="@LoadChatStyle.css" text="Choose File" textAlignment="CENTER" textFill="WHITE">
@@ -24,7 +24,7 @@
       </Button>
       <ImageView fitHeight="136.0" fitWidth="156.0" layoutX="222.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Desktop/upload_thick.png" />
+            <Image url="@../../media/upload_thick.png" />
          </image>
       </ImageView>
    </children>
