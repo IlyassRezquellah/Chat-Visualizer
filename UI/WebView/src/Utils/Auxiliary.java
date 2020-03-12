@@ -87,14 +87,14 @@ public class Auxiliary{
         // Step 9: Sorting logic by invoking sortByCountValue()
         Map<String, Integer> wordLHMap = sortByCountValue( mapOfRepeatedWord);
  
-        System.out.println("\n\nAfter sorting"+ " in descending order of count : \n");
+        /*System.out.println("\n\nAfter sorting"+ " in descending order of count : \n");
         System.out.println("Words" + "\t\t" + "Count");
-        System.out.println("======" + "\t\t" + "=====");
+        System.out.println("======" + "\t\t" + "=====");*/
  
         // Step 10: Again print after sorting
-        for(Map.Entry<String, Integer> entry : wordLHMap.entrySet()) {
+        /*for(Map.Entry<String, Integer> entry : wordLHMap.entrySet()) {
             System.out.println(entry.getKey()+ "\t\t" + entry.getValue());
-        }
+        }*/
         return wordLHMap;
     }
  

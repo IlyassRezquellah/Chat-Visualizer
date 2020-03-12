@@ -225,12 +225,12 @@ public class PersonManager{
             //JSon media individual y media general
             jSData.append(jSonAverage());
             //JSon con todos los mensajes, para sacar las palabras más usadas
-            jSonWordsMostUsed();
+            jSData.append(jSonWordsMostUsed());
             //Json con la media para la grafica de percentage de la convo
             jSData.append(jSonPercentage());
             //JavaScript con la frecuencia hablada, mostrada en horas
             jSData.append(jSHourAverageMessagesPerson());
-
+            
             //Creamos el javaScript Con toda la información
             oFileMessages.write(jSData.toString().getBytes());
         }
@@ -389,26 +389,24 @@ public class PersonManager{
         System.out.println("Dias totales hablados --> "+ Colors.ANSI_YELLOW +daysGlobal+ Colors.ANSI_RESET); 
     }
    //Con este metodo, extraemos todos los mensajes(textos) de cada persona, y los almaceno en un para asu posterior exportación en json
-    public void jSonWordsMostUsed(){
+    public String jSonWordsMostUsed(){
         StringBuilder jSonAllMessages = new StringBuilder();
         jSonAllMessages.append("[{");
         for (Person p : persons){
             for (int i = 0, t = p.getTotalMessages(); i < t; i++){
                 //Siempre se eliminan los saltos de línea(replaceAll) para que no sucedan errores cuando se lea el archivo más tarde.
-                jSonAllMessages.append(p.getMessageObj(i).getText()
-                    .replaceAll("\\r|\\n", " ") + ", ");
+                jSonAllMessages.append(p.getMessageObj(i).getText().replaceAll("\\r|\\n", " ") + ", ");
             }
-            
         }
-        jSonAllMessages.append("}]");
-        System.out.println();
+        jSonAllMessages.append("}]\n");
+        return countWordsFromHugeString(jSonAllMessages.toString());
         //Más tarde se usará este TopWordsMostUsed.json para calcular las palabras más usadas en la conversación
-        try(FileOutputStream oFileChars = new FileOutputStream("web/javaScript/"+"TopWordsMostUsed.js", false)){
+        /*try(FileOutputStream oFileChars = new FileOutputStream("web/javaScript/"+"TopWordsMostUsed.js", false)){
             oFileChars.write(countWordsFromHugeString(jSonAllMessages.toString()).getBytes());
         } 
         catch (Exception e){
             System.out.println("Error: " + e);
-        }
+        }*/
     }
     
     //Contar el numero de veces que se repite cada palabra de la string con todos los messages concatenados del chat de cada persona
@@ -418,7 +416,7 @@ public class PersonManager{
         output.append("var dataChartTops = [");
         int limit = (wordsWithCount.size() > 190) ? 190 : wordsWithCount.size();
         int limitCounter = 1;
-        System.out.println("límite: " + limit);
+        //System.out.println("límite: " + limit);
         // Step 10: Again print after sorting
         for(Map.Entry<String, Integer> entry : wordsWithCount.entrySet()) {
             
