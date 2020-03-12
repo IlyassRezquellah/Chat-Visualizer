@@ -2,30 +2,28 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.LoadChatController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.LoadChatController">
     <stylesheets>
         <URL value="@LoadChatStyle.css" />
     </stylesheets>
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="23.0" opacity="0.06" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../Desktop/Captura.PNG" />
-         </image>
-      </ImageView>
-      <Button fx:id="btn_LoadFile" layoutX="192.0" layoutY="236.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectFile" prefHeight="87.0" prefWidth="216.0" style="-fx-background-color: #2E3A5D; -fx-background-radius: 25;" stylesheets="@LoadChatStyle.css" text="Choose File" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="dragSpace" onDragEntered="#dragFile" prefHeight="400.0" prefWidth="600.0" />
+      <Button fx:id="btn_ChangeScene" layoutX="521.0" layoutY="361.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" stylesheets="@LoadChatStyle.css" text="Continue">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_LoadFile" layoutX="192.0" layoutY="157.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectFile" prefHeight="87.0" prefWidth="216.0" style="-fx-background-color: #0075FF; -fx-background-radius: 25;" stylesheets="@LoadChatStyle.css" text="Choose File" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>
       </Button>
-      <ImageView fitHeight="136.0" fitWidth="156.0" layoutX="222.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../Desktop/upload_thick.png" />
-         </image>
-      </ImageView>
+      <CheckBox fx:id="check_Drag" layoutX="74.0" layoutY="358.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="69.0" text="Drag" />
    </children>
 </AnchorPane>
