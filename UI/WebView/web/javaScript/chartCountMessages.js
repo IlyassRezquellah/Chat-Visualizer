@@ -121,6 +121,7 @@ series.tooltip.background.filters.clear();
 
 
 
-
+//Hide shadow tooltip
+series.tooltip.background.filters.clear(); 
 
 
