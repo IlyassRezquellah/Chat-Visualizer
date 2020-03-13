@@ -29,6 +29,7 @@ public class Main extends Application{
         
         //Coge, Carga y muestra la nueva escena
         this.stage = stage;
+        legalUse.getStylesheets().add(getClass().getResource("LoadChatStyle.css").toExternalForm());
         stage.setScene(legalUseScene);
         stage.show();
     }
