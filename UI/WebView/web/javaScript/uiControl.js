@@ -38,3 +38,13 @@ function exportPDF() {
       pdfMake.createPdf(doc).download("report.pdf");
     });
 }
+
+function setNumberOnTable(){
+document.getElementById('totalDays').innerHTML = totalDays;
+document.getElementById('totalMessagesCount').innerHTML = totalMessagesCount;
+document.getElementById('totalWordsCount').innerHTML = totalWordsCount;
+document.getElementById('totalChartsCount').innerHTML = totalChartsCount;
+document.getElementById('firstDate').innerHTML = firstDate;
+document.getElementById('mostActiveDate').innerHTML = mostActiveDate;
+}
+setNumberOnTable()

@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class LegalUseController implements Initializable
 {
@@ -40,6 +41,8 @@ public class LegalUseController implements Initializable
                 
         //Carga y muestra la nueva escena
         window.setScene(LoadChatScene);
+        window.setResizable(false);
+        //window.initStyle(StageStyle.UNDECORATED);
         window.show();
     }
     

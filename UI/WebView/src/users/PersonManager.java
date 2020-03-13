@@ -30,7 +30,11 @@ public class PersonManager{
     private InterpreterWhatsapp InterWhatsapp;
     private List<Person> persons;
     private boolean analysisCompleted;
-    
+    private int totalDays;
+    private int totalMessagesCount;
+    private int totalWordsCount;
+    private int totalChartsCount;
+    private Date mostActiveDate;
     public PersonManager(){
         analysisCompleted = false;
         //Crear más adelante una clases que gestione todo esto
@@ -92,6 +96,11 @@ public class PersonManager{
         wordGlobal = 0;
         charsGlobal = 0;
         daysGlobal = 0;
+        totalDays = 0;
+        totalChartsCount = 0;
+        totalMessagesCount = 0;
+        totalWordsCount = 0;
+        mostActiveDate = new Date(0,0,0);
         //Almacena los días que comenzó y terminó la conversación
         int firstDayComvo = 0;
         int lastDayComvo = 0;
@@ -128,7 +137,6 @@ public class PersonManager{
         for(int i = 0; i < totalPersons; i++){
             System.out.println(persons.get(i).getName() + " --> "+ Colors.ANSI_YELLOW + persons.get(i).getPercentageSpoke()+ Colors.ANSI_RESET);
         }
-
     }
     //Calcula y anota la media mensual de messages que se habla de manera grupal en una conversación
     public void getGrupAverageMonthsMessages(){
@@ -208,9 +216,6 @@ public class PersonManager{
                 dataHours[i] += data[p][i];
             }
         }
-        /*for (double num: dataHours) {
-            System.out.println("Hours->: " + num);
-        }*/
     }
     
     //Creación y expotación de ficheros JSon
@@ -218,19 +223,21 @@ public class PersonManager{
         try(FileOutputStream oFileMessages = new FileOutputStream(Utils.Auxiliary.jSDataPatch, false)){
             //Cargar fichero de texto
             StringBuilder jSData = new StringBuilder();
+            //Guardar los nombres de los usuarios del chat
             for (int i = 0, t = persons.size(); i < t; i++)
                 jSData.append(String.format("var name%d = \"%s\"%n", i, persons.get(i).getName()));
-            //JSon de conteos básicos (Mensajes, palabras, caracteres)
+            //JS de conteos básicos (Mensajes, palabras, caracteres)
             jSData.append(jSonCount());
-            //JSon media individual y media general
+            //JS con los datos de la tabla
+            jSData.append(jSTable());
+            //JS media individual y media general
             jSData.append(jSonAverage());
-            //JSon con todos los mensajes, para sacar las palabras más usadas
+            //JS con todos los mensajes, para sacar las palabras más usadas
             jSData.append(jSonWordsMostUsed());
-            //Json con la media para la grafica de percentage de la convo
+            //JS con la media para la grafica de percentage de la convo
             jSData.append(jSonPercentage());
-            //JavaScript con la frecuencia hablada, mostrada en horas
+            //JS con la frecuencia hablada, mostrada en horas
             jSData.append(jSHourAverageMessagesPerson());
-            
             //Creamos el javaScript Con toda la información
             oFileMessages.write(jSData.toString().getBytes());
         }
@@ -239,6 +246,11 @@ public class PersonManager{
             return false;
         }
         return true;
+    }
+    //Datos de la tabla
+    public String jSTable(){
+        return String.format("var totalDays = %d%nvar totalMessagesCount = %d%nvar totalWordsCount = %d%nvar totalChartsCount = %d%nvar firstDate = '%d-%d-%d'%nvar mostActiveDate = '%s'%n", 
+            totalDays, totalMessagesCount, totalWordsCount, totalChartsCount, firstDateComvo.getYear(), firstDateComvo.getMonth(), firstDateComvo.getDay(), mostActiveDate.toString());
     }
     //JSon (chat): Conteos 
     public String jSonCount(){
@@ -249,7 +261,10 @@ public class PersonManager{
         StringBuilder jSonChars = new StringBuilder();
         //Usamos un contador para los meses, ya que es necesaria su representación numérica en el json
         int counterMonths;
-
+        float activeGlobalNumber = 0.0f;
+        float dayAverageMessage = 0.0f;
+        float dayAverageWord = 0.0f;
+        //Calculo de día más activo
         //Abrimos brackets para empezar la extructura del json
         jSonMessages.append("var dataMessagesCount = [");
         jSonWords.append("var dataWordsCount = [");
@@ -261,7 +276,7 @@ public class PersonManager{
             for(HashMap.Entry<String, Month> m : personsMatrishka[0].get(y.getKey()).getAllMonths().entrySet()){
                 for(Day d : personsMatrishka[0].get(y.getKey()).getOneMonth(m.getKey()).getDays()){
                     //Delimita la inforamción exportada a partir del día que comienza y termina la conversación
-                    //startDateComvo endDateComvo
+                    float activeLocalNumber = 0;
                     if(insideOfDateRangeCombo(new java.util.Date(y.getKey(), counterMonths, d.getName()))){
                         //Escribimos la fecha en el json
                         jSonMessages.append(beginingDate + y.getKey() + "-" + String.format("%02d", counterMonths) + "-" + d.getNameString() + "\",");
@@ -278,13 +293,32 @@ public class PersonManager{
                                 jSonMessages.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount() + ",");
                                 jSonWords.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount() + ",");
                                 jSonChars.append("\"" + persons.get(i).getName() + "\": " + personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getCharCount() + ",");
-                            }    
+                            }
+                            totalMessagesCount += personsMatrishka[i].get(y.getKey()).getMessageCount();
+                            totalWordsCount += personsMatrishka[i].get(y.getKey()).getWordCount();
+                            totalChartsCount += personsMatrishka[i].get(y.getKey()).getCharCount();
+                            dayAverageMessage = personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getMessageCount();
+                            dayAverageWord = personsMatrishka[i].get(y.getKey()).getOneMonth(m.getKey()).getOneDay(d.getArrayName()).getWordCount();
+                            if(dayAverageMessage != 0 || dayAverageWord != 0){
+                                activeLocalNumber += dayAverageWord / dayAverageMessage;
+                                System.out.println("X: "+ dayAverageWord + "Y: " + dayAverageMessage + " = " +activeLocalNumber);
+                            }
                         }
+                        //Contador de días hablados
+                        if(activeLocalNumber > 0)
+                            totalDays++;
                         //Se cierra esta fecha
                         jSonMessages.append("},\n");
                         jSonWords.append("},\n");
                         jSonChars.append("},\n");
+                        //calculo del día más activo
+                        if(activeLocalNumber > activeGlobalNumber){
+                            activeGlobalNumber = activeLocalNumber;
+                            System.out.println("ACTIVE");
+                            mostActiveDate = new Date(y.getKey(), counterMonths, d.getName());
+                        }
                     }
+                    activeLocalNumber = 0;
                 }
                 //Tenemos en cuenta que el counter de meses no se pase de 12
                 counterMonths++;

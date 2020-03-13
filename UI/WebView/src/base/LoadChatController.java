@@ -68,10 +68,8 @@ public class LoadChatController implements Initializable{
             //Leemos el chat txt linea a linea
             while ((line = reader.readLine()) != null && verificationCounter <= limitLines){
                 //Usando los patterns para determinar si el archivo txt importado es realmente un chat de whatsapp
-                if(patternDateTime.matcher(line).matches() || patternMessage.matcher(line).matches()){
+                if(patternDateTime.matcher(line).matches() || patternMessage.matcher(line).matches())
                     verificationCounter++;
-                    System.out.println("GoodLine");
-                }
             }
         } catch (IOException ex)
         {

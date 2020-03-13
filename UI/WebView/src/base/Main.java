@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
     
 public class Main extends Application{
     private static int  state = 0;
@@ -32,6 +33,8 @@ public class Main extends Application{
         this.stage = stage;
         //legalUse.getStylesheets().add(getClass().getResource("LoadChatStyle.css").toExternalForm());
         stage.setScene(legalUseScene);
+        stage.setResizable(false);
+        //stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
     public void reset(){
