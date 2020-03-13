@@ -24,12 +24,13 @@ public class Main extends Application{
         reset();
         //Guardamos la configuración de la escena
         legalUse = FXMLLoader.load(getClass().getResource("LegalUseFXML.fxml"));
+        //legalUse.getStylesheets().add(getClass().getResource("LoadChatStyle.css").toExternalForm());
         //Creamos una escena con la configuración anterior
         legalUseScene = new Scene(legalUse);
         
         //Coge, Carga y muestra la nueva escena
         this.stage = stage;
-        legalUse.getStylesheets().add(getClass().getResource("LoadChatStyle.css").toExternalForm());
+        //legalUse.getStylesheets().add(getClass().getResource("LoadChatStyle.css").toExternalForm());
         stage.setScene(legalUseScene);
         stage.show();
     }

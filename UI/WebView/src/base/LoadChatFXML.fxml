@@ -22,7 +22,7 @@
             <Image url="@../mediaJavaFX/subida.png" />
          </image>
       </ImageView>
-      <Button fx:id="btn_LoadFile" layoutX="192.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectFile" prefHeight="87.0" prefWidth="216.0" style="-fx-background-color: #323E62; -fx-background-radius: 25;" stylesheets="@LoadChatStyle.css" text="Choose File" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btn_LoadFile" layoutX="192.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#selectFile" prefHeight="87.0" prefWidth="216.0" text="Choose File" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="30.0" />
          </font>

@@ -1,7 +1,35 @@
 /*
  * Empty Stylesheet file.
  */
+.button {
+  -fx-background-color:#323E62;
+  
+  -fx-font-size: 15px;
+  -fx-text-align: center;
+  
+  -fx-outline: none;
 
-.mainFxmlClass {
-
+  
+  -fx-border: none;
+  -fx-background-radius: 25;
+  -fx-box-shadow: 0 9px #999;
+  
+  
 }
+
+.button:hover {
+    -fx-background-color:transparent;
+    -fx-text-fill: #323E62;
+    /*-fx-border: solid 2px #323E62;*/
+    -fx-border-color: #323E62;
+    -fx-border-radius: 22;
+    -fx-border-width: 3;
+    
+}
+/*
+.button:active {
+  -fx-background-color: #3e8e41;
+  -fx-box-shadow: 0 5px #666;
+  -fx-transform: translateY(4px);
+}
+*/
