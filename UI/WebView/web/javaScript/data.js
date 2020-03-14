@@ -1096,11 +1096,11 @@ var dataChartsCount = [{"date": "2018-10-04","Christian": 108,"Ilyass": 0},
 {"date": "2019-10-02","Christian": 0,"Ilyass": 0},
 {"date": "2019-10-03","Christian": 52,"Ilyass": 10}]
 var totalDays = 159
-var totalMessagesCount = 735694
-var totalWordsCount = 3398386
-var totalChartsCount = 13874352
+var totalMessagesCount = 3919
+var totalWordsCount = 17965
+var totalChartsCount = 73433
 var firstDate = '2018-10-1'
-var mostActiveDate = '2019-3-29'
+var mostActiveDate = '2019-2-4'
 var dataMessagesAverage = [{"category": "2018 OCTOBER", "Christian": 7.548387, "Ilyass": 6.548387, "general": 3.274194},
 {"category": "2018 NOVEMBER", "Christian": 11.400000, "Ilyass": 11.900000, "general": 5.950000},
 {"category": "2018 DECEMBER", "Christian": 12.548387, "Ilyass": 10.483871, "general": 5.241935},
