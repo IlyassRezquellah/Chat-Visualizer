@@ -33,4 +33,4 @@ series.dataFields.value = "weight";
 //Hide shadow tooltip
 series.tooltip.background.filters.clear();
 
-createChatTittle("chartTops", "Chart tops Count");
+createChatTittle("chartTops", "Top words most used");

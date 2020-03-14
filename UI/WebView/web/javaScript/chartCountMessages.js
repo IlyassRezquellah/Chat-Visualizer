@@ -125,4 +125,4 @@ series.tooltip.background.filters.clear();
 //Hide shadow tooltip
 series.tooltip.background.filters.clear(); 
 
-createChatTittle("chartCountMessages", "Chart messageWordChar Count");
+createChatTittle("chartCountMessages", "Timeline");

@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Roboto', sans-serif;
    
 }
 input{
@@ -94,6 +95,21 @@ th {
     color: grey;
     text-align: left;
 }
+/*Leyendas*/
+p{
+    /*display: inline-block;*/
+    vertical-align: top;
+    text-align: center;
+    /*margin-left: 25%;*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color:#283150;
+    font-weight: bold;
+}
+#leyend{
+    width:45%;
+}
+
 /*Botones info */
 
 .overlay {
@@ -180,13 +196,4 @@ th {
         width: 95%;
         
     }
-  }
-p{
-    /*display: inline-block;*/
-    vertical-align: top;
-    text-align: center;
-    /*margin-left: 25%;*/
-}
-#leyend{
-    width:45%;
 }

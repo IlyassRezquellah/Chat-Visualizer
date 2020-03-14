@@ -102,4 +102,4 @@ series2.tooltip.background.filters.clear();
 series1.tooltip.background.filters.clear();
 series3.tooltip.background.filters.clear(); 
 
-createChatTittle("chartAverage", "Chart average");
+createChatTittle("chartAverage", "Average");
