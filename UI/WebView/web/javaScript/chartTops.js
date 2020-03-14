@@ -31,4 +31,6 @@ series.maxFontSize = am4core.percent(30);
 series.dataFields.word = "word";
 series.dataFields.value = "weight";
 //Hide shadow tooltip
-series.tooltip.background.filters.clear();  
+series.tooltip.background.filters.clear();
+
+createChatTittle("chartTops", "Chart tops Count");

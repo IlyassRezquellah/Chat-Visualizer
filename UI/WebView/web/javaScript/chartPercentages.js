@@ -54,4 +54,6 @@ series.slices.template.tooltipText = "{category}";
 
 
 //Hide shadow tooltip
-series.tooltip.background.filters.clear(); 
+series.tooltip.background.filters.clear();
+
+createChatTittle("chartPercentages", "Chart messageWordChar Countpercentage");

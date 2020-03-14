@@ -17,6 +17,7 @@ am4core.useTheme(am4themes_animated);
 // Create chart instance
 var chartMessagesCount = am4core.create("chartCountMessages", am4charts.XYChart);
 
+
 // Add data
 chartMessagesCount.data = dataMessagesCount;
 
@@ -124,4 +125,4 @@ series.tooltip.background.filters.clear();
 //Hide shadow tooltip
 series.tooltip.background.filters.clear(); 
 
-
+createChatTittle("chartCountMessages", "Chart messageWordChar Count");

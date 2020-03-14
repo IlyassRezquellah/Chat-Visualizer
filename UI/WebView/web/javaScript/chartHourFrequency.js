@@ -76,3 +76,5 @@ slider.events.on("rangechanged", function() {
 });*/
 //Hide shadow tooltip
 series.tooltip.background.filters.clear(); 
+
+createChatTittle("chartHourFrequency", "Chart hour frequency");
