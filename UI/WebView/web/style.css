@@ -3,38 +3,41 @@ body {
     font-family: 'Roboto', sans-serif;
    
 }
-input{
+/*Buttons*/
+input {
     outline: none;
     width: 30px; 
     height: 30px;
     margin-bottom: 5%
 }
-#btnInfo{
+#btnInfo {
     display: inline-block;
     position: 30%;
 }
-#btnMessages{
-    padding-left: 2%;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    outline: none;
-}
-#btnWords{
-    padding-left: 2%;
-    margin-bottom: 20%;
-    outline: none;
-}
-#btnChars{
-    padding-left: 2%;
-    margin-bottom: 20%;
-    outline: none;
-}
+/*UserInterface*/
 #uiPanel {
     position: fixed;
     height: 100%;
     width: 45px;
     /*background-color: blue; */
 }
+#btnMessages {
+    padding-left: 2%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    outline: none;
+}
+#btnWords { 
+    padding-left: 2%;
+    margin-bottom: 20%;
+    outline: none;
+}
+#btnChars {
+    padding-left: 2%;
+    margin-bottom: 20%;
+    outline: none;
+}
+/*Charts*/
 #chartCountMessages {
     display: inline-block;
     margin-left: 36px;
@@ -42,58 +45,93 @@ input{
     width: 93%;
     height: 500px;
 }
-#chartAverage {
-    display: inline-block;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    width: 46%;
-    height: 500px;
-}
-#Numbers{
-    display: inline-block;
-    margin-left: 0%;
-    margin-right: 0.5%;
-    width: 30%;
-    height: 400px;
-    
-}
 #chartTops {
     display: inline-block;
     margin-left: 55px;
     margin-right: 0.5%;
-    width:45%;
+    width:42%;
+    height: 500px;
+}
+#chartAverage {
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 45%;
     height: 500px;
 }
 #chartPercentages {
     display: inline-block;
     margin-left: 0.5%;
+    margin-right: 0.0%;
+    padding-left: 0%;
+    width: 30%;
+    height: 400px;
+
+}
+/*Table*/
+#Numbers{
+    display: inline-block;
+    margin-left: 0%;
+    padding-left: 0%;
     margin-right: 0.5%;
     width: 30%;
     height: 400px;
+    
 }
-#chartHourFrequency {
-    display: inline-block;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    width: 32.5%;
-    height: 400px;
-}
-table{
+table {
+    margin-left: 0%;
+    padding-left: 0%;
     margin-top: 7.5%;
     border-collapse: separate;
     border-spacing: 90px 0;
 }
-td{
+@media screen and (max-width: 1615px) {
+    table {
+        border-spacing: 60px 0;
+    }
+}
+@media screen and (max-width: 1450px) {
+    table {
+        border-spacing: 30px 0;
+    }
+}
+@media screen and (max-width: 1300px) {
+    table {
+        border-spacing: 20px 0;
+    }
+}
+@media screen and (max-width: 1250px) {
+    table {
+        border-spacing: 10px 0;
+    }
+}
+tbody {
+    margin-left: 0%;
+    padding-left: 0%;
+}
+td {
+    margin-left: 0%;
+    padding-left: 0%;
     font-size: 50px;
     color:#283150;
     text-align: left;
 }
-#date{
+#date {
     font-size: 26px;
 }
 th {
+    margin-left: 0%;
+    padding-left: 0%;
     color: grey;
     text-align: left;
+}
+/*Table end*/
+#chartHourFrequency {
+    display: inline-block;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 30%;
+    height: 400px;
 }
 /*Leyendas*/
 p{
@@ -109,9 +147,7 @@ p{
 #leyend{
     width:45%;
 }
-
 /*Botones info */
-
 .overlay {
     position: fixed;
     top: 0;
