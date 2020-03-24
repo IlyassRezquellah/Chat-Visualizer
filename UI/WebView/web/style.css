@@ -201,35 +201,44 @@ p{
 /*On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
 @media screen and (max-width: 1200px) {
     #chartTops{
+        padding-left: 6%;
         margin-left: 0.5%;
         margin-right: 0.5%;
-      width: 95%;
+        width: 85%;
     }
     #chartAverage{
+        padding-left: 2%;
         margin-left: 0.5%;
         margin-right: 0.5%;
-        width: 95%;
+        width: 88%;
     }
     #chartCountMessages{
+        padding-left: 3%;
         margin-left: 0.5%;
         margin-right: 0.5%;
-        width: 95%;
+        width: 88%;
     }
     #chartPercentages{
+        padding-left: 6.5%;
         margin-left: 0.5%;
         margin-right: 0.5%;
-        width: 95%;
+        width: 84%;
     }
     #chartHourFrequency{
+        padding-left: 2%;
         margin-left: 0.5%;
         margin-right: 0.5%;
-        width: 95%;
+        width: 88%;
     }
     #Numbers{
-        margin-left: 30%;
+        padding-left: 2%;
+        margin-left: 2%;
         margin-right: 35%;;
         text-align: left;
-        width: 95%;
+        width: 88%;
         
+    }
+    table {
+        border-spacing: 25px 0;
     }
 }

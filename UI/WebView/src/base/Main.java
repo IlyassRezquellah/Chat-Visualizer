@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
     
@@ -32,6 +33,8 @@ public class Main extends Application{
         //Coge, Carga y muestra la nueva escena
         this.stage = stage;
         //legalUse.getStylesheets().add(getClass().getResource("LoadChatStyle.css").toExternalForm());
+        Image icon = new Image(getClass().getResourceAsStream("/Utils/icon.png"));
+        stage.getIcons().add(icon);
         stage.setScene(legalUseScene);
         stage.setResizable(false);
         //stage.initStyle(StageStyle.UNDECORATED);
