@@ -77,4 +77,4 @@ slider.events.on("rangechanged", function() {
 //Hide shadow tooltip
 series.tooltip.background.filters.clear(); 
 
-createChatTittle("chartHourFrequency", "Activity by time of day");
+createChatTittle("chartHourFrequency", "Activity by hour");

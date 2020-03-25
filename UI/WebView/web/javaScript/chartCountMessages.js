@@ -102,7 +102,7 @@ bullethover.properties.scale = 1.3;
 
 // Make a panning cursor
 chartMessagesCount.cursor = new am4charts.XYCursor();
-chartMessagesCount.cursor.behavior = "panXY";
+/*chartMessagesCount.cursor.behavior = "panXY";*/
 chartMessagesCount.cursor.xAxis = dateAxis;
 chartMessagesCount.cursor.snapToSeries = series;
 
@@ -120,9 +120,5 @@ chartMessagesCount.scrollbarX.parent = chartMessagesCount.bottomAxesContainer;
 series2.tooltip.background.filters.clear();
 series.tooltip.background.filters.clear();
 
-
-
-//Hide shadow tooltip
-series.tooltip.background.filters.clear(); 
 
 createChatTittle("chartCountMessages", "Timeline");

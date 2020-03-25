@@ -113,6 +113,7 @@ td {
     margin-left: 0%;
     padding-left: 0%;
     font-size: 50px;
+    font-weight: bold;
     color:#283150;
     text-align: left;
 }
@@ -124,6 +125,10 @@ th {
     padding-left: 0%;
     color: grey;
     text-align: left;
+}
+#firstDate,#mostActiveDate{
+    font-size: 43px;
+   font-weight: bold;
 }
 /*Table end*/
 #chartHourFrequency {

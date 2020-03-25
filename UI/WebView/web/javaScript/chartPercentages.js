@@ -56,4 +56,4 @@ series.slices.template.tooltipText = "{category}";
 //Hide shadow tooltip
 series.tooltip.background.filters.clear();
 
-createChatTittle("chartPercentages", "Users by volume");
+createChatTittle("chartPercentages", "Who is more active?");
