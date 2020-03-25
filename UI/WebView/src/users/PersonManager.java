@@ -32,6 +32,7 @@ public class PersonManager{
     private boolean analysisCompleted;
     private int totalDays;
     private Date mostActiveDate;
+    private String firstTalkedDate;
     public PersonManager(){
         analysisCompleted = false;
         //Crear más adelante una clases que gestione todo esto
@@ -116,6 +117,7 @@ public class PersonManager{
         System.out.println("El menor es el: "+firstDayComvo+" / "+persons.get(firstDayComvo).getMessageFromFirstDate().toString());
         System.out.println("El mayor es el: "+lastDayComvo+" / "+persons.get(lastDayComvo).getMessageFromLastDate().toString());
         firstDateComvo = persons.get(firstDayComvo).getMessageFromFirstDate();
+        firstTalkedDate = persons.get(firstDayComvo).getMessageFromFirstDateOurn();
         lastDateComvo = persons.get(lastDayComvo).getMessageFromLastDate();
         
     }
@@ -248,8 +250,8 @@ public class PersonManager{
     }
     //Datos de la tabla
     public String jSTable(){
-        return String.format("var totalDays = %d%nvar totalMessagesCount = %d%nvar totalWordsCount = %d%nvar totalChartsCount = %d%nvar firstDate = '%d-%d-%d'%nvar mostActiveDate = '%s'%n", 
-            totalDays, messagesGlobal, wordGlobal, charsGlobal, firstDateComvo.getYear(), firstDateComvo.getMonth(), firstDateComvo.getDay(), mostActiveDate.toString());
+        return String.format("var totalDays = %d%nvar totalMessagesCount = %d%nvar totalWordsCount = %d%nvar totalChartsCount = %d%nvar firstDate = '%s'%nvar mostActiveDate = '%s'%n", 
+            totalDays, messagesGlobal, wordGlobal, charsGlobal, firstTalkedDate, mostActiveDate.toString());
     }
     //JSon (chat): Conteos 
     public String jSonCount(){

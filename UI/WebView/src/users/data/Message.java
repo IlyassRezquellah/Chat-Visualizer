@@ -90,7 +90,10 @@ public class Message
     public void setMoreText(String text){
         this.text += ("\n\r" + text);
     }
-     public java.util.Date getDate(){
+    public java.util.Date getDate(){
         return date.getDate(); 
+    }
+    public String getOurnDate(){
+        return String.format("%d-%d-%d", getYear(), getMonth(), getDay()); 
     }
 }

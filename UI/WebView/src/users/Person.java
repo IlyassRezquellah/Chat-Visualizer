@@ -46,6 +46,9 @@ public class Person{
     public java.util.Date getMessageFromFirstDate(){
         return getMessageObj(0).getDate();
     }
+    public String getMessageFromFirstDateOurn(){
+        return getMessageObj(0).getOurnDate();
+    }
     public java.util.Date getMessageFromLastDate(){
         return getMessageObj(mensajes.size()-1).getDate();
     }
