@@ -37,7 +37,7 @@ https://github.com/EliassReque/Chat-Visualizer
 ## License
 [MIT License](https://github.com/EliassReque/Chat-Visualizer/blob/master/LICENSE)
 
-## Contributing to pandas
+## Contributing to chat-visualizer
 All contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas are welcome.
 
 
