@@ -10,8 +10,7 @@
 
 # Chat-Visualizer: powerful data analysis toolkit
 ## What is it?
-Our project offers the possibility of seeing exhaustive statistics, graphs and specific averages of your conversation with anyone. At the moment, our goal is to work with the exported files by users of WhatsApp conversations and later focus on other applications such as Instagram, telegram, twitter...etc.
-From our point of view, WhatsApp users will become more curious to explore, analyse and have more information regarding the conversation the make (, even for those to whom it may concern to preform such analysis to what ever conversation they want such as companies, medical researches or even for legal purposes, however, that's our vision for the future success of our project).  For now, we are certain that our project makes it possible for the WhatsApp application to give a general easy to interpret statistics.
+Our project offers the possibility of seeing exhaustive statistics, graphs and specific averages of your conversation with anyone. At the moment, our goal is to work with the exported files by users of WhatsApp conversations and later focus on other applications such as Instagram, telegram, twitter...etc. From our point of view, WhatsApp users will become more curious to explore, analyze and have more information regarding the conversation they make, it even works for those to whom it may concern to perform such analysis to whatever conversation they want, such as companies, medical researches or even for legal purposes, however, that's our vision for the future success of our project. For now, we are certain that our project makes it possible for the WhatsApp application to give a generally easy to interpret statistics.
 
 
 ## Main Features
