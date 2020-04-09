@@ -4,8 +4,8 @@
 
 
 
-<img src="https://github.com/EliassReque/FinalProject/blob/master/Graficas/Images/Captura.PNG">
-
+<img src="https://github.com/EliassReque/FinalProject/blob/master/Graficas/Images/captura2v2.png">
+<img src="https://github.com/EliassReque/FinalProject/blob/master/Graficas/Images/Capturav2.PNG">
 ----------------
 
 # Chat-Visualizer: powerful data analysis toolkit
