@@ -28,6 +28,7 @@ Here are just a few of the things that chat-visualizer does well:
 The source code is currently hosted on GitHub at:
 https://github.com/EliassReque/Chat-Visualizer
 
+[Download last release](https://github.com/EliassReque/Chat-Visualizer/releases/download/1.0/Chat-Visualizer.zip)
 
 
 ## Dependencies
@@ -38,5 +39,6 @@ https://github.com/EliassReque/Chat-Visualizer
 
 ## Contributing to chat-visualizer
 All contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas are welcome.
+
 
 
