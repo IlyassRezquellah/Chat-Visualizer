@@ -16,13 +16,13 @@ Our project offers the possibility of seeing exhaustive statistics, graphs and s
 ## Main Features
 Here are just a few of the things that chat-visualizer does well:
 
-  - Periodo de tiempo de la conversación
-  - Cuándo y cuántos mensajes ha mandado cada persona en ese periodo de tiempo
-  - Medias generales: palabras por mensaje, letras por mensaje, mensajes por día, letras por día, número total de mensaje de ambas   partes.
-  - Gráficos de los datos anteriores con la evolución con el paso del tiempo
-  - Número total del contenido multimedia.
-  - Tops: día más activo, primer y último día de la conversación, palabras más usadas.
-  - Actividad de la conversación, representada en horas. 
+  - Timeline of the conversation
+  - When and how many messages has each person sent in that period of time
+  - General averages: words per message, characters per message, messages per day, letters per day, total number of messages from both parties
+  - Graphs of previous data with evolution over time
+  - Total number of multimedia content
+  - Tops: most active day, first and last day of conversation, most used words
+  - Conversation activity, represented in hours 
   
 ## Where to get it
 The source code is currently hosted on GitHub at:
